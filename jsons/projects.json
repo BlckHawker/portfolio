@@ -1,0 +1,91 @@
+{
+    "Projects":
+    [
+        {
+            "Title": "Casper's Cat Cafe",
+            "Date": "January 2023 - April 2023",
+            "Languages": ["C#"],
+            "Tools": ["Visual Studio", "Unity"],
+            "Description": ["This is an academic group project where we were tasked to make a casual game. My group decided to make an app that could be played on desktop or a mobile device where the player was in charge of a cat cafe. They would play mini games in order to earn a currency called treats. When they have enough treats, they can spend them at the adoption center that will give them a random cat to roam around the floor. My main tasks were to create a saving system that would save the users amount of treats and which cats that have acquired and the creation of two of our mini games.",
+            "The first mini game has the player working at a barista. They will be bombarded with coffee orders that they need to prepare in a short amount of time. The game rewards players with fast reflexes by giving them more points depending on how fast they complete the order. I also implemented a tutorial system that uses pictures from the minigame in order to familiarize the user with the layout. I have also implemented a highscore system that has increased the amount of competitiveness and replayability in our playtests.",
+            "The other minigame I created was a fishing simulator. The player would have to wait until a fish bites on their line, click when they do, and reel the fish in by spamming the “pull” button. The amount of clicks it took for a fish to get caught would depend on their size: small, medium, or large. The larger the fish, the bigger the reward would be.  If the player did not spam enough, then the fish would break free and the player would have to wait for another fish. It’s very bare bones due to time constraints, and unfortunately did not make it into our latest build of the game.",
+            "I also helped with the adoption system. When you adopt a cat that you have already obtained, then the game will give the user a 50% refund."
+        ],
+            "Links": [
+                {
+                    "Name": "Latest Build",
+                    "Link": "https://github.com/andrewrama/IGME450/releases/tag/2-10-23"
+                },
+                {
+                    "Name": "Demo",
+                    "Link": "https://youtu.be/Vu_ZcVhQJqA"
+                }
+            ],
+
+            "Image": 
+            {
+                "src": "img/casper.gif",
+                "alt": "Barista Game Demonstration"
+            }
+
+        },
+        {
+            "Title": "Ultimate Tic Tac Toe",
+            "Date": "December 2022",
+            "Languages": ["Javascript", "PixiJS"],
+            "Tools": ["Visual Studio Code"],
+            "Description": ["This project is a twist of the game Tic Tac Toe where the entire game is made up of 9 smaller tic tac toe boards. When someone wins a smaller board, the player’s symbol gets displayed over the small board. When a player wins enough boards to make a tic tac toe, they win the game."],
+            "Links": [
+                {
+                    "Name": "Play Here",
+                    "Link": "https://blckhawker.github.io/Ultimate-Tic-Tac-Toe/"
+                }
+            ],
+
+            "Image": 
+            {
+                "src": "img/ultimate-tic-tac-toe.gif",
+                "alt": "Ultimate Tic Tac Toe Gameplay"
+            }
+        },
+        {
+            "Title": "Pokemon Finder",
+            "Date": "November 2022",
+            "Languages": ["Javascript", "HTML", "CSS", "PixiJS"],
+            "Tools": ["Visual Studio Code"],
+            "Description": ["This website allows users to look up Pokemon based on type, either the exact type or types that are weak or strong against a specific type. This site was made to learn how to use APIs along with extracting information from a JSON file. I also learned a little about dynamic displays since I was unaware about how much data would be extracted every time."],
+            "Links": [
+                {
+                    "Name": "Website",
+                    "Link": "https://people.rit.edu/nab6476/235/project2/"
+                }
+            ],
+            "Image":
+            {
+                "src": "img/pokemon.gif",
+                "alt": "Pokemon Finder Demonstration"
+            }
+        },
+        {
+            "Title": "Conway’s Game of Life",
+            "Languages": ["Javascript", "HTML", "CSS"],
+            "Date": "October 2022",
+            "Tools": ["Visual Studio Code"],
+            "Description": ["Conway’s game is a zero player game that simulates how population grows/shrinks depending on adjacent neighbors. This was one of my first projects using loops in javascript to create a game-like function."],
+            "Links": [
+                {
+                    "Name": "Website",
+                    "Link": "https://blckhawker.github.io/Conways-Game-of-Life/"
+                },
+                {
+                    "Name": "Repository",
+                    "Link": "https://github.com/BlckHawker/Conways-Game-of-Life"
+                }
+            ],
+            "Image":{
+                "src": "img/conway.gif",
+                "alt": "Conway’s Game of Life Demostration"
+            }
+        }
+    ]
+}

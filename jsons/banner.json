@@ -1,0 +1,7 @@
+{
+    "Buttons": [
+        {"Name": "About Me", "Link": "./index.html"},
+        {"Name": "Projects", "Link": "./projects.html"},
+        {"Name": "Resume", "Link": "./resume.html"}
+    ]
+}

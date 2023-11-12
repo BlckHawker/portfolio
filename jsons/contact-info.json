@@ -1,0 +1,25 @@
+{
+    "Name": "Nya Bentley",
+    "Contacts": [
+        {
+            "Name": "Email",
+            "Link": "mailto:nyabentley@gmail.com",
+            "Icon": "fas fa-envelope"
+        },
+        {
+            "Name": "GitHub",
+            "Link": "https://github.com/BlckHawker",
+            "Icon": "fab fa-github"
+        },
+        {
+            "Name": "YouTube",
+            "Link": "https://www.youtube.com/channel/UCafm_giO-1F4xo9NPWnoFYg",
+            "Icon": "fab fa-youtube"
+        },
+        {
+            "Name": "LinkedIn",
+            "Link": "https://www.linkedin.com/in/nya-bentley-2a370b1b5/",
+            "Icon": "fab fa-linkedin"
+        }
+    ]
+}
