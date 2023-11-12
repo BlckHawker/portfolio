@@ -49,15 +49,17 @@ async function loadProjects() {
 
     function createProjectLayout(projectData, flexClass, titleHeaderNum, dateHeaderNum, haveHR) {
         console.log(projectData);
+        let html = "";
+        if (haveHR)
+            html += "<hr>";
         const titleHeaderElement = `h${titleHeaderNum}`;
         const dateHeaderElement = `h${dateHeaderNum}`;
 
-        let html = `<${titleHeaderElement}>${projectData['Title']}</${titleHeaderElement}>`;
+        html += `<${titleHeaderElement}>${projectData['Title']}</${titleHeaderElement}>`;
         html += `<${dateHeaderElement}>${projectData['Date']}</${dateHeaderElement}>`
         const wordSpan = `<span>` + getLanguages(projectData) + getTools(projectData) + getDescription(projectData) + getLinks(projectData) + `</span>`;
        
-        if (haveHR)
-            html += "<hr>";
+        
         html += `<div class="${flexClass}"> ${wordSpan}`;
 
         const image = projectData['Image'];
