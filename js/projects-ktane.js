@@ -1,6 +1,10 @@
-import { getContactInfo, getBannerElement } from './utils.js'
+import { getContactInfo, getBannerElement, highlightBanner } from './utils.js'
+
+var carosolIndex;
 
 window.onload = () => {
+
+    carosolIndex = document.querySelector("#carousel-page-num");
     loadProjects();
     loadContacts();
     loadBanner();
@@ -54,6 +58,8 @@ async function loadProjects() {
           
             function changeSlide(slideNumber) {
               carousel.style.setProperty('--current-slide', slideNumber);
+              carosolIndex.innerHTML = `${slideNumber + 1} of ${numSlides}`;
+              console.log(carosolIndex.innerHTML);
             }
           
             // get elements
@@ -65,15 +71,16 @@ async function loadProjects() {
             let currentSlide = 0;
             let numSlides = slidesContainer.children.length;
 
-            console.log(numSlides);
-          
             // set up events
             buttonPrevious.addEventListener('click', handlePrevious);
             buttonNext.addEventListener('click', handleNext);
+
+            carosolIndex.innerHTML = `1 of ${numSlides}`;
           }
           
           const carousels = document.querySelectorAll('[data-carousel]');
           carousels.forEach(setUpCarousel);
+          
     });
 
     function createLFAProject(name) {
@@ -152,5 +159,9 @@ async function loadContacts() {
 }
 
 async function loadBanner() {
-    getBannerElement().then(html => { document.querySelector("#banner").innerHTML = html} );
+    await getBannerElement().then(html => { document.querySelector("#banner").innerHTML = html} );
+
+    let dropDown = document.querySelector(".dropdown");
+    console.log(dropDown);
+    highlightBanner(dropDown);
 }

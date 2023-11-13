@@ -24,7 +24,7 @@ async function getBannerElement() {
         else
         {
             html += `<div class="dropdown">`;
-            html += `<a href="" class="no-highlight">${banner['Name']}</a>`;
+            html += `<a href="">${banner['Name']}</a>`;
             html += `<div class="dropdown-content">`;
 
             for(let i = 0; i < banner['Dropdown'].length; i++) {
@@ -60,4 +60,34 @@ async function loadBannerInfo() {
         });
 }
 
-export { getContactInfo, getBannerElement };
+function highlightBanner(banner) {
+    console.log(banner.querySelector("a"));
+
+    banner.onmouseover = (banner) => {
+        const child = banner.target.querySelector("a");
+
+        if(child)
+        {
+            child.style.backgroundColor = "#fff";
+            child.style.color = "#393939";
+            banner.target.style.backgroundColor = "#fff";
+            banner.target.style.color = "#393939";
+        }
+       
+    };
+
+    banner.onmouseout = (banner) => {
+        const child = banner.target.querySelector("a");
+
+        if(child)
+        {
+            child.style.backgroundColor = "#393939";
+            child.style.color = "white";
+            banner.target.style.backgroundColor = "#393939";
+            banner.target.style.color = "white";
+        }
+    };
+
+}
+
+export { getContactInfo, getBannerElement, highlightBanner };

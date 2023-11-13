@@ -1,4 +1,4 @@
-import { getContactInfo, getBannerElement } from './utils.js'
+import { getContactInfo, getBannerElement, highlightBanner } from './utils.js'
 
 window.onload = () => {
     loadProjects();
@@ -7,7 +7,11 @@ window.onload = () => {
 }
 
 async function loadBanner() {
-    getBannerElement().then(html => { document.querySelector("#banner").innerHTML = html} );
+    await getBannerElement().then(html => { document.querySelector("#banner").innerHTML = html} );
+
+    let dropDown = document.querySelector(".dropdown");
+    console.log(dropDown);
+    highlightBanner(dropDown);
 }
 
 async function loadProjects() {
@@ -29,7 +33,6 @@ async function loadProjects() {
         });
 
     function createProjectLayout(projectData, flexClass, titleHeaderNum, dateHeaderNum, haveHR) {
-        console.log(projectData);
         let html = "";
         if (haveHR)
             html += "<hr>";
