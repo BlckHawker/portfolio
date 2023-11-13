@@ -26,20 +26,76 @@ async function loadProjects() {
 
         //add LFA
         let lfaHtml = "";
+        console.log(lfaNames.length);
         for(let i = 0; i < lfaNames.length; i++){
             lfaHtml += createLFAProject(lfaNames[i]);
         }
         document.querySelector("#lfa").innerHTML += lfaHtml;
+
+        //load carosol
+        function modulo(number, mod) {
+            let result = number % mod;
+            if (result < 0) {
+              result += mod;
+            }
+            return result;
+          }
+          
+          function setUpCarousel(carousel) {
+            function handleNext() {
+              currentSlide = modulo(currentSlide + 1, numSlides);
+              changeSlide(currentSlide);
+            }
+          
+            function handlePrevious() {
+              currentSlide = modulo(currentSlide - 1, numSlides);
+              changeSlide(currentSlide);
+            }
+          
+            function changeSlide(slideNumber) {
+              carousel.style.setProperty('--current-slide', slideNumber);
+            }
+          
+            // get elements
+            const buttonPrevious = carousel.querySelector('[data-carousel-button-previous]');
+            const buttonNext = carousel.querySelector('[data-carousel-button-next]');
+            const slidesContainer = carousel.querySelector('[data-carousel-slides-container]');
+          
+            // carousel state we need to remember
+            let currentSlide = 0;
+            let numSlides = slidesContainer.children.length;
+
+            console.log(numSlides);
+          
+            // set up events
+            buttonPrevious.addEventListener('click', handlePrevious);
+            buttonNext.addEventListener('click', handleNext);
+          }
+          
+          const carousels = document.querySelectorAll('[data-carousel]');
+          carousels.forEach(setUpCarousel);
     });
 
     function createLFAProject(name) {
         let html = "";
 
-        html += "<hr>"
-        html += `<h3>${name}</h3>`
+        //create slides div
+        html += `<div class="slide">`
+
+        //create name 
+        html += `<h2>${name}</h2>`
+
+        //create comparson div
         html += `<div class="comparison">`
+
+        //create content
         html += createLFASpan(name, true);
         html += createLFASpan(name, false);
+
+        //close comparsion div
+        html += `</div>`
+
+        //close slides div
         html += `</div>`
         return html;
     }

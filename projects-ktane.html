@@ -11,7 +11,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/test.css">
+    <script type="module" src="js/test.js"></script>
+
     <title>Document</title>
+
 </head>
 
 <body>
@@ -35,7 +40,23 @@
         what they can log since they can only use text. LFA has the ability to add svg graphics, put messages into
         dropdowns and code blocks, reword logging to make it more clear, and much more. Here are my contributions to
         this using LFA.</p>
-    <div id="lfa"></div>
+
+
+
+    <div class="carousel" data-carousel>
+        <div class="carousel-buttons">
+            <button class="carousel-button carousel-button_previous" data-carousel-button-previous>
+                <span class="fas fa-chevron-circle-left"></span>
+            </button>
+            <button class="carousel-button carousel-button_next" data-carousel-button-next>
+                <span class="fas fa-chevron-circle-right"></span>
+            </button>
+        </div>
+
+
+        <div id="lfa" class="slides" data-carousel-slides-container>
+        </div>
+    </div>
 </body>
 <footer>
     <hr>
