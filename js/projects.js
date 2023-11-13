@@ -11,25 +11,6 @@ async function loadBanner() {
 }
 
 async function loadProjects() {
-    //load ktane projects
-    // await fetch("./jsons/ktane-projects-info.json")
-    //     .then((res) => {
-    //         return res.json();
-    //     })
-    //     .then((data) => {
-    //         const jsonData = data['Projects'];
-
-    //         let html = "";
-    //         for (let i = 0; i < jsonData.length; i++) {
-    //             const divClass = i % 2 == 0 ? "flex" : "flex-reverse";
-    //             const project = jsonData[i];
-    //             html += createProjectLayout(project, divClass, 3, false);
-    //         }
-
-    //         document.querySelector("#ktane").innerHTML += html;
-    //     });
-
-    //load other projects
     await fetch("./jsons/projects.json")
         .then((res) => {
             return res.json();
@@ -69,7 +50,6 @@ async function loadProjects() {
 
         if (!src || !alt)
             html += `<img src="img/WIP.png" alt="This is a work in progress">`;
-
         else
             html += `<img src="${src}" alt="${alt}">`;
 
@@ -78,11 +58,11 @@ async function loadProjects() {
     }
 
     function getTools (projectData) {
-        return `<p id="tools"><b>Tools:</b> ${projectData['Tools'].join(", ")}</p>`
+        return `<p class="tools"><b>Tools:</b> ${projectData['Tools'].join(", ")}</p>`
     }
 
     function getLanguages(projectData) {
-        return `<p id="languages"><b>Languages/Libraries:</b> ${projectData['Languages'].join(", ")}</p>`
+        return `<p class="languages"><b>Languages/Libraries:</b> ${projectData['Languages'].join(", ")}</p>`
     }
 
     function getDescription(projectData) {

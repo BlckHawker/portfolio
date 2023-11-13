@@ -1,7 +1,28 @@
 {
     "Buttons": [
-        {"Name": "About Me", "Link": "./index.html"},
-        {"Name": "Projects", "Link": "./projects.html"},
-        {"Name": "Resume", "Link": "./resume.html"}
+        {
+            "Name": "About Me",
+            "Link": "./index.html",
+            "Dropdown": []
+        },
+        {
+            "Name": "Projects",
+            "Link": "./projects.html",
+            "Dropdown": [
+                {
+                    "Name": "General Projects",
+                    "Link": "./projects.html"
+                },
+                {
+                    "Name": "KTANE Projects",
+                    "Link": "./projects-ktane.html"
+                }
+            ]
+        },
+        {
+            "Name": "Resume",
+            "Link": "./resume.html",
+            "Dropdown": []
+        }
     ]
 }

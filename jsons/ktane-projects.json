@@ -1,0 +1,81 @@
+{
+    "Projects": [
+        {
+            "Title": "Solver",
+            "Date": "Feb 2019 - April 2022",
+            "Languages": [
+                "C#"
+            ],
+            "Tools": [
+                "Visual Studio",
+                "Windows Forms"
+            ],
+            "Description": [
+                "When I first was introduced to the modding community of KTANE, I wanted to create solvers of modules other people created given some information from the bomb. This is when I was first learning how to program. I used the manual as instructions of how the program should work, and used Windows Forms to create GUIs for the user to input the needed information to get the correct answer."
+            ],
+            "Links": [
+                {
+                    "Name": "Latest Build",
+                    "Link": "https://github.com/KTANE-Solver/KTANE-Solver/releases"
+                },
+                {
+                    "Name": "Documentation",
+                    "Link": "https://www.youtube.com/playlist?list=PLR_AbBaKlWBgDyX3Wpq8omdWbtuthDlpL"
+                }
+            ],
+            "Image": {
+                "src": "",
+                "alt": ""
+            }
+        },
+        {
+            "Title": "Mods",
+            "Date": "January 2023 - Present",
+            "Languages": [
+                "C#",
+                "HTML",
+                "CSS",
+                "Javascript"
+            ],
+            "Tools": [
+                "Unity",
+                "Visual Studio",
+                "Visual Studio Code",
+                "Inkscape"
+            ],
+            "Description": [
+                "After a few years of creating solvers of KTANE mods, I decided to create some mods of my own. Not only did I have to write the logic of solving the mod, I also had to write the instructions, model it, and write the logic for interactions.  I like creating mods more than creating solvers since it gives me more freedom in terms of creativity. The modding community also has a sub group on Twitch, mostly known as “Twitch Plays”, where players can go to a Twitch channel and play the game through chat commands. There is a special command called “force solve” where the module solves itself. Although it’s unnecessary, most modders implement this by having the module figuring out the calculations itself and pressing its own buttons to solve it."
+            ],
+            "Links": [
+                {
+                    "Name": "Demonstration",
+                    "Link": ""
+                },
+                {
+                    "Name": "Steam Workshop",
+                    "Link": ""
+                }
+            ],
+            "Image": {
+                "src": "",
+                "alt": ""
+            }
+        }
+    ],
+    "LFA": [
+        "Shoddy Chess",
+        "Logical Hexabuttons",
+        "Orientation Hypercube",
+        "Langton's Anteater",
+        "Character Slots",
+        "Not Murder",
+        "Forget Us Not",
+        "Scrutiny Squares",
+        "Drive In WIndow",
+        "Forget Them All",
+        "Papyrus Tiles",
+        "Robot Programming",
+        "The Arena",
+        "4 Buttons"
+    ]
+}

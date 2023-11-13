@@ -1,0 +1,72 @@
+@media screen and (min-width: 1000px) {
+
+}
+
+.flex {
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: center
+}
+
+.comparison {
+    display: flex;
+    flex-flow: column;
+    gap: 3%;
+    align-items: center;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+h2,
+h4 {
+    margin-top: 1%;
+    margin-bottom: 0px;
+}
+
+h1,
+h2,
+h4,
+.languages,
+.tools {
+    text-align: center;
+}
+
+img {
+    width: 30%;
+}
+
+body {
+    margin: 0%;
+}
+
+.comparison-text {
+    font-size: 20px;
+}
+
+h1,
+h3, td {
+    text-align: center;
+}
+
+.comparison span img {
+    width: 100%;
+}
+
+.introduction {
+    margin: auto 10% 1% 10%;
+}
+
+.center-text, .center-image {
+    text-align: center;
+}
+
+.narrow-text {
+    margin: auto 10%;
+}
+
+#lfa hr {
+    border: 1px solid #3d85c6;
+}
