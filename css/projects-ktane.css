@@ -103,9 +103,12 @@ td {
   .carousel-button:hover {
     color: rgba(0, 0, 0, 0.5);
   }
+
+  #lfa-date {
+    margin-bottom: 1%;
+  }
   
   .carousel-button_next {
-    /* The "next slide button" will be at the right */
     right: 0;
   }
   

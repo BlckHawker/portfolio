@@ -2,7 +2,7 @@
     "Projects": [
         {
             "Title": "Solver",
-            "Date": "Feb 2019 - April 2022",
+            "Date": "February 2019 - April 2022",
             "Languages": [
                 "C#"
             ],
@@ -10,9 +10,9 @@
                 "Visual Studio",
                 "Windows Forms"
             ],
-            "Description": [
-                "When I first was introduced to the modding community of KTANE, I wanted to create solvers of modules other people created given some information from the bomb. This is when I was first learning how to program. I used the manual as instructions of how the program should work, and used Windows Forms to create GUIs for the user to input the needed information to get the correct answer."
-            ],
+            "Description": 
+                "When I first was introduced to the modding community of KTANE, I wanted to create solvers of modules other people created given some information from the bomb. The program requries the user to have the bomb running with the program right next to it. The program then asks for edgework from the bomb, and which module the user wants to be solved. Depending on the module, the user will need to type in information from that module that for program asks for. This is when I was first learning how to program. I used the manual as instructions of how the program should work, and used Windows Forms to create GUIs for the user to input the needed information to get the correct answer."
+            ,
             "Links": [
                 {
                     "Name": "Latest Build",
@@ -43,9 +43,9 @@
                 "Visual Studio Code",
                 "Inkscape"
             ],
-            "Description": [
-                "After a few years of creating solvers of KTANE mods, I decided to create some mods of my own. Not only did I have to write the logic of solving the mod, I also had to write the instructions, model it, and write the logic for interactions.  I like creating mods more than creating solvers since it gives me more freedom in terms of creativity. The modding community also has a sub group on Twitch, mostly known as “Twitch Plays”, where players can go to a Twitch channel and play the game through chat commands. There is a special command called “force solve” where the module solves itself. Although it’s unnecessary, most modders implement this by having the module figuring out the calculations itself and pressing its own buttons to solve it."
-            ],
+            "Description": 
+                "After a few years of creating solvers of KTANE mods, I decided to create some mods of my own. Not only did I have to write the logic of solving the mod, I also had to write the instructions, model it, and write the logic for interactions. I like creating mods more than creating solvers since it gives me more freedom in terms of creativity. The modding community also has a sub group on Twitch, mostly known as “Twitch Plays”, where players can go to a Twitch channel and play the game through chat commands. There is a special command called “force solve” where the module solves itself. Although it’s unnecessary, most modders implement this by having the module figuring out the calculations itself and pressing its own buttons to solve it. I add Twitch Plays support to all my mods because I want to make my modules accessible to everyone, even those who don't own the game and can only play through Twitch. It's also a decent challenge development wise."
+            ,
             "Links": [
                 {
                     "Name": "Demonstration",

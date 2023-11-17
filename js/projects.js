@@ -69,7 +69,7 @@ async function loadProjects() {
     }
 
     function getDescription(projectData) {
-        return `${projectData['Description'].map(d => `<p>${d}</p>`).join("")}`;
+        return `${projectData['Description'].split('\n').map(d => `<p>${d}</p>`).join("")}`;
     }
 
     function getLinks(projectData) {
