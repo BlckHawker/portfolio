@@ -74,7 +74,7 @@ async function loadProjects() {
 
     function getLinks(projectData) {
         const arr = projectData['Links'].map(link => { return `<a href="${link['Link']}" target="_blank">${link['Name']}</a>` });
-        return arr.join(" | ");
+        return`<div class="project-links"><span>${arr.join(" | ")}</span></div>`;
     }
 
 

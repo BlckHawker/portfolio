@@ -25,13 +25,12 @@ async function loadProjects() {
             generalHtml += createGeneralProjectLayout(generalProjects[i]);
         }
 
-        
         document.querySelector("#projects").innerHTML += `<div class="project">${generalHtml}</div>`;
 
         //add LFA
         let lfaHtml = "";
         console.log(lfaNames.length);
-        for(let i = 0; i < lfaNames.length; i++){
+        for(let i = 0; i < lfaNames.length; i++) {
             lfaHtml += createLFAProject(lfaNames[i]);
         }
         document.querySelector("#lfa").innerHTML += lfaHtml;
@@ -148,7 +147,7 @@ async function loadProjects() {
 
     function getLinks(projectData) {
         const arr = projectData['Links'].map(link => { return `<a href="${link['Link']}" target="_blank">${link['Name']}</a>` });
-        return arr.join(" | ");
+        return`<div class="project-links"><span>${arr.join(" | ")}</span></div>`;
     }
 }
 

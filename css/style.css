@@ -110,3 +110,8 @@ body {
 .dropdown:hover {
     background-color: white;
 }
+
+.project-links {
+    text-align: center;
+    margin-bottom: 5%;
+}
