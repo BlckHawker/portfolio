@@ -98,6 +98,24 @@
                 "src": "img/conway.gif",
                 "alt": "Conway’s Game of Life Demostration"
             }
+        },
+        {
+            "Title": "Volitile Vermin",
+            "Languages":["C#", "MonoGame"],
+            "Date":"January 2021 - May 2021",
+            "Tools": ["Visual Studio"],
+            "Description": "This was a group project for one of my classes; it's also the first game I created. The game is a top down shooter where the player has to kill all enenmies in the level in order to progress to the next one. The game is won when the player passes all the levels. My task was to create a level editor in order to have other members of my group easlity create levels. I also inplemented a high score system where players who get a top 5 score can put their initials in and is displayed on other playthroughs.",
+            "Links": [
+                {
+                    "Name": "Demo",
+                    "Link": "https://youtu.be/v1BvdzU7wZQ"
+                }
+            ],
+            "Image": 
+            {
+                "src": "img/vermin.png",
+                "alt": "Volitile Vermin"
+            } 
         }
     ]
 }
