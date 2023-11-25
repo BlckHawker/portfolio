@@ -10,7 +10,6 @@ async function loadBanner() {
     await getBannerElement().then(html => { document.querySelector("#banner").innerHTML = html} );
 
     let dropDown = document.querySelector(".dropdown");
-    console.log(dropDown);
     highlightBanner(dropDown);
 }
 

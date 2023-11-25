@@ -29,7 +29,6 @@ async function loadProjects() {
 
         //add LFA
         let lfaHtml = "";
-        console.log(lfaNames.length);
         for(let i = 0; i < lfaNames.length; i++) {
             lfaHtml += createLFAProject(lfaNames[i]);
         }
@@ -58,7 +57,6 @@ async function loadProjects() {
             function changeSlide(slideNumber) {
               carousel.style.setProperty('--current-slide', slideNumber);
               carosolIndex.innerHTML = `${slideNumber + 1} of ${numSlides}`;
-              console.log(carosolIndex.innerHTML);
             }
           
             // get elements
@@ -161,6 +159,5 @@ async function loadBanner() {
     await getBannerElement().then(html => { document.querySelector("#banner").innerHTML = html} );
 
     let dropDown = document.querySelector(".dropdown");
-    console.log(dropDown);
     highlightBanner(dropDown);
 }

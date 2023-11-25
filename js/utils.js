@@ -61,8 +61,6 @@ async function loadBannerInfo() {
 }
 
 function highlightBanner(banner) {
-    console.log(banner.querySelector("a"));
-
     banner.onmouseover = (banner) => {
         const child = banner.target.querySelector("a");
 
