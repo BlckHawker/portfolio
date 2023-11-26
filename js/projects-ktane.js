@@ -1,4 +1,4 @@
-import { getContactInfo, getBannerElement, highlightBanner } from './utils.js'
+import { getContactInfo, getBannerElement, highlightBanner, changeTitle } from './utils.js'
 
 var carosolIndex;
 
@@ -8,6 +8,7 @@ window.onload = () => {
     loadProjects();
     loadContacts();
     loadBanner();
+    changeTitle();
 }
 
 async function loadProjects() {

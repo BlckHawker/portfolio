@@ -1,9 +1,10 @@
-import { getContactInfo, getBannerElement, highlightBanner } from './utils.js'
+import { getContactInfo, getBannerElement, highlightBanner, changeTitle } from './utils.js'
 
 window.onload = () => {
     loadProjects();
     loadContacts();
     loadBanner();
+    changeTitle();
 }
 
 async function loadBanner() {

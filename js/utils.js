@@ -1,5 +1,6 @@
 let contactData;
 let bannerData;
+let aboutMeData;
 
 async function getContactInfo() {
     await loadContactInfo();
@@ -19,25 +20,34 @@ async function getBannerElement() {
     for (let i = 0; i < bannerData['Buttons'].length; i++) {
         const banner = bannerData['Buttons'][i];
 
-        if(banner['Dropdown'].length == 0)
+        if (banner['Dropdown'].length == 0)
             html += `<a href="${banner['Link']}">${banner['Name']}</a>`
-        else
-        {
+        else {
             html += `<div class="dropdown">`;
             html += `<a href="">${banner['Name']}</a>`;
             html += `<div class="dropdown-content">`;
 
-            for(let i = 0; i < banner['Dropdown'].length; i++) {
+            for (let i = 0; i < banner['Dropdown'].length; i++) {
                 const link = banner['Dropdown'][i];
                 html += `<a href="${link['Link']}">${link['Name']}</a>`;
             }
 
             html += `</div></div>`;
-        }    
-        
+        }
+
     }
 
     return html;
+}
+
+async function getAboutMeInfo() {
+    await loadAboutMeInfo();
+    return aboutMeData;
+}
+
+async function changeTitle() {
+    await loadAboutMeInfo();
+    document.querySelector('title').textContent = `${aboutMeData['FirstName']} Bentley`;
 }
 
 async function loadContactInfo() {
@@ -60,25 +70,33 @@ async function loadBannerInfo() {
         });
 }
 
+async function loadAboutMeInfo() {
+    await fetch("./jsons/about-me.json")
+        .then((res) => {
+            return res.json();
+        })
+        .then((data) => {
+            aboutMeData = data;
+        });
+}
+
 function highlightBanner(banner) {
     banner.onmouseover = (banner) => {
         const child = banner.target.querySelector("a");
 
-        if(child)
-        {
+        if (child) {
             child.style.backgroundColor = "#fff";
             child.style.color = "#393939";
             banner.target.style.backgroundColor = "#fff";
             banner.target.style.color = "#393939";
         }
-       
+
     };
 
     banner.onmouseout = (banner) => {
         const child = banner.target.querySelector("a");
 
-        if(child)
-        {
+        if (child) {
             child.style.backgroundColor = "#393939";
             child.style.color = "white";
             banner.target.style.backgroundColor = "#393939";
@@ -88,4 +106,4 @@ function highlightBanner(banner) {
 
 }
 
-export { getContactInfo, getBannerElement, highlightBanner };
+export { getContactInfo, getBannerElement, getAboutMeInfo, highlightBanner, changeTitle };
