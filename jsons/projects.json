@@ -1,6 +1,23 @@
 {
     "Projects": [
         {
+            "Title": "Foundation of Game Graphics Programming",
+            "Date": "August 2023 - December 2023",
+            "Languages": ["C++", "HLSL", "Direct X 11"],
+            "Tools": ["Visual Studio"],
+            "Description": "During my time at RIT, I enrolled in a class that delved deep into the world of game graphics programming. Beginning with a thorough exploration of meshes as the fundamental building blocks for 3D object rendering, the course progressed to the development of camera systems, translating world space events into the player's perspective. The focal point was the utilization of shaders and HLSL code to govern on-screen processing, enabling the rendering of shadows, imparting depth and shine to objects, facilitating the incorporation of post-processing effects like blurring, and much more. This class not only served as a robust introduction to game graphics but also refined crucial programming skills, emphasizing algorithm navigation and the implementation of intricate systems.",
+            "Links": [
+                {
+                    "Name": "Repository",
+                    "Link": "https://github.com/BlckHawker/IGME-540"
+                }
+            ],
+            "Image": {
+                "src": "",
+                "alt": ""
+            }
+        },
+        {
             "Title": "Casper's Cat Cafe",
             "Date": "January 2023 - April 2023",
             "Languages": [
@@ -101,9 +118,14 @@
         },
         {
             "Title": "Volitile Vermin",
-            "Languages":["C#", "MonoGame"],
-            "Date":"January 2021 - May 2021",
-            "Tools": ["Visual Studio"],
+            "Languages": [
+                "C#",
+                "MonoGame"
+            ],
+            "Date": "January 2021 - May 2021",
+            "Tools": [
+                "Visual Studio"
+            ],
             "Description": "This was a group project for one of my classes; it's also the first game I created. The game is a top down shooter where the player has to kill all enenmies in the level in order to progress to the next one. The game is won when the player passes all the levels. My task was to create a level editor in order to have other members of my group easlity create levels. I also inplemented a high score system where players who get a top 5 score can put their initials in and is displayed on other playthroughs.",
             "Links": [
                 {
@@ -111,11 +133,10 @@
                     "Link": "https://youtu.be/v1BvdzU7wZQ"
                 }
             ],
-            "Image": 
-            {
+            "Image": {
                 "src": "img/vermin.png",
                 "alt": "Volitile Vermin"
-            } 
+            }
         }
     ]
 }
