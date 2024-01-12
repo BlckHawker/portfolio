@@ -24,7 +24,7 @@ async function getBannerElement() {
             html += `<a href="${banner['Link']}">${banner['Name']}</a>`
         else {
             html += `<div class="dropdown">`;
-            html += `<a href="">${banner['Name']}</a>`;
+            html += `<a href="${banner['Link']}">${banner['Name']}</a>`;
             html += `<div class="dropdown-content">`;
 
             for (let i = 0; i < banner['Dropdown'].length; i++) {
