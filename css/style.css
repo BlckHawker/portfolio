@@ -12,9 +12,7 @@ p,
 span,
 a:link,
 td { color: white; }
-
-
-
+#bannder { z-index: 9999; }
 a:visited {
     color: rgb(173, 171, 171);
 }
