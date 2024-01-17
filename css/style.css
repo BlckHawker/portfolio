@@ -13,6 +13,7 @@ span,
 a:link,
 td {
     color: white;
+    z-index: 99999999999999;
 }
 
 a:visited {
