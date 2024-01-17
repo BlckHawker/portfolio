@@ -64,8 +64,14 @@
     ],
     "LFA": [
         "4 Buttons",
+        "Advanced Shapes and Colors",
         "Aquarium",
+        "Bakery",
+        "Bamboozled Again",
+        "Bridges",
         "Character Slots",
+        "Directional Button",
+        "Discolored Squares",
         "Drive In Window",
         "Forget Them All",
         "Forget Us Not",
@@ -73,11 +79,14 @@
         "Logical Hexabuttons",
         "Not Murder",
         "Orientation Hypercube",
+        "Overcooked",
         "Papyrus Tiles",
+        "Reflection",
         "Robot Programming",
         "Scrutiny Squares",
         "Shoddy Chess",
         "Techinical Buttons",
-        "The Arena"
+        "The Arena",
+        "Twister"
     ]
 }

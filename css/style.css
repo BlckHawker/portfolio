@@ -11,10 +11,9 @@ h4,
 p,
 span,
 a:link,
-td {
-    color: white;
-    z-index: 99999999999999;
-}
+td { color: white; }
+
+
 
 a:visited {
     color: rgb(173, 171, 171);
