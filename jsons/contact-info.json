@@ -1,9 +1,9 @@
 {
-    "Name": "Nya Bentley",
+    "Name": "Kovu Bentley",
     "Contacts": [
         {
             "Name": "Email",
-            "Link": "mailto:nyabentley@gmail.com",
+            "Link": "mailto:kovubentley@gmail.com",
             "Icon": "fas fa-envelope"
         },
         {
@@ -18,7 +18,7 @@
         },
         {
             "Name": "LinkedIn",
-            "Link": "https://www.linkedin.com/in/nya-bentley-2a370b1b5/",
+            "Link": "https://www.linkedin.com/in/kovu-bentley/",
             "Icon": "fab fa-linkedin"
         }
     ]
