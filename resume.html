@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/resume.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/resume.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script type="module" src="js/contacts.js"></script>
+    <script>
+      function redirect(str) {
+        window.location.href = str;
+      }
+      function toggleDropDown() {
+        const element = document.querySelector('.dropdown-content');
+        console.log(element.style.display);
+        element.style.display = element.style.display == 'block' ? 'none' : 'block' 
+      }
+    </script>
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="banner"></div>
     <iframe id="resume" src="./img/Resume 2024.pdf"></iframe>
-</body>
-<footer>
-    <hr>
+  </body>
+  <footer>
+    <hr />
     <div id="contactLinks"></div>
-</footer>
-
+  </footer>
 </html>

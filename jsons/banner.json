@@ -7,7 +7,6 @@
         },
         {
             "Name": "Projects",
-            "Link": "./projects.html",
             "Dropdown": [
                 {
                     "Name": "General Projects",

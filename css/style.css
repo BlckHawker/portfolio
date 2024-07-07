@@ -87,7 +87,6 @@ body {
 
 }
 
-
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -100,11 +99,6 @@ body {
 .dropdown-content a:hover {
     background-color: #ddd;
 }
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
 .dropdown:hover {
     background-color: white;
 }
@@ -112,4 +106,21 @@ body {
 .project-links {
     text-align: center;
     margin-bottom: 5%;
+}
+
+#banner button {
+    all: unset;
+    padding-block-start: 0.83em;
+    padding-block-end: 0.83em;
+    font-size: 23px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background-color: #393939;
+}
+
+#banner button:hover {
+    background-color: white;
+    color: black
 }

@@ -1,69 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="js/utils.js"></script>
     <script type="module" src="js/projects-ktane.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="css/projects-ktane.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="css/projects-ktane.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <title>Document</title>
+    <script>
+      function redirect(str) {
+        window.location.href = str;
+      }
+      function toggleDropDown() {
+        const element = document.querySelector('.dropdown-content');
+        console.log(element.style.display);
+        element.style.display = element.style.display == 'block' ? 'none' : 'block' 
+      }
+    </script>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div id="banner"></div>
     <h1>KTANE Projects</h1>
-    <p class="introduction">Keep Talking and Nobody Explodes is a co-op game where all parties must work together in
-        order to defuse a bomb. The bomb is made up of puzzles called “modules”. One person takes the role of the
-        defuser. They can interact with the bomb. Everyone else is an expert; they have access to the manuals that tell
-        how to defuse the modules. Defusers are not allowed to look at the manuals while the experts are not allowed to
-        look at the bomb. Both parties must communicate with each other in order to defuse the bomb. Each page of the
-        manual tells how to solve a specific module given some information from the bomb. Solving all modules before
-        time runs out will defuse the bomb. The modding community flourished in 2016 where players could create their
-        own modules and other tools to enhance the experience playing the game. Here are some of my contributions to the
-        community.
+    <p class="introduction">
+      Keep Talking and Nobody Explodes is a co-op game where all parties must work together in order to defuse a bomb. The bomb is made up of puzzles called “modules”. One person takes the role of the
+      defuser. They can interact with the bomb. Everyone else is an expert; they have access to the manuals that tell how to defuse the modules. Defusers are not allowed to look at the manuals while
+      the experts are not allowed to look at the bomb. Both parties must communicate with each other in order to defuse the bomb. Each page of the manual tells how to solve a specific module given
+      some information from the bomb. Solving all modules before time runs out will defuse the bomb. The modding community flourished in 2016 where players could create their own modules and other
+      tools to enhance the experience playing the game. Here are some of my contributions to the community.
     </p>
 
     <div id="projects"></div>
-    <hr>
+    <hr />
     <h2>Log File Analyzer (LFA)</h2>
     <h4 id="lfa-date">July 2023 - Present</h4>
     <p class="languages"><b>Languages/Libraries: </b>Regex, Javscript, Jquery, CSS, SVG</p>
     <p class="languages"><b>Tools: </b>Visual Studio Code</p>
-    <p class="narrow-text ">The log file analyzer is a tool created by the community that parses logs printed from
-        modules in a more digestible way. Most logs tell the user how to solve the module and the steps to get there.
-        Mods are limited in what they can log since they can only use text. LFA has the ability to add svg graphics, put
-        messages into dropdowns and code blocks, reword logging to make it more clear, and much more. Here are my
-        contributions to LFA.</p>
+    <p class="narrow-text">
+      The log file analyzer is a tool created by the community that parses logs printed from modules in a more digestible way. Most logs tell the user how to solve the module and the steps to get
+      there. Mods are limited in what they can log since they can only use text. LFA has the ability to add svg graphics, put messages into dropdowns and code blocks, reword logging to make it more
+      clear, and much more. Here are my contributions to LFA.
+    </p>
     <h4></h4>
 
-
-
     <div class="carousel" data-carousel>
-        <div class="carousel-buttons">
-            <button class="carousel-button carousel-button_previous" data-carousel-button-previous>
-                <span class="fas fa-chevron-circle-left"></span>
-            </button>
-            <button class="carousel-button carousel-button_next" data-carousel-button-next>
-                <span class="fas fa-chevron-circle-right"></span>
-            </button>
-        </div>
+      <div class="carousel-buttons">
+        <button class="carousel-button carousel-button_previous" data-carousel-button-previous>
+          <span class="fas fa-chevron-circle-left"></span>
+        </button>
+        <button class="carousel-button carousel-button_next" data-carousel-button-next>
+          <span class="fas fa-chevron-circle-right"></span>
+        </button>
+      </div>
 
-
-        <div id="lfa" class="slides" data-carousel-slides-container>
-        </div>
-        <p id="carousel-page-num" class="center-text">blah</p>
+      <div id="lfa" class="slides" data-carousel-slides-container></div>
+      <p id="carousel-page-num" class="center-text">blah</p>
     </div>
-</body>
-<footer>
-    <hr>
+  </body>
+  <footer>
+    <hr />
     <div id="contactLinks"></div>
-</footer>
-
+  </footer>
 </html>

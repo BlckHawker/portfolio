@@ -20,23 +20,18 @@ async function getBannerElement() {
     for (let i = 0; i < bannerData['Buttons'].length; i++) {
         const banner = bannerData['Buttons'][i];
 
-        if (banner['Dropdown'].length == 0)
-            html += `<a href="${banner['Link']}">${banner['Name']}</a>`
+        if (banner['Dropdown'].length == 0) {
+            html += `<button onclick="redirect('${banner['Link']}')">${banner['Name']}</button>`
+        }
         else {
-            html += `<div class="dropdown">`;
-            html += `<a href="${banner['Link']}">${banner['Name']}</a>`;
-            html += `<div class="dropdown-content">`;
-
+            html += `<button class="dropdown" onclick="toggleDropDown()">${banner['Name']}<div class="dropdown-content">`
             for (let i = 0; i < banner['Dropdown'].length; i++) {
                 const link = banner['Dropdown'][i];
                 html += `<a href="${link['Link']}">${link['Name']}</a>`;
             }
-
-            html += `</div></div>`;
+            html += `</div></button>`;
         }
-
     }
-
     return html;
 }
 
@@ -103,7 +98,5 @@ function highlightBanner(banner) {
             banner.target.style.color = "white";
         }
     };
-
 }
-
 export { getContactInfo, getBannerElement, getAboutMeInfo, highlightBanner, changeTitle };

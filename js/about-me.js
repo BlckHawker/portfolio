@@ -1,27 +1,27 @@
-import { getContactInfo, getBannerElement, highlightBanner, getAboutMeInfo, changeTitle } from './utils.js'
+import * as utils from './utils.js'
 
 window.onload = () => {
     loadContacts();
     loadBanner();
     changeName();
-    changeTitle();
+    utils.changeTitle();
 }
 
 async function loadContacts() {
-    getContactInfo().
+    utils.getContactInfo().
         then(data =>
             document.querySelector("#contactLinks").innerHTML = data);
 }
 
 async function loadBanner() {
-    await getBannerElement().then(html => { document.querySelector("#banner").innerHTML = html} );
+    await utils.getBannerElement().then(html => { document.querySelector("#banner").innerHTML = html} );
 
     let dropDown = document.querySelector(".dropdown");
-    highlightBanner(dropDown);
+    utils.highlightBanner(dropDown);
 }
 
 async function changeName() {
-    await getAboutMeInfo().then(data => {
+    await utils.getAboutMeInfo().then(data => {
         const firstName = data["FirstName"];
 
         document.querySelector('h1').innerHTML = `${firstName} Bentley`;
