@@ -1,5 +1,4 @@
 - fix ktane lfa title going over the nav bar
-- for all projects, mke it so the title is aboive languages/libraries
 - refactor lfa to not need to use the json, but rather read the folders
 - refactor projects dropdown to use click instead of hover
 - add maintainer to ktane projects
@@ -7,3 +6,5 @@
 - add hamburger left side section for each project section
 - replace resume with master resume
 - refactor website to use react
+- add filters to look for a specifc tool for projects
+- have ktane projects reverse the same ways as the other projects page

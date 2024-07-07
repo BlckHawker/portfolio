@@ -113,10 +113,10 @@ async function loadProjects() {
     function createGeneralProjectLayout(projectData) {
         let html = "";
         html += "<hr>";
-        html += `<h2>${projectData['Title']}</h2>`
-        html += `<h4>${projectData['Date']}</h4>`
+        html += ``
+        html += ``
 
-        const wordSpan = `<span>` + getLanguages(projectData) + getTools(projectData) + getDescription(projectData) + getLinks(projectData) + `</span>`;
+        const wordSpan = `<span>` + `<h2>${projectData['Title']}</h2>` + `<h4>${projectData['Date']}</h4>` + getTools(projectData) + getDescription(projectData) + getLinks(projectData) + `</span>`;
         html += `<div class="flex"> ${wordSpan}`;
 
         const image = projectData['Image'];
@@ -135,11 +135,6 @@ async function loadProjects() {
     function getTools (projectData) {
         return `<p class="tools"><b>Tools:</b> ${projectData['Tools'].join(", ")}</p>`
     }
-
-    function getLanguages(projectData) {
-        return `<p class="languages"><b>Languages/Libraries:</b> ${projectData['Languages'].join(", ")}</p>`
-    }
-
     function getDescription(projectData) {
         return `${projectData['Description'].split('\n').map(d => `<p>${d}</p>`).join("")}`;
     }

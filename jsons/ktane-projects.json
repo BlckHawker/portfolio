@@ -3,10 +3,8 @@
         {
             "Title": "Solver",
             "Date": "February 2019 - April 2022",
-            "Languages": [
-                "C#"
-            ],
             "Tools": [
+                "C#",
                 "Visual Studio",
                 "Windows Forms"
             ],
@@ -31,13 +29,11 @@
         {
             "Title": "Mods",
             "Date": "January 2023 - Present",
-            "Languages": [
+            "Tools": [
                 "C#",
                 "HTML",
                 "CSS",
-                "Javascript"
-            ],
-            "Tools": [
+                "Javascript",
                 "Unity",
                 "Visual Studio",
                 "Visual Studio Code",

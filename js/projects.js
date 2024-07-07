@@ -30,6 +30,7 @@ async function loadProjects() {
             }
 
             document.querySelector("#projects").innerHTML += `<div class="project">${html}</div>`;
+            
         });
 
     function createProjectLayout(projectData, flexClass, titleHeaderNum, dateHeaderNum, haveHR) {
@@ -38,10 +39,7 @@ async function loadProjects() {
             html += "<hr>";
         const titleHeaderElement = `h${titleHeaderNum}`;
         const dateHeaderElement = `h${dateHeaderNum}`;
-
-        html += `<${titleHeaderElement}>${projectData['Title']}</${titleHeaderElement}>`;
-        html += `<${dateHeaderElement}>${projectData['Date']}</${dateHeaderElement}>`
-        const wordSpan = `<span>` + getLanguages(projectData) + getTools(projectData) + getDescription(projectData) + getLinks(projectData) + `</span>`;
+        const wordSpan = `<span>${`<${titleHeaderElement}>${projectData['Title']}</${titleHeaderElement}>`}${`<${dateHeaderElement}>${projectData['Date']}</${dateHeaderElement}>`}${getTools(projectData)}${getDescription(projectData)}${getLinks(projectData)}</span>`;
        
         
         html += `<div class="${flexClass}"> ${wordSpan}`;
@@ -61,11 +59,7 @@ async function loadProjects() {
     }
 
     function getTools (projectData) {
-        return `<p class="tools"><b>Tools:</b> ${projectData['Tools'].join(", ")}</p>`
-    }
-
-    function getLanguages(projectData) {
-        return `<p class="languages"><b>Languages/Libraries:</b> ${projectData['Languages'].join(", ")}</p>`
+        return `<p class="tools"><b>Languages/Libraries/Tools:</b> ${projectData['Tools'].join(", ")}</p>`
     }
 
     function getDescription(projectData) {
