@@ -1,6 +1,5 @@
 - fix ktane lfa title going over the nav bar
 - refactor lfa to not need to use the json, but rather read the folders
-- refactor projects dropdown to use click instead of hover
 - add maintainer to ktane projects
 - add souvenir support to ktane projects
 - add hamburger left side section for each project section
