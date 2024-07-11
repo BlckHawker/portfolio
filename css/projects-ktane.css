@@ -1,27 +1,60 @@
-@media screen and (min-width: 1000px) {}
+@media screen and (min-width: 1000px) {
+  .flex-reverse {
+    display: flex;
+    gap: 5%;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: auto 10%;
+  }
 
-.flex {
+  .flex {
     display: flex;
     gap: 5%;
     align-items: center;
     margin-left: 10%;
     margin-right: 10%;
-    justify-content: center
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .flex,
+  .flex-reverse {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 0%;
+  }
+
+  h2 {
+    margin-top: 5%;
+    margin-bottom: 1%;
+  }
+
+  .project {
+    margin: auto 5%;
+  }
+
+  h4 {
+    margin: 0.5em auto;
+  }
 }
 
 .comparison {
-    display: flex;
-    flex-flow: row;
-    gap: 3%;
-    align-items: center;
-    margin-left: 25%;
-    margin-right: 25%;
+  display: flex;
+  flex-flow: row;
+  gap: 3%;
+  align-items: center;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
 h2,
 h4 {
-    margin-top: 1%;
-    margin-bottom: 0px;
+  margin-top: 1%;
+  margin-bottom: 0px;
 }
 
 h1,
@@ -29,110 +62,109 @@ h2,
 h4,
 .languages,
 .tools {
-    text-align: center;
+  text-align: center;
 }
 
 img {
-    width: 30%;
+  width: 30%;
 }
 
 body {
-    margin: 0%;
+  margin: 0%;
 }
 
 .comparison-text {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 h1,
 h3,
 td {
-    text-align: center;
+  text-align: center;
 }
 
 .comparison span img {
-    width: 100%;
+  width: 100%;
 }
 
 .introduction {
-    margin: auto 10% 1% 10%;
+  margin: auto 10% 1% 10%;
 }
 
 .center-text,
 .center-image {
-    text-align: center;
+  text-align: center;
 }
 
 .narrow-text {
-    margin: auto 20%;
+  margin: auto 20%;
 }
 
 #lfa hr {
-    border: 1px solid #3d85c6;
+  border: 1px solid #3d85c6;
 }
 
 .link-span {
-  
 }
 
 /* Carousel */
 
 .carousel {
-    --current-slide: 0;
-    /* we set position relative so absolute position works properly for the buttons */
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .carousel-button {
-    /* vertically centering the buttons */
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-  
-    /* basic styling */
-    padding: 0;
-    margin: 0.5rem;
-    border-radius: 50%;
-    background-color: transparent;
-    border: none;
-  
-    font-size: 1.5rem;
-    cursor: pointer;
-  
-    transition: color 0.1s;
-  }
-  
-  .carousel-button:hover {
-    color: rgba(0, 0, 0, 0.5);
-  }
+  --current-slide: 0;
+  /* we set position relative so absolute position works properly for the buttons */
+  position: relative;
+  overflow: hidden;
+}
 
-  #lfa-date {
-    margin-bottom: 1%;
+.carousel-button {
+  /* vertically centering the buttons */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+
+  /* basic styling */
+  padding: 0;
+  margin: 0.5rem;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  transition: color 0.1s;
+}
+
+.carousel-button:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#lfa-date {
+  margin-bottom: 1%;
+}
+
+.carousel-button_next {
+  right: 0;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s;
+  transform: translateX(calc(-100% * var(--current-slide)));
+}
+
+.slide {
+  flex: 0 0 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .carousel-button {
+    font-size: 2rem;
+    margin: 1rem;
   }
-  
-  .carousel-button_next {
-    right: 0;
-  }
-  
-  .slides {
-    display: flex;
-    transition: transform 0.5s;
-    transform: translateX(calc(-100% * var(--current-slide)));
-  }
-  
-  .slide {
-    flex: 0 0 100%;
-  }
-  
-  @media screen and (min-width: 768px) {
-    .carousel-button {
-      font-size: 2rem;
-      margin: 1rem;
-    }
-  }
+}
 
 #carousel-page-num {
-    margin-top: 0%;
+  margin-top: 0%;
 }

@@ -1,13 +1,15 @@
+- update souv demo to add all missing modules
 - fix ktane lfa title going over the nav bar
 - refactor lfa to not need to use the json, but rather read the folders
 - add maintainer to ktane projects
-- add souvenir support to ktane projects
 - add hamburger left side section for each project section
-- replace resume with master resume
-- refactor website to use react
+- refactor website to use compontents (not neccesarily react)
 - add filters to look for a specifc tool for projects
-- have ktane projects reverse the same ways as the other projects page
 - remove obselete code regarding first name
 - refactor onclick code for banner to no be duplicated (use queryselctor when each page is loaded. create a function in utils)
 - fix "general projects" button sharing hover with "projects" button
 - remove uncessary rules in style.css
+- update mod picture
+- update mod demostration video
+- add traumatic toybox to projects
+- make a warning that states firefox is not a supported browser

@@ -26,21 +26,18 @@ async function loadProjects() {
             for (let i = 0; i < jsonData.length; i++) {
                 const divClass = i % 2 == 0 ? "flex" : "flex-reverse";
                 const project = jsonData[i];
-                html += createProjectLayout(project, divClass, 2, 4, true);
+                html += createProjectLayout(project, divClass, true);
             }
 
             document.querySelector("#projects").innerHTML += `<div class="project">${html}</div>`;
             
         });
 
-    function createProjectLayout(projectData, flexClass, titleHeaderNum, dateHeaderNum, haveHR) {
+    function createProjectLayout(projectData, flexClass, haveHR) {
         let html = "";
         if (haveHR)
             html += "<hr>";
-        const titleHeaderElement = `h${titleHeaderNum}`;
-        const dateHeaderElement = `h${dateHeaderNum}`;
-        const wordSpan = `<span>${`<${titleHeaderElement}>${projectData['Title']}</${titleHeaderElement}>`}${`<${dateHeaderElement}>${projectData['Date']}</${dateHeaderElement}>`}${getTools(projectData)}${getDescription(projectData)}${getLinks(projectData)}</span>`;
-       
+        const wordSpan = `<span><h2>${projectData['Title']}</h2><h4>${projectData['Date']}</h4>${getTools(projectData)}${getDescription(projectData)}${getLinks(projectData)}</span>`;
         
         html += `<div class="${flexClass}"> ${wordSpan}`;
 

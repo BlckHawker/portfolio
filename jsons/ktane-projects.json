@@ -59,13 +59,23 @@
         },
         {
             "Title": "Souvenir",
-            "Date": "Finish",
+            "Date": "July 2023 - January 2024",
             "Tools": [
                 "C#",
                 "Unity",
                 "Visual Studio Code"
             ],
-            "Description": "<a href=\"https://github.com/Timwi/KtaneSouvenir\">Souvenir</a> is a module that asks various questions about other modules. Since there are always new modules being created, there's always a supply to update the module with new questions. I have added souvenir support to 28 modules with a demonstration video shown below. These integrations have significantly honed my ability to interpret and enhance code across different standards and practices."
+            "Links": [
+                {
+                    "Name": "Demonstration",
+                    "Link": "https://www.youtube.com/watch?v=g8pATKCpfsQ&ab_channel=Hawker"
+                }
+            ],
+            "Image": {
+                "src": "img/Souvenir.png",
+                "alt": "Souvenir preview image"
+            },
+            "Description": "<a href=\"https://github.com/Timwi/KtaneSouvenir\" target=\"_blank\">Souvenir</a> is a module that asks various questions about other modules. Since there are always new modules being created, there's always a supply to update the module with new questions. I have added souvenir support to 28 modules with a demonstration video shown below. These integrations have significantly honed my ability to interpret and enhance code across different standards and practices."
         }
     ],
     "LFA": [
@@ -92,7 +102,6 @@
         "Reflection",
         "Robot Programming",
         "Scrutiny Squares",
-        "Seeded Maze",
         "Seeded Maze",
         "Shoddy Chess",
         "Simon Serves",

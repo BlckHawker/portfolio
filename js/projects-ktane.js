@@ -23,7 +23,7 @@ async function loadProjects() {
         //add other projects
         let generalHtml = "";
         for(let i = 0; i < generalProjects.length; i++) {
-            generalHtml += createGeneralProjectLayout(generalProjects[i]);
+            generalHtml += createGeneralProjectLayout(generalProjects[i], i % 2 == 0 ? "flex" : "flex-reverse");
         }
 
         document.querySelector("#projects").innerHTML += `<div class="project">${generalHtml}</div>`;
@@ -110,18 +110,18 @@ async function loadProjects() {
         return `<span class="center-image"><p class="center-text comparison-text">${text}</p><img src="img/LFA/${name}/${text}.png" alt=""></span>`
     }
 
-    function createGeneralProjectLayout(projectData) {
+    function createGeneralProjectLayout(projectData, flex) {
         let html = "";
         html += "<hr>";
         html += ``
         html += ``
 
         const wordSpan = `<span>` + `<h2>${projectData['Title']}</h2>` + `<h4>${projectData['Date']}</h4>` + getTools(projectData) + getDescription(projectData) + getLinks(projectData) + `</span>`;
-        html += `<div class="flex"> ${wordSpan}`;
+        html += `<div class="${flex}"> ${wordSpan}`;
 
         const image = projectData['Image'];
-        const src = image['src']
-        const alt = image['alt'];
+        const src = image == undefined ? undefined : image['src']
+        const alt = image == undefined ? undefined : image['alt'];
 
         if (!src || !alt)
             html += `<img src="img/WIP.png" alt="This is a work in progress">`;
@@ -140,7 +140,7 @@ async function loadProjects() {
     }
 
     function getLinks(projectData) {
-        const arr = projectData['Links'].map(link => { return `<a href="${link['Link']}" target="_blank">${link['Name']}</a>` });
+        const arr = (projectData['Links'] == undefined ? [] : projectData['Links']).map(link => { return `<a href="${link['Link']}" target="_blank">${link['Name']}</a>` });
         return`<div class="project-links"><span>${arr.join(" | ")}</span></div>`;
     }
 }
