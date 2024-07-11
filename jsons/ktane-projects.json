@@ -9,7 +9,7 @@
                 "Windows Forms"
             ],
             "Description": 
-                "When I first was introduced to the modding community of KTANE, I wanted to create solvers of modules other people created given some information from the bomb. The program requries the user to have the bomb running with the program right next to it. The program then asks for edgework from the bomb, and which module the user wants to be solved. Depending on the module, the user will need to type in information from that module that for program asks for. This is when I was first learning how to program. I used the manual as instructions of how the program should work, and used Windows Forms to create GUIs for the user to input the needed information to get the correct answer."
+                "When I first was introduced to the modding community of KTANE, I wanted to create solvers of modules other people created given some information from the bomb. The program requires the user to have the bomb running with the program right next to it. The program then asks for edgework from the bomb, and which module the user wants to be solved. Depending on the module, the user will need to type in information from that module that for program asks for. This is when I was first learning how to program. I used the manual as instructions of how the program should work, and used Windows Forms to create GUIs for the user to input the needed information to get the correct answer."
             ,
             "Links": [
                 {
@@ -23,7 +23,7 @@
             ],
             "Image": {
                 "src": "img/KTANE Solver.gif",
-                "alt": "KTANE Solcer Demostration"
+                "alt": "KTANE Solver Demonstration"
             }
         },
         {
@@ -106,7 +106,7 @@
         "Shoddy Chess",
         "Simon Serves",
         "Simon Shrieks",
-        "Techinical Buttons",
+        "Technical Buttons",
         "Tetravex",
         "The Arena",
         "Twister"
