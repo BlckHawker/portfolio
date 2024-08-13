@@ -1,6 +1,28 @@
 {
     "Projects": [
         {
+            "Title": "Traumatic Toybox",
+            "Date": "January 2024 - May 2024",
+            "Tools": ["C#", "Unity", "Visual Studio"],
+            "Description": "Traumatic Toybox started initially as a project for class that focused on the production of game development. It is a first person stealth game where the protagonist is a toy that must escape a toybox full of murderous teddy bears who are out for blood (stuffing). I took the role of the Lead Programmer in which I was in charge of developing the basic movement including sprinting, crouching, and the stamina meter. I was also responsible for the enemy detection icons that appear differently if the enemy is on or off the screen.",
+            "Links": [
+                {
+                    "Name": "itch.io Page",
+                    "Link": "https://avb999.itch.io/traumatic-toybox"
+                },
+                {
+                    "Name": "Demo",
+                    "Link": "https://www.youtube.com/watch?v=yw9JfkdARDk"
+                }
+            ],
+            "Image": 
+            {
+                "src": "img/traumatic.gif",
+                "alt": "gif of protagonist trying to run away from the enemies and failing"
+            }
+
+        },
+        {
             "Title": "Foundation of Game Graphics Programming",
             "Date": "August 2023 - December 2023",
             "Tools": ["C++", "HLSL", "Direct X 11", "Visual Studio"],
