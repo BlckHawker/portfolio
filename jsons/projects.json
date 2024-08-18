@@ -1,10 +1,41 @@
 {
     "Projects": [
-
+        {
+            "Title": "Crowd Comic",
+            "Date": "May 2024 - August 2024",
+            "Tools": [
+                "Sequelize",
+                "SQL",
+                "TypeScript",
+                "JavaScript",
+                "React",
+                "Node Package Manager (NPM)",
+                "Visual Studio Code, Swagger API documentation"
+            ],
+            "Description": "Crowd Comic is a project that encourages users to collaborate with each other to create their own story. The project starts off with one panel set (root) with three hooks. A user can choose one of those hooks and create a new panel set, continuing the story.\nI had numerous responsibilities while working on this project; the main one was developing the backend with the use of Sequelize and SQL. Since I was working with team members with different levels of database knowledge, I would guide them through the process of creating a database including the creation of schemas and controllers.\nI also created API handlers and endpoints that would be used for the front end to make requests to the backend. Since, there was an abundance of endpoints that did various things; we knew that it was impractical to have people memorize them. We used Swagger.io which would auto generate documentation for each request. We would then tweak said documentation in order for it to be understandable for all developers. This saved us time from tediously writing documentation by hand.\nIt was crucial for the backend to be running in order to develop the front end. With some team members having more of a designer role, it was my responsibility to guide them through the set up. Rather than verbally instructing them how to do so, we wrote thorough documentation explaining not only the set up, but other topics related to the backend. This includes: the schema, project structure, regulations of unit tests, how to migrate data, scripts that quickly configures the database's content, etc.\nWhen the backend was finished, my team was moved to help with the functionality of the front end. Since I had previous experience with React, I helped other team members with the learning curve along with refactoring some boilerplate code into components. My main responsibility was to help with functionality of the read page. I added the logic that would either send the user to the next set of panels, or the page where they can create the next set; this all depended on if that hook lead to anywhere yet. Since this projects focusses on collaboration, I made is so the author of a panel set could not branch off of their own set of panels.\nOverall, this project allowed me to gain experience of working with a large group that has different levels of skills is a variety of topics. It would have been easy to tell my teammates to \"learn as you go\" and leave them, but I wanted to be a good leader and show by example. Instead, I took the time to answer any questions they had, and gave constructive feedback in the hopes they would improve.",
+            "Links": [
+                {
+                    "Name": "Prototype",
+                    "Link": "https://crowd-comic-site-07c5469f2ff1.herokuapp.com"
+                },
+                {
+                    "Name": "Github Organization",
+                    "Link": "https://github.com/RIT-Crowd-Comic"
+                }
+            ],
+            "Image": {
+                "src": "img/Crowd Comic.gif",
+                "alt": "gif of scrolling down the root's panel sets"
+            }
+        },
         {
             "Title": "Traumatic Toybox",
             "Date": "January 2024 - May 2024",
-            "Tools": ["C#", "Unity", "Visual Studio"],
+            "Tools": [
+                "C#",
+                "Unity",
+                "Visual Studio"
+            ],
             "Description": "Traumatic Toybox started initially as a project for class that focused on the production of game development. It is a first person stealth game where the protagonist is a toy that must escape a toybox full of murderous teddy bears who are out for blood (stuffing). I took the role of the Lead Programmer in which I was in charge of developing the basic movement including sprinting, crouching, and the stamina meter. I was also responsible for the enemy detection icons that appear differently if the enemy is on or off the screen.",
             "Links": [
                 {
@@ -16,17 +47,20 @@
                     "Link": "https://www.youtube.com/watch?v=yw9JfkdARDk"
                 }
             ],
-            "Image": 
-            {
+            "Image": {
                 "src": "img/traumatic.gif",
                 "alt": "gif of protagonist trying to run away from the enemies and failing"
             }
-
         },
         {
             "Title": "Foundation of Game Graphics Programming",
             "Date": "August 2023 - December 2023",
-            "Tools": ["C++", "HLSL", "Direct X 11", "Visual Studio"],
+            "Tools": [
+                "C++",
+                "HLSL",
+                "Direct X 11",
+                "Visual Studio"
+            ],
             "Description": "During my time at RIT, I enrolled in a class that delved deep into the world of game graphics programming. The class first focused on what meshes are as they are fundamental building blocks for 3D object rendering. The course then progressed to the development of camera systems, translating world space events into the player's perspective. The focal point was the utilization of shaders and HLSL code to govern on-screen processing, enabling the rendering of shadows, giving the illusion of depth and shine to objects, adding post-processing effects such as blurring, and much more. This class not only served as a robust introduction to game graphics but also refined crucial software engineering skills, emphasizing importance of code optimization in terms of size and speed along with the importance of communicating with various team members to build good foundation for the project.",
             "Links": [
                 {
@@ -68,7 +102,8 @@
             "Date": "December 2022",
             "Tools": [
                 "Javascript",
-                "PixiJS","Visual Studio Code"
+                "PixiJS",
+                "Visual Studio Code"
             ],
             "Description": "This project is a twist of the game Tic Tac Toe where the entire game is made up of 9 smaller tic tac toe boards. When someone wins a smaller board, the player’s symbol gets displayed over the small board. When a player wins enough boards to make a tic tac toe, they win the game.",
             "Links": [
@@ -89,7 +124,8 @@
                 "Javascript",
                 "HTML",
                 "CSS",
-                "PixiJS", "Visual Studio Code"
+                "PixiJS",
+                "Visual Studio Code"
             ],
             "Description": "This website allows users to look up Pokemon based on type, either the exact type or types that are weak or strong against a specific type. This site was made to learn how to use APIs along with extracting information from a JSON file. I also learned a little about dynamic displays since I was unaware about how much data would be extracted every time.",
             "Links": [
@@ -109,7 +145,8 @@
             "Tools": [
                 "Javascript",
                 "HTML",
-                "CSS","Visual Studio Code"
+                "CSS",
+                "Visual Studio Code"
             ],
             "Description": "Conway’s Game of Life is a zero player \"game\" that simulates how population grows/shrinks depending on adjacent neighbors. This was one of my first projects using loops in javascript to create a game-like function.",
             "Links": [
@@ -132,7 +169,8 @@
             "Date": "January 2021 - May 2021",
             "Tools": [
                 "C#",
-                "MonoGame","Visual Studio"
+                "MonoGame",
+                "Visual Studio"
             ],
             "Description": "This was a group project for one of my classes; it's also the first game I created. The game is a top down shooter where the player has to kill all enemies in the level in order to progress to the next one. The game is won when the player passes all the levels. My task was to create a level editor in order to have other members of my group easily create levels. I also implemented a high score system where players who get a top 5 score can put their initials in and is displayed on other playthroughs.",
             "Links": [
