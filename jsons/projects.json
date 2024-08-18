@@ -1,6 +1,27 @@
 {
     "Projects": [
         {
+            "Title": "Pin State",
+            "Date": "August 2024",
+            "Tools": ["Visual Studio", "C#"],
+            "Description": "This a prototype that handles the scoreboard of a game of bowling. It was made to understand the State design pattern for a class. The assignment was to refactor an old project that simulated a bowling center with multiple lanes. The original project handled the scoring in one method with multiple checks for bonuses (strikes and spares). It was clear the developers were struggling as the code is inefficient and difficult to read, which is most likely due to a time constraint. Although the state pattern increases coupling (increases the amount of files), it decreases the amount of work one file needs to do. This means each pin state can handle their own scoring, and a method can be called to get it. When the total score is needed, a loop can be ran where said method is called.\nUnfortunately, this project alone does not fully show how powerful design patterns can be. They can streamline the process of developing, and has the potential benefit of making maintainability easier. If a design pattern should be used (and which one) depends on what the project entails; it's important to not shoehorn a design pattern just for the sakes of having one as some deviations of the pattern can lead to the pattern not working as intended.",
+            "Links":
+             [
+                {
+                    "Name": "Repository",
+                    "Link": "https://github.com/BlckHawker/PinState"
+                },
+                {
+                    "Name": "Design Pattern Catalog",
+                    "Link:": "https://refactoring.guru/design-patterns/catalog"
+                }
+            ],
+            "Image": {
+                "src": "img/Pin State.gif",
+                "alt": "gif of scrolling down through the results of a bowling game"
+            }
+        },
+        {
             "Title": "Crowd Comic",
             "Date": "May 2024 - August 2024",
             "Tools": [
