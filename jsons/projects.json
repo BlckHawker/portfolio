@@ -1,5 +1,6 @@
 {
     "Projects": [
+
         {
             "Title": "Traumatic Toybox",
             "Date": "January 2024 - May 2024",
@@ -26,7 +27,7 @@
             "Title": "Foundation of Game Graphics Programming",
             "Date": "August 2023 - December 2023",
             "Tools": ["C++", "HLSL", "Direct X 11", "Visual Studio"],
-            "Description": "During my time at RIT, I enrolled in a class that delved deep into the world of game graphics programming. Beginning with a thorough exploration of meshes as the fundamental building blocks for 3D object rendering, the course progressed to the development of camera systems, translating world space events into the player's perspective. The focal point was the utilization of shaders and HLSL code to govern on-screen processing, enabling the rendering of shadows, imparting depth and shine to objects, facilitating the incorporation of post-processing effects like blurring, and much more. This class not only served as a robust introduction to game graphics but also refined crucial programming skills, emphasizing algorithm navigation and the implementation of intricate systems.",
+            "Description": "During my time at RIT, I enrolled in a class that delved deep into the world of game graphics programming. The class first focused on what meshes are as they are fundamental building blocks for 3D object rendering. The course then progressed to the development of camera systems, translating world space events into the player's perspective. The focal point was the utilization of shaders and HLSL code to govern on-screen processing, enabling the rendering of shadows, giving the illusion of depth and shine to objects, adding post-processing effects such as blurring, and much more. This class not only served as a robust introduction to game graphics but also refined crucial software engineering skills, emphasizing importance of code optimization in terms of size and speed along with the importance of communicating with various team members to build good foundation for the project.",
             "Links": [
                 {
                     "Name": "Repository",
@@ -110,7 +111,7 @@
                 "HTML",
                 "CSS","Visual Studio Code"
             ],
-            "Description": "Conway’s game is a zero player game that simulates how population grows/shrinks depending on adjacent neighbors. This was one of my first projects using loops in javascript to create a game-like function.",
+            "Description": "Conway’s Game of Life is a zero player \"game\" that simulates how population grows/shrinks depending on adjacent neighbors. This was one of my first projects using loops in javascript to create a game-like function.",
             "Links": [
                 {
                     "Name": "Website",
