@@ -80,7 +80,6 @@ async function loadProjects() {
             getFilters('languages');
             localStorage.setItem("filters", JSON.stringify(filters));
             getValidProjects();
-            // renderProjects();
         });
 }
 
@@ -176,10 +175,6 @@ function getValidProjects() {
 
     document.querySelector("#results").innerHTML = `Showing ${validProjects.length} out of ${projects.length} projects`;
     console.log(validProjects);
-    renderProjects();
-}
-
-function renderProjects() {
     const html = validProjects.map((p, ix) => createProjectLayout(p, ix % 2 == 0 ? "flex" : "flex-reverse"));
     document.querySelector("#projects").innerHTML = `<div class="project">${html.join("")}</div>`;
 }
