@@ -1,8 +1,6 @@
 import { getContactInfo, getBannerElement, highlightBanner, changeTitle } from './utils.js'
 let projects = [];
-let toolsFilters = [];
-let librariesFilters = [];
-let languagesFilters = [];
+let filters = [];
 let validProjects = [];
 
 window.onload = () => {
@@ -78,18 +76,16 @@ async function loadProjects() {
         .then((data) => {
             projects = data['Projects'].map(p => new Project({ hasHR: true, title: p['Title'], startDate: p['Start Date'], endDate: p['End Date'], tools: p['Tools'], libraries: p['Libraries'], languages: p['Languages'], image: p['Image'], description: p['Description'], links: p['Links'] }))
             const html = projects.map((p, ix) => createProjectLayout(p, ix % 2 == 0 ? "flex" : "flex-reverse"));
-            
-            getAllTools();
-            getAllLibraries();
-            getAllLanguages();
-            console.log(toolsFilters)
-            console.log(librariesFilters)
-            console.log(languagesFilters)
-
+            filters = [];
+            getFilters('tools');
+            getFilters('libraries');
+            getFilters('languages');
+            // console.log(toolsFilters)
+            // console.log(librariesFilters)
+            // console.log(languagesFilters)
 
             document.querySelector("#projects").innerHTML = `<div class="project">${html.join("")}</div>`;
 
-            
         });
 
     function createProjectLayout(project, flexClass) {
@@ -102,35 +98,72 @@ async function loadProjects() {
     }
 }
 
-function getAllTools() {
-    const arr = removeDuplicates(projects.flatMap(p => p.tools)).sort();
-    const element = document.querySelector("#tools-filter");
-    element.innerHTML = "<legend>Tools</legend>" + arr.map(tool => `<div>
-                                                <input type="checkbox" id="${tool}" name="${tool}" checked />
-                                                <label for="${tool}">${tool}</label>
-                                            </div>`).join("");
-    toolsFilters = arr.map(l => {return {name: l, checked: true}});
+function getFilters(filterType) {
+    //localStorage.setItem("filters", "[]");
+    let localStorageFilters = JSON.parse(localStorage.getItem("filters")).filter(filter => filter.type === filterType);
+    let targetedFilters = [];
+    const filterNames = removeDuplicates(projects.flatMap(project => {
+        switch (filterType) {
+            case 'tools':
+              return project.tools;
+            case 'languages':
+              return project.languages;
+            case 'libraries':
+              return project.libraries;
+          }
+    })).sort();
 
+    console.log(filterNames);
+
+    if (localStorageFilters.length == 0) {
+        targetedFilters = filterNames.map(name => { return { name, checked: true, type: filterType } });
+
+    }
+
+    else {
+        //check if new filters have been added
+        targetedFilters = filterNames.map(name => {
+            for (const tool of localStorageFilters) {
+                if (tool.name == name) {
+                    return { name, checked: tool.checked, type: filterType };
+                }
+            }
+            return { name, checked: true, type: filterType };
+        });
+
+    }
+
+    const element = document.querySelector(`#${filterType}-filter`);
+    const legend = document.createElement('legend');
+    legend.innerHTML = filterType.charAt(0).toUpperCase() + filterType.slice(1);
+    element.appendChild(legend);
+    console.log(filters);
+    targetedFilters.forEach(filter => {
+        const div = document.createElement('div');
+        const checkbox = document.createElement('input');
+        checkbox.onclick = handleClick;
+        checkbox.type = "checkbox";
+        checkbox.name = filter.name;
+        checkbox.value = filter.name;
+        checkbox.dataset['type'] = filterType;
+        checkbox.id = filter.name;
+        checkbox.checked = filter.checked;
+        const label = document.createElement('label')
+        label.htmlFor = filter.name;
+        label.appendChild(document.createTextNode(filter.name));
+        div.appendChild(checkbox);
+        div.appendChild(label);
+        element.appendChild(div);
+    });
+
+    filters = filters.concat(targetedFilters);
+    localStorage.setItem("filters", JSON.stringify(filters));
 }
 
-function getAllLibraries() {
-    const arr = removeDuplicates(projects.flatMap(p => p.libraries)).sort();
-    const element = document.querySelector("#libraries-filter");
-    element.innerHTML = "<legend>Libraries</legend>" + arr.map(library => `<div>
-                                                <input type="checkbox" id="${library}" name="${library}" checked />
-                                                <label for="${library}">${library}</label>
-                                            </div>`).join("");
-    librariesFilters = arr.map(l => {return {name: l, checked: true}});
-}
-
-function getAllLanguages() {
-    const arr = removeDuplicates(projects.flatMap(p => p.languages)).sort();
-    const element = document.querySelector("#languages-filter");
-    element.innerHTML = "<legend>Languages</legend>" + arr.map(language => `<div>
-                                                <input type="checkbox" id="${language}" name="${language}" checked />
-                                                <label for="${language}">${language}</label>
-                                            </div>`).join("");
-    languagesFilters = arr.map(l => {return {name: l, checked: true}});
+function handleClick(e) {
+    console.log(e.target.dataset['type']);
+    filters.find(filter => filter.name === e.target.name).checked == e.target.checked;
+    localStorage.setItem("filters", JSON.stringify(filters));
 }
 
 function removeDuplicates(arr) {
