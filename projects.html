@@ -1,40 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module" src="js/projects.js"></script>
-    <script type="module" src="js/utils.js"></script>
-    <script>
-      function redirect(str) {
-        window.location.href = str;
-      }
-      function toggleDropDown() {
-        const element = document.querySelector('.dropdown-content');
-        console.log(element.style.display);
-        element.style.display = element.style.display == 'block' ? 'none' : 'block' 
-      }
-    </script>
-    <link rel="stylesheet" href="./css/projects.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <div id="banner"></div>
-    <h1>Projects</h1>
-    <div id="projects"></div>
-    <div class="project"></div>
-  </body>
-  <footer>
-    <hr />
-    <div id="contactLinks"></div>
-  </footer>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script type="module" src="js/projects.js"></script>
+  <script type="module" src="js/utils.js"></script>
+  <script>
+    function redirect(str) {
+      window.location.href = str;
+    }
+    function toggleDropDown() {
+      const element = document.querySelector('.dropdown-content');
+      console.log(element.style.display);
+      element.style.display = element.style.display == 'block' ? 'none' : 'block'
+    }
+  </script>
+  <link rel="stylesheet" href="./css/projects.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="banner"></div>
+  <button id="myButton">Click me</button>
+  <div id="myPopup" class="popup">
+    <div class="popup-content">
+      <h2>Filters</h2>
+      <div id="filters">
+        <fieldset>
+          <legend>Tools</legend>
+          <div>
+            <input type="checkbox" id="scales" name="scales" checked />
+            <label for="scales">A</label>
+          </div>
+          <div>
+            <input type="checkbox" id="scales" name="scales" checked />
+            <label for="scales">B</label>
+          </div>
+          <div>
+            <input type="checkbox" id="scales" name="scales" checked />
+            <label for="scales">C</label>
+          </div>
+        </fieldset>
+      </div>
+      <button id="closePopup">
+        Close
+      </button>
+    </div>
+  </div>
+
+  <script>
+    myButton.addEventListener(
+      "click",
+      function () {
+        myPopup.classList.add("show");
+      }
+    );
+    closePopup.addEventListener(
+      "click",
+      function () {
+        myPopup.classList.remove(
+          "show"
+        );
+      }
+    );
+  </script>
+
+  <h1>Projects</h1>
+  <div id="projects"></div>
+</body>
+<footer>
+  <hr />
+  <div id="contactLinks"></div>
+</footer>
+
 </html>

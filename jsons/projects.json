@@ -2,11 +2,17 @@
     "Projects": [
         {
             "Title": "Pin State",
-            "Date": "August 2024",
-            "Tools": ["Visual Studio", "C#"],
+            "Start Date": "August 2024",
+            "End Date": "August 2024",
+            "Tools": [
+                "Visual Studio"
+            ],
+            "Languages": [
+                "C#"
+            ],
+            "Libraries": [],
             "Description": "This a prototype that handles the scoreboard of a game of bowling. It was made to understand the State design pattern for a class. The assignment was to refactor an old project that simulated a bowling center with multiple lanes. The original project handled the scoring in one method with multiple checks for bonuses (strikes and spares). It was clear the developers were struggling as the code is inefficient and difficult to read, which is most likely due to a time constraint. Although the state pattern increases coupling (increases the amount of files), it decreases the amount of work one file needs to do. This means each pin state can handle their own scoring, and a method can be called to get it. When the total score is needed, a loop can be ran where said method is called.\nUnfortunately, this project alone does not fully show how powerful design patterns can be. They can streamline the process of developing, and has the potential benefit of making maintainability easier. If a design pattern should be used (and which one) depends on what the project entails; it's important to not shoehorn a design pattern just for the sakes of having one as some deviations of the pattern can lead to the pattern not working as intended.",
-            "Links":
-             [
+            "Links": [
                 {
                     "Name": "Repository",
                     "Link": "https://github.com/BlckHawker/PinState"
@@ -23,14 +29,20 @@
         },
         {
             "Title": "Crowd Comic",
-            "Date": "May 2024 - August 2024",
-            "Tools": [
-                "Sequelize",
+            "Start Date": "May 2024",
+            "End Date": "August 2024",
+            "Languages": [
+                "C#",
                 "SQL",
                 "TypeScript",
-                "JavaScript",
-                "React",
+                "JavaScript"
+            ],
+            "Libraries": [
+                "Sequelize",
                 "Node Package Manager (NPM)",
+                "React"
+            ],
+            "Tools": [
                 "Visual Studio Code, Swagger API documentation"
             ],
             "Description": "Crowd Comic is a project that encourages users to collaborate with each other to create their own story. The project starts off with one panel set (root) with three hooks. A user can choose one of those hooks and create a new panel set, continuing the story.\nI had numerous responsibilities while working on this project; the main one was developing the backend with the use of Sequelize and SQL. Since I was working with team members with different levels of database knowledge, I would guide them through the process of creating a database including the creation of schemas and controllers.\nI also created API handlers and endpoints that would be used for the front end to make requests to the backend. Since, there was an abundance of endpoints that did various things; we knew that it was impractical to have people memorize them. We used Swagger.io which would auto generate documentation for each request. We would then tweak said documentation in order for it to be understandable for all developers. This saved us time from tediously writing documentation by hand.\nIt was crucial for the backend to be running in order to develop the front end. With some team members having more of a designer role, it was my responsibility to guide them through the set up. Rather than verbally instructing them how to do so, we wrote thorough documentation explaining not only the set up, but other topics related to the backend. This includes: the schema, project structure, regulations of unit tests, how to migrate data, scripts that quickly configures the database's content, etc.\nWhen the backend was finished, my team was moved to help with the functionality of the front end. Since I had previous experience with React, I helped other team members with the learning curve along with refactoring some boilerplate code into components. My main responsibility was to help with functionality of the read page. I added the logic that would either send the user to the next set of panels, or the page where they can create the next set; this all depended on if that hook lead to anywhere yet. Since this projects focusses on collaboration, I made is so the author of a panel set could not branch off of their own set of panels.\nOverall, this project allowed me to gain experience of working with a large group that has different levels of skills is a variety of topics. It would have been easy to tell my teammates to \"learn as you go\" and leave them, but I wanted to be a good leader and show by example. Instead, I took the time to answer any questions they had, and gave constructive feedback in the hopes they would improve.",
@@ -51,9 +63,13 @@
         },
         {
             "Title": "Traumatic Toybox",
-            "Date": "January 2024 - May 2024",
+            "Start Date": "January 2024",
+            "End Date": "May 2024",
+            "Languages": [
+                "C#"
+            ],
+            "Libraries": [],
             "Tools": [
-                "C#",
                 "Unity",
                 "Visual Studio"
             ],
@@ -75,11 +91,16 @@
         },
         {
             "Title": "Foundation of Game Graphics Programming",
-            "Date": "August 2023 - December 2023",
-            "Tools": [
+            "Start Date": "August 2023",
+            "End Date": "December 2023",
+            "Languages": [
                 "C++",
-                "HLSL",
-                "Direct X 11",
+                "HLSL"
+            ],
+            "Libraries": [
+                "Direct X 11"
+            ],
+            "Tools": [
                 "Visual Studio"
             ],
             "Description": "During my time at RIT, I enrolled in a class that delved deep into the world of game graphics programming. The class first focused on what meshes are as they are fundamental building blocks for 3D object rendering. The course then progressed to the development of camera systems, translating world space events into the player's perspective. The focal point was the utilization of shaders and HLSL code to govern on-screen processing, enabling the rendering of shadows, giving the illusion of depth and shine to objects, adding post-processing effects such as blurring, and much more. This class not only served as a robust introduction to game graphics but also refined crucial software engineering skills, emphasizing importance of code optimization in terms of size and speed along with the importance of communicating with various team members to build good foundation for the project.",
@@ -96,9 +117,12 @@
         },
         {
             "Title": "Casper's Cat Cafe",
-            "Date": "January 2023 - April 2023",
+            "Start Date": "January 2023",
+            "End Date": "April 2023",
+            "Languages": [
+                "C#"
+            ],
             "Tools": [
-                "C#",
                 "Visual Studio",
                 "Unity"
             ],
@@ -120,10 +144,15 @@
         },
         {
             "Title": "Ultimate Tic Tac Toe",
-            "Date": "December 2022",
+            "Start Date": "December 2022",
+            "End Date": "December 2022",
+            "Languages": [
+                "Javascript"
+            ],
+            "Libraries": [
+                "PixiJS"
+            ],
             "Tools": [
-                "Javascript",
-                "PixiJS",
                 "Visual Studio Code"
             ],
             "Description": "This project is a twist of the game Tic Tac Toe where the entire game is made up of 9 smaller tic tac toe boards. When someone wins a smaller board, the player’s symbol gets displayed over the small board. When a player wins enough boards to make a tic tac toe, they win the game.",
@@ -140,12 +169,17 @@
         },
         {
             "Title": "Pokemon Finder",
-            "Date": "November 2022",
-            "Tools": [
+            "Start Date": "November 2022",
+            "End Date": "November 2022",
+            "Languages": [
                 "Javascript",
                 "HTML",
-                "CSS",
-                "PixiJS",
+                "CSS"
+            ],
+            "Libraries": [
+                "PixiJS"
+            ],
+            "Tools": [
                 "Visual Studio Code"
             ],
             "Description": "This website allows users to look up Pokemon based on type, either the exact type or types that are weak or strong against a specific type. This site was made to learn how to use APIs along with extracting information from a JSON file. I also learned a little about dynamic displays since I was unaware about how much data would be extracted every time.",
@@ -162,11 +196,15 @@
         },
         {
             "Title": "Conway’s Game of Life",
-            "Date": "October 2022",
-            "Tools": [
+            "Start Date": "October 2022",
+            "End Date": "October 2022",
+            "Languages": [
                 "Javascript",
                 "HTML",
-                "CSS",
+                "CSS"
+            ],
+            "Libraries": [],
+            "Tools": [
                 "Visual Studio Code"
             ],
             "Description": "Conway’s Game of Life is a zero player \"game\" that simulates how population grows/shrinks depending on adjacent neighbors. This was one of my first projects using loops in javascript to create a game-like function.",
@@ -187,10 +225,15 @@
         },
         {
             "Title": "Volatile Vermin",
-            "Date": "January 2021 - May 2021",
+            "Start Date": "January 2021",
+            "End Date": "May 2021",
+            "Languages": [
+                "C#"
+            ],
+            "Libraries": [
+                "MonoGame"
+            ],
             "Tools": [
-                "C#",
-                "MonoGame",
                 "Visual Studio"
             ],
             "Description": "This was a group project for one of my classes; it's also the first game I created. The game is a top down shooter where the player has to kill all enemies in the level in order to progress to the next one. The game is won when the player passes all the levels. My task was to create a level editor in order to have other members of my group easily create levels. I also implemented a high score system where players who get a top 5 score can put their initials in and is displayed on other playthroughs.",
