@@ -76,16 +76,12 @@ async function loadProjects() {
         .then((data) => {
             projects = data['Projects'].map(p => new Project({ hasHR: true, title: p['Title'], startDate: p['Start Date'], endDate: p['End Date'], tools: p['Tools'], libraries: p['Libraries'], languages: p['Languages'], image: p['Image'], description: p['Description'], links: p['Links'] }))
             const html = projects.map((p, ix) => createProjectLayout(p, ix % 2 == 0 ? "flex" : "flex-reverse"));
+            document.querySelector("#projects").innerHTML = `<div class="project">${html.join("")}</div>`;
             filters = [];
             getFilters('tools');
             getFilters('libraries');
             getFilters('languages');
-            // console.log(toolsFilters)
-            // console.log(librariesFilters)
-            // console.log(languagesFilters)
-
-            document.querySelector("#projects").innerHTML = `<div class="project">${html.join("")}</div>`;
-
+            localStorage.setItem("filters", JSON.stringify(filters));
         });
 
     function createProjectLayout(project, flexClass) {
@@ -99,25 +95,21 @@ async function loadProjects() {
 }
 
 function getFilters(filterType) {
-    //localStorage.setItem("filters", "[]");
-    let localStorageFilters = JSON.parse(localStorage.getItem("filters")).filter(filter => filter.type === filterType);
+    let localStorageFilters = JSON.parse(localStorage.getItem("filters") || "[]").filter(filter => filter.type === filterType);
     let targetedFilters = [];
     const filterNames = removeDuplicates(projects.flatMap(project => {
         switch (filterType) {
             case 'tools':
-              return project.tools;
+                return project.tools;
             case 'languages':
-              return project.languages;
+                return project.languages;
             case 'libraries':
-              return project.libraries;
-          }
+                return project.libraries;
+        }
     })).sort();
-
-    console.log(filterNames);
 
     if (localStorageFilters.length == 0) {
         targetedFilters = filterNames.map(name => { return { name, checked: true, type: filterType } });
-
     }
 
     else {
@@ -157,12 +149,10 @@ function getFilters(filterType) {
     });
 
     filters = filters.concat(targetedFilters);
-    localStorage.setItem("filters", JSON.stringify(filters));
 }
 
 function handleClick(e) {
-    console.log(e.target.dataset['type']);
-    filters.find(filter => filter.name === e.target.name).checked == e.target.checked;
+    filters.find(filter => filter.name === e.target.name).checked = e.target.checked;
     localStorage.setItem("filters", JSON.stringify(filters));
 }
 
