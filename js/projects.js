@@ -97,6 +97,7 @@ async function loadProjects() {
                 filters.forEach(filter => { filter.checked = true; });
                 filterCheckboxes.forEach(checkbox => { checkbox.checked = true; })
                 getValidProjects();
+                localStorage.setItem("filters", JSON.stringify(filters));
                 console.log(filterCheckboxes);
             };
 
