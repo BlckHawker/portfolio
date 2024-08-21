@@ -26,41 +26,23 @@
 
 <body>
   <div id="banner"></div>
-  <button id="myButton"> 
+  <button id="settings-button"> 
     <img src="img/settings.png" alt="setting"/> 
   </button>
   <div id="myPopup" class="popup">
     <div class="popup-content">
-      <button>Restore Defaults</button>
+      <button id="restore-filter-button">Restore Defaults</button>
       <h2>Filters</h2>
       <div id="filters">
         <fieldset id="tools-filter"></fieldset>
         <fieldset id="libraries-filter"></fieldset>
         <fieldset id="languages-filter"></fieldset>
       </div>
-      <button id="closePopup">
+      <button id="close-button">
         Close
       </button>
     </div>
   </div>
-
-  <script>
-    myButton.addEventListener(
-      "click",
-      function () {
-        myPopup.classList.add("show");
-      }
-    );
-    closePopup.addEventListener(
-      "click",
-      function () {
-        myPopup.classList.remove(
-          "show"
-        );
-      }
-    );
-  </script>
-
   <h1>Projects</h1>
   <p id="results">Showing x out of y projects</p>
   <div id="projects"></div>

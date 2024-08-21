@@ -8,6 +8,9 @@ window.onload = () => {
     loadContacts();
     loadBanner();
     changeTitle();
+    const popUp = document.querySelector('#myPopup');
+    document.querySelector('#settings-button').onclick = () => { popUp.classList.add("show"); }
+    document.querySelector('#close-button').onclick = () => { popUp.classList.remove("show"); }
 }
 
 class Project {
@@ -80,6 +83,23 @@ async function loadProjects() {
             getFilters('languages');
             localStorage.setItem("filters", JSON.stringify(filters));
             getValidProjects();
+            const filterIds = ['tools-filter', 'libraries-filter', 'languages-filter'];
+            const filterCheckboxes = [];
+            filterIds.forEach(id => {
+                for (const child of document.querySelector(`#${id}`).children) {
+                    if (child.tagName === 'DIV') {
+                        filterCheckboxes.push(child.children[0]);
+                    }
+                }
+            });
+
+            document.querySelector('#restore-filter-button').onclick = () => {
+                filters.forEach(filter => { filter.checked = true; });
+                filterCheckboxes.forEach(checkbox => { checkbox.checked = true; })
+                getValidProjects();
+                console.log(filterCheckboxes);
+            };
+
         });
 }
 

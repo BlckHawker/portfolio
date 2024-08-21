@@ -74,7 +74,7 @@ h1 {
     margin-block-start: 0px;
 }
 
-#myButton {
+#settings-button {
     padding: 0;
     width: 100px;
     border: none;
@@ -82,7 +82,7 @@ h1 {
     margin-left: 90%;
 }
 
-#myButton img {
+#settings-button img {
     margin-top: 10%;
 }
 
