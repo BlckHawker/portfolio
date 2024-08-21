@@ -123,6 +123,7 @@
             "Languages": [
                 "C#"
             ],
+            "Libraries": [],
             "Tools": [
                 "Visual Studio",
                 "Unity"

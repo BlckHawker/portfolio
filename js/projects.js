@@ -1,7 +1,7 @@
 import { getContactInfo, getBannerElement, highlightBanner, changeTitle } from './utils.js'
 let projects = [];
 let filters = [];
-let validProjects = [];
+let validProjects = []; //projects that match the filter
 
 window.onload = () => {
     loadProjects();
@@ -75,23 +75,22 @@ async function loadProjects() {
         })
         .then((data) => {
             projects = data['Projects'].map(p => new Project({ hasHR: true, title: p['Title'], startDate: p['Start Date'], endDate: p['End Date'], tools: p['Tools'], libraries: p['Libraries'], languages: p['Languages'], image: p['Image'], description: p['Description'], links: p['Links'] }))
-            const html = projects.map((p, ix) => createProjectLayout(p, ix % 2 == 0 ? "flex" : "flex-reverse"));
-            document.querySelector("#projects").innerHTML = `<div class="project">${html.join("")}</div>`;
-            filters = [];
             getFilters('tools');
             getFilters('libraries');
             getFilters('languages');
             localStorage.setItem("filters", JSON.stringify(filters));
+            getValidProjects();
+            // renderProjects();
         });
+}
 
-    function createProjectLayout(project, flexClass) {
-        let html = "";
-        if (project.hasHR)
-            html += "<hr>";
-        const wordSpan = `<span><h2>${project.title}</h2><h4>${project.getProjectTimeFrame()}</h4>${project.getToolLibrariesLanguages()}${project.getDescription()}${project.getLinks()}</span>`;
-        html += `<div class="${flexClass}"> ${wordSpan}${project.getImage()}</div>`;
-        return html;
-    }
+function createProjectLayout(project, flexClass) {
+    let html = "";
+    if (project.hasHR)
+        html += "<hr>";
+    const wordSpan = `<span><h2>${project.title}</h2><h4>${project.getProjectTimeFrame()}</h4>${project.getToolLibrariesLanguages()}${project.getDescription()}${project.getLinks()}</span>`;
+    html += `<div class="${flexClass}"> ${wordSpan}${project.getImage()}</div>`;
+    return html;
 }
 
 function getFilters(filterType) {
@@ -129,11 +128,10 @@ function getFilters(filterType) {
     const legend = document.createElement('legend');
     legend.innerHTML = filterType.charAt(0).toUpperCase() + filterType.slice(1);
     element.appendChild(legend);
-    console.log(filters);
     targetedFilters.forEach(filter => {
         const div = document.createElement('div');
         const checkbox = document.createElement('input');
-        checkbox.onclick = handleClick;
+        checkbox.onclick = checkboxClick;
         checkbox.type = "checkbox";
         checkbox.name = filter.name;
         checkbox.value = filter.name;
@@ -151,9 +149,45 @@ function getFilters(filterType) {
     filters = filters.concat(targetedFilters);
 }
 
-function handleClick(e) {
+function getValidProjects() {
+    validProjects = [];
+    for (const project of projects) {
+        for (const filter of filters) {
+            if (!filter.checked)
+                continue;
+            let applicableProject = false;
+            switch (filter.type) {
+                case 'tools':
+                    applicableProject = project.tools.includes(filter.name);
+                    break;
+                case 'languages':
+                    applicableProject = project.languages.includes(filter.name);
+                    break;
+                case 'libraries':
+                    applicableProject = project.libraries.includes(filter.name);
+                    break;
+            }
+            if (applicableProject) {
+                validProjects.push(project);
+                break;
+            }
+        }
+    }
+
+    document.querySelector("#results").innerHTML = `Showing ${validProjects.length} out of ${projects.length} projects`;
+    console.log(validProjects);
+    renderProjects();
+}
+
+function renderProjects() {
+    const html = validProjects.map((p, ix) => createProjectLayout(p, ix % 2 == 0 ? "flex" : "flex-reverse"));
+    document.querySelector("#projects").innerHTML = `<div class="project">${html.join("")}</div>`;
+}
+
+function checkboxClick(e) {
     filters.find(filter => filter.name === e.target.name).checked = e.target.checked;
     localStorage.setItem("filters", JSON.stringify(filters));
+    getValidProjects();
 }
 
 function removeDuplicates(arr) {
