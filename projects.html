@@ -31,21 +31,9 @@
     <div class="popup-content">
       <h2>Filters</h2>
       <div id="filters">
-        <fieldset>
-          <legend>Tools</legend>
-          <div>
-            <input type="checkbox" id="scales" name="scales" checked />
-            <label for="scales">A</label>
-          </div>
-          <div>
-            <input type="checkbox" id="scales" name="scales" checked />
-            <label for="scales">B</label>
-          </div>
-          <div>
-            <input type="checkbox" id="scales" name="scales" checked />
-            <label for="scales">C</label>
-          </div>
-        </fieldset>
+        <fieldset id="tools-filter"></fieldset>
+        <fieldset id="libraries-filter"></fieldset>
+        <fieldset id="languages-filter"></fieldset>
       </div>
       <button id="closePopup">
         Close
@@ -71,6 +59,7 @@
   </script>
 
   <h1>Projects</h1>
+  <p id="results">failed to load projects</p>
   <div id="projects"></div>
 </body>
 <footer>
