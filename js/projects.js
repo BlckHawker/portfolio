@@ -1,7 +1,9 @@
 import { getContactInfo, getBannerElement, highlightBanner, changeTitle } from './utils.js'
-let projects = [];
-let filters = [];
+let projects = []; //projects objects
 let validProjects = []; //projects that match the filter
+let filters = []; //filter objects
+let filterCheckboxes = []; //all filter checkbox element
+
 
 window.onload = () => {
     loadProjects();
@@ -83,22 +85,12 @@ async function loadProjects() {
             getFilters('languages');
             localStorage.setItem("filters", JSON.stringify(filters));
             getValidProjects();
-            const filterIds = ['tools-filter', 'libraries-filter', 'languages-filter'];
-            const filterCheckboxes = [];
-            filterIds.forEach(id => {
-                for (const child of document.querySelector(`#${id}`).children) {
-                    if (child.tagName === 'DIV') {
-                        filterCheckboxes.push(child.children[0]);
-                    }
-                }
-            });
-
             document.querySelector('#restore-filter-button').onclick = () => {
+                console.log(filterCheckboxes);
                 filters.forEach(filter => { filter.checked = true; });
                 filterCheckboxes.forEach(checkbox => { checkbox.checked = true; })
                 getValidProjects();
                 localStorage.setItem("filters", JSON.stringify(filters));
-                console.log(filterCheckboxes);
             };
 
         });
@@ -164,6 +156,7 @@ function getFilters(filterType) {
         div.appendChild(checkbox);
         div.appendChild(label);
         element.appendChild(div);
+        filterCheckboxes.push(checkbox);
     });
 
     filters = filters.concat(targetedFilters);
