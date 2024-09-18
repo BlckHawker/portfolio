@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="js/project-ideas.js"></script>
+    <script type="module" src="js/utils.js"></script>
+    <script>
+        function redirect(str) {
+            window.location.href = str;
+        }
+        function toggleDropDown() {
+            const element = document.querySelector('.dropdown-content');
+            console.log(element.style.display);
+            element.style.display = element.style.display == 'block' ? 'none' : 'block'
+        }
+    </script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/project-ideas.css">
+</head>
+
+<body>
+    <div id="banner"></div>
+    <h1>Ideas</h1>
+    <div id="ideas">
+        <p>These are projects ideas that I have come up with and will hopefully implement one day. I wonder if having
+            them
+            publicly available for anyone to see will give me more of an urgency to start/finish them. Speaking of them
+            being publicly available, feel free to do any of these project for your own. If you do so, please message me
+            on
+            your progress/experience. I want to see how people grow as developer/designers.</p>
+    </div>
+</body>
+<footer>
+    <hr />
+    <div id="contactLinks"></div>
+</footer>
+
+</html>
