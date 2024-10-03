@@ -17,6 +17,12 @@
         {
             "Title": "Rock Paper Scissors Boids",
             "Description": "At RIT, I took a class that taught me how to use Unity, mainly scripting. One of the projects I was assigned was to create a project use boids (artificial intelligence to simulate free will of objects, mainly through movement). The theme of my project, at the time, was Human vs Zombies (a large game of tag where the zombies are it). The humans' only job was to run away, while the zombies' job was to chase the humans. There was nothing for the \"player\" to do besides watch the simulation run.\nI have the idea of changing the theme to Rock Paper Scissors where each boids would run away and chase each target. When a collision happens, a boid will change to another team. For example, rocks colliding to paper will turn into paper. I am planning to add sliders that will change the stats of each boids including but not limited to: movmement speed, the radius of their vision, how much they prefer chasing something rather than running away, etc. The player will also have the option to place obstacles anywhere on the map that all boids will need to avoid in order to not get deleted."
+        },
+        {
+            "Title": "Dynamic Binary Puzzle Solver",
+            "Description": "I created a <a href=\"https://www.puzzle-binairo.com\" target=\"_blank\">Binary Puzzle (also known as Binario)</a> solver during my <a href=\"/projects-ktane.html\" target=\"_blank\">KTANE solver saga</a>. The KTANE version always generated a 6x6 puzzle, but I have recently started solving some with a larger size. I want to challenge myself by making a solver where the dimensions are not constant. This will force me to think about what rules work for one size and not for others and apply them in the appropriate context."
         }
+
+        
     ]
 }
