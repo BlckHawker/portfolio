@@ -29,6 +29,10 @@
         {
             "Title": "Sudoku Solver",
             "Description": "I have learned to do Sudoku puzzles at a very young age. However, I never found myself finishing most of them. I found myself being very slow at deducing what the number of each cell was as I needed to slowly look at the respective row, column, and block. I always wondered if there were more sophisticated deductions, and I think making a solver will aid me in answering that question."
+        },
+        {
+            "Title": "1 Player Ultimate Tic Tac Toe",
+            "Description": "In 2022, I made <a href=\"/projects.html\" target=\"_blank\">Ultimate Tic Tac Toe</a> where one cell of the game is its own version of tic tac toe. I made it two players as it was a school project and I was pressed for time. I always wanted to make it a single-player game to challenge my skills of creating AI that replicates playing against a real person.\nI have thought of using different algorithms to achieve this goal and have different levels of difficulty. I thinking of having \"Easy\" perform random moves and harder difficulties using mini-maxing with different parameters."
         }
 
         
