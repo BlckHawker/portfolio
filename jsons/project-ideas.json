@@ -25,6 +25,10 @@
         {
             "Title": "Budget Tracker",
             "Description": "I like my life to be organized, and technology has made that job easier. This applies to budgeting apps including a wishlist function. However, a big task like this can be done in several ways, and I never found an app that exactly fits my preferences; not to mention one that is free without some form of restriction.\nI want to be able to have items sectioned into categories (Needs, Wants, Savings, etc). These categories can then either have items or more subcategories, making a tree structure with a limited depth. The user will have the option of depositing or withdrawing money to/from a certain item/category along with notes. I'm planning on having depositing be customizable where the user has the option of automatically giving a certain category a percentage of the deposit. Or have a priority system where all the money goes into a certain category until the \"goal amount\" is reached. Then all deposited money will go into the next category. I also want each category to have its own stats section where users can see what they're spending most of their money on."
+        },
+        {
+            "Title": "Sudoku Solver",
+            "Description": "I have learned to do Sudoku puzzles at a very young age. However, I never found myself finishing most of them. I found myself being very slow at deducing what the number of each cell was as I needed to slowly look at the respective row, column, and block. I always wondered if there were more sophisticated deductions, and I think making a solver will aid me in answering that question."
         }
 
         
