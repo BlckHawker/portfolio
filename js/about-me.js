@@ -7,17 +7,14 @@ window.onload = () => {
     utils.changeTitle();
 }
 
+async function loadBanner() {
+    await utils.getBannerElement().then(html => { document.querySelector("#banner").innerHTML = html} );
+}
+
 async function loadContacts() {
     utils.getContactInfo().
         then(data =>
             document.querySelector("#contactLinks").innerHTML = data);
-}
-
-async function loadBanner() {
-    await utils.getBannerElement().then(html => { document.querySelector("#banner").innerHTML = html} );
-
-    let dropDown = document.querySelector(".dropdown");
-    utils.highlightBanner(dropDown);
 }
 
 async function changeName() {

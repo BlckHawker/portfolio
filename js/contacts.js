@@ -1,4 +1,4 @@
-import { getContactInfo, getBannerElement, highlightBanner } from './utils.js'
+import { getContactInfo, getBannerElement } from './utils.js'
 
 window.onload = () => {
     loadContacts();
@@ -13,7 +13,4 @@ async function loadContacts() {
 
 async function loadBanner() {
     await getBannerElement().then(html => { document.querySelector("#banner").innerHTML = html} );
-
-    let dropDown = document.querySelector(".dropdown");
-    highlightBanner(dropDown);
 }

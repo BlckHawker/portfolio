@@ -1,4 +1,4 @@
-import { getContactInfo, getBannerElement, highlightBanner, changeTitle } from './utils.js'
+import { getContactInfo, getBannerElement, changeTitle } from './utils.js'
 
 var carosolIndex;
 
@@ -153,7 +153,4 @@ async function loadContacts() {
 
 async function loadBanner() {
     await getBannerElement().then(html => { document.querySelector("#banner").innerHTML = html} );
-
-    let dropDown = document.querySelector(".dropdown");
-    highlightBanner(dropDown);
 }

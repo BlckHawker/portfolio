@@ -15,9 +15,6 @@ async function loadContacts() {
 
 async function loadBanner() {
     await utils.getBannerElement().then(html => { document.querySelector("#banner").innerHTML = html} );
-
-    let dropDown = document.querySelector(".dropdown");
-    utils.highlightBanner(dropDown);
 }
 
 async function loadProjects() {

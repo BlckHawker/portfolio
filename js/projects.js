@@ -1,4 +1,4 @@
-import { getContactInfo, getBannerElement, highlightBanner, changeTitle } from "./utils.js";
+import { getContactInfo, getBannerElement, changeTitle } from "./utils.js";
 let projects = []; //projects objects
 let validProjects = []; //projects that match the filter
 let filters = []; //filter objects
@@ -75,9 +75,6 @@ async function loadBanner() {
   await getBannerElement().then((html) => {
     document.querySelector("#banner").innerHTML = html;
   });
-
-  let dropDown = document.querySelector(".dropdown");
-  highlightBanner(dropDown);
 }
 
 async function loadProjects() {

@@ -20,13 +20,15 @@ async function getBannerElement() {
     for (let i = 0; i < bannerData['Buttons'].length; i++) {
         const banner = bannerData['Buttons'][i];
 
-        if (banner['Dropdown'].length == 0) {
+        const dropdown = banner['Dropdown'];
+
+        if (dropdown.length == 0) {
             html += `<button onclick="redirect('${banner['Link']}')">${banner['Name']}</button>`
         }
         else {
-            html += `<button class="dropdown" onclick="toggleDropDown()">${banner['Name']}<div class="dropdown-content">`
-            for (let i = 0; i < banner['Dropdown'].length; i++) {
-                const link = banner['Dropdown'][i];
+            html += `<button class="dropdown" onclick="toggleDropDown()">${banner['Name']}<div class="dropdown-content">`;
+            for (let i = 0; i < dropdown.length; i++) {
+                const link = dropdown[i];
                 html += `<a href="${link['Link']}">${link['Name']}</a>`;
             }
             html += `</div></button>`;
@@ -75,28 +77,4 @@ async function loadAboutMeInfo() {
         });
 }
 
-function highlightBanner(banner) {
-    banner.onmouseover = (banner) => {
-        const child = banner.target.querySelector("a");
-
-        if (child) {
-            child.style.backgroundColor = "#fff";
-            child.style.color = "#393939";
-            banner.target.style.backgroundColor = "#fff";
-            banner.target.style.color = "#393939";
-        }
-
-    };
-
-    banner.onmouseout = (banner) => {
-        const child = banner.target.querySelector("a");
-
-        if (child) {
-            child.style.backgroundColor = "#393939";
-            child.style.color = "white";
-            banner.target.style.backgroundColor = "#393939";
-            banner.target.style.color = "white";
-        }
-    };
-}
-export { getContactInfo, getBannerElement, getAboutMeInfo, highlightBanner, changeTitle };
+export { getContactInfo, getBannerElement, getAboutMeInfo, changeTitle };
