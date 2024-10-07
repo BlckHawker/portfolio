@@ -20,7 +20,7 @@
         },
         {
             "Title": "Dynamic Binary Puzzle Solver",
-            "Description": "I created a <a href=\"https://www.puzzle-binairo.com\" target=\"_blank\">Binary Puzzle (also known as Binario)</a> solver during my <a href=\"/projects-ktane.html\" target=\"_blank\">KTANE solver saga</a>. The KTANE version always generated a 6x6 puzzle, but I have recently started solving some with a larger size. I want to challenge myself by making a solver where the dimensions are not constant. This will force me to think about what rules work for one size and not for others and apply them in the appropriate context."
+            "Description": "I created a <a href=\"https://www.puzzle-binairo.com\" target=\"_blank\">Binary Puzzle (also known as Binario)</a> solver during my <a href=\"/portfolio/projects-ktane.html\" target=\"_blank\">KTANE solver saga</a>. The KTANE version always generated a 6x6 puzzle, but I have recently started solving some with a larger size. I want to challenge myself by making a solver where the dimensions are not constant. This will force me to think about what rules work for one size and not for others and apply them in the appropriate context."
         },
         {
             "Title": "Budget Tracker",
@@ -32,7 +32,7 @@
         },
         {
             "Title": "1 Player Ultimate Tic Tac Toe",
-            "Description": "In 2022, I made <a href=\"/projects.html\" target=\"_blank\">Ultimate Tic Tac Toe</a> where one cell of the game is its own version of tic tac toe. I made it two players as it was a school project and I was pressed for time. I always wanted to make it a single-player game to challenge my skills of creating AI that replicates playing against a real person.\nI have thought of using different algorithms to achieve this goal and have different levels of difficulty. I thinking of having \"Easy\" perform random moves and harder difficulties using mini-maxing with different parameters."
+            "Description": "In 2022, I made <a href=\"/portfolio/projects.html\" target=\"_blank\">Ultimate Tic Tac Toe</a> where one cell of the game is its own version of tic tac toe. I made it two players as it was a school project and I was pressed for time. I always wanted to make it a single-player game to challenge my skills of creating AI that replicates playing against a real person.\nI have thought of using different algorithms to achieve this goal and have different levels of difficulty. I thinking of having \"Easy\" perform random moves and harder difficulties using mini-maxing with different parameters."
         }
 
         
