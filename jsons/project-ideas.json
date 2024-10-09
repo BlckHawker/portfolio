@@ -12,8 +12,6 @@
             "Title": "Q Learning Rubik's Cube",
             "Description": "I was always mesmerized with Rubik's Cubes. When I finally learned an algorithm that guarantees the cube would be solved, I felt a great wave of pride. Although I never had the time to get into the hobby myself, I enjoy watching competitive cubing. I find the idea of memorizing patterns in order to optimize the solving process fascinating. A few years later, I took a class that focused on the use AI in games. We learned about neural networking and Q learning (a machine learning algorithm where the machine iteratively learns how to solve something and improves over time). I figured a rubik's cube would be a great puzzle to understand the algorithm more."
         },
-
-        
         {
             "Title": "Rock Paper Scissors Boids",
             "Description": "At RIT, I took a class that taught me how to use Unity, mainly scripting. One of the projects I was assigned was to create a project use boids (artificial intelligence to simulate free will of objects, mainly through movement). The theme of my project, at the time, was Human vs Zombies (a large game of tag where the zombies are it). The humans' only job was to run away, while the zombies' job was to chase the humans. There was nothing for the \"player\" to do besides watch the simulation run.\nI have the idea of changing the theme to Rock Paper Scissors where each boids would run away and chase each target. When a collision happens, a boid will change to another team. For example, rocks colliding to paper will turn into paper. I am planning to add sliders that will change the stats of each boids including but not limited to: movement speed, the radius of their vision, how much they prefer chasing something rather than running away, etc. The player will also have the option to place obstacles anywhere on the map that all boids will need to avoid in order to not get deleted."
@@ -33,8 +31,10 @@
         {
             "Title": "1 Player Ultimate Tic Tac Toe",
             "Description": "In 2022, I made <a href=\"/portfolio/projects.html\" target=\"_blank\">Ultimate Tic Tac Toe</a> where one cell of the game is its own version of tic tac toe. I made it two players as it was a school project and I was pressed for time. I always wanted to make it a single-player game to challenge my skills of creating AI that replicates playing against a real person.\nI have thought of using different algorithms to achieve this goal and have different levels of difficulty. I thinking of having \"Easy\" perform random moves and harder difficulties using mini-maxing with different parameters."
+        },
+        {
+            "Title":"Tiny Tower Full Stack Project",
+            "Description": "Tiny Tower is an idle mobile game where the user is a manager of a multi-purpose tower. Each floor of the tower either sells products, or are resident floors for employees of the product floors. Each employee has stats that affect how well they do their job on certain floors. I've been playing this game on and off for over a decade. Throughout that time, I have thought of creating a \"solver\" that would tell the user the best optimization of floors to buy and where to hire people. Although I still like this idea and plan to implement it, it's too opened minded as there are a lot of factors in play. It would be better to create a simulation of the game where the user can easily put their data in first, and then start working on an optimization.\nI could make the simulation a Windows Form GUI the same way I did for my KTANE Solver project, but that seems too easy (and not that pretty). I want this project to challenge my front-end UI/UX skills in order to get the desired information from the user. I would also like to create a backend using a database like Postgres in order to hold said information."
         }
-
-        
     ]
 }
