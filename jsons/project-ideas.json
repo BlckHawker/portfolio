@@ -39,6 +39,10 @@
         {
             "Title": "Papyrus Tiles: Yellow Tiles + Breadth First Search Path Finder",
             "Description": "\"Papyrus Tiles\" is one of my <a href=\"/portfolio/projects-ktane.html\" target=\"_blank\">KTANE mods</a> that resembles the tile puzzle from <a href=\"https://undertale.com\" target=\"_blank\">Undertale</a>. Each tile affects the player in a neutral or negative way, with the latter causing a stirke. The goal is to reach the other side of the grid without getting a strike. I implemented all of the tile colors with the exception of the yellow one where the user will be zapped and forced to move back on the last tile they stepped on causing a strike. It was not initially implemented due to time constraints, but it's definitely something not difficult with my current set of skills.\nAnother feature I've been wanting to improve on is the pathfinder for verifying a puzzle is solvable. The current version of the mod uses recursion to find a path, but it's not reliable as it doesn't guarantee the shortest path. I also noticed it can get stuck in infinite loops at times. Breadth first search is definitely a better algorithm to use in this context."
+        },
+        {
+            "Title": "Stardew Valley 100% Guide Mod",
+            "Description": "Stardew Valley [insert link] is farming game that surprisingly has a lot of content besides farming. This makes 100% the game a very long task to complete, especially since there are multiple ways to do something. I have often thought \"I wish there was a mod that told me to hold onto these items so I don't have to grind them later.\" That is one of the things I want the mod to do. I also want to have a \"quest list\" so the player knows what to do in order to progress to 100%."
         }
     ]
 }
