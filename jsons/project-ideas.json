@@ -51,6 +51,14 @@
         {
             "Title": "Hashi Puzzle Solver",
             "Description": "Hashi (also known as bridges) is a puzzle where the player must connect nodes together with single or double edges that can come out of each node orthogonally. Each node has a number on it represent the required amount of edges that needs to come out of that node. The goal is to connect the nodes in such as way that each node has the right amount of edges and all the nodes connect in a way such that there is only one map. I find myself doing this puzzle a lot and would like to see if there is a way to program a solver. The only initial roadblock I see is figuring out when making an edge between nodes will cause an intersection, but I think that one be a problem once I think about it more."
+        },
+        {
+            "Title": "Workout Tracker",
+            "Description": "I have been physically active ever since I was a child by doing various sports. It was difficult to keep active while I was in college. I downloaded the app \"<a href=\"https://www.stardewvalley.net\" target=\"_blank\">Strong</a>\" which has very useful features such as creating workout templates, easily adding/removing a set to a workout, and cooldown timer between sets. Unfortunately, there are several features that are locked behind a paywall, including seeing your progress by doing a specific workout. I understand the \"freemium\" models of applications, but it's not for me. Creating a mobile application of my own will allow me to implement features that work for me specifically without any financial costs." 
+        },
+        {
+            "Title": "Towers Puzzle Solver",
+            "Description": "<a href=\"https://www.puzzle-skyscrapers.com\" target=\"_blank\">Towers (also known as skyscrapers)</a> is another puzzle of a 4x4 grid in which each row/column has a number on each side. This number represents the towers that can be seen by that perspective. Towers have a height of 1-4 inclusively, and can be placed on any of the cells. The goal is to fullfil the row/column numbers while only being able to place one tower of each height per row/column.\nThis was one of my first puzzles that allowed me to see what other kinds of puzzle there are. I was first introduced to it in my junior year of highschool when I took AP CSA. This wasn't something that we were allowed to use computers for, and was forced to solve it with pen and paper. Unfortunately, I was not able to get it done and it has been bothering me since. I could definitely make a solver simply with some recursion, though I would like to figure out what are some deduction I can make to easily solve the puzzle." 
         }
     ]
 }
