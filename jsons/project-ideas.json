@@ -43,6 +43,14 @@
         {
             "Title": "Stardew Valley 100% Guide Mod",
             "Description": "Stardew Valley [insert link] is farming game that surprisingly has a lot of content besides farming. This makes 100% the game a very long task to complete, especially since there are multiple ways to do something. I have often thought \"I wish there was a mod that told me to hold onto these items so I don't have to grind them later.\" That is one of the things I want the mod to do. I also want to have a \"quest list\" so the player knows what to do in order to progress to 100%."
+        },
+        {
+            "Title": "Path Finder Visualizer",
+            "Description": "There are many path finding algorithms with various levels of efficiency. It can be rather difficult to fully understand how slow certain algorithms can be using small mazes. Creating a program that allows users who use a dynamic size for mazes and allows them to place their own walls (or by randomly assign them) can show how much better it is. I could also add statistics such as how many nodes were visited along with the amount of real time it took. I could also allow mazes and search results to be saved and loaded, and have a comparer. This would be a stretch goal, but this project would also work for a \"Papyrus Tiles\" maze."
+        },
+        {
+            "Title": "Hashi Puzzle Solver",
+            "Description": "Hashi (also known as bridges) is a puzzle where the player must connect nodes together with single or double edges that can come out of each node orthogonally. Each node has a number on it represent the required amount of edges that needs to come out of that node. The goal is to connect the nodes in such as way that each node has the right amount of edges and all the nodes connect in a way such that there is only one map. I find myself doing this puzzle a lot and would like to see if there is a way to program a solver. The only initial roadblock I see is figuring out when making an edge between nodes will cause an intersection, but I think that one be a problem once I think about it more."
         }
     ]
 }
