@@ -67,6 +67,18 @@
         {
             "Title": "DND Dice Roller + Manager",
             "Description":"I got into my first DND campaign in 2023, and I love it. Though the rules can be a bit confusing and since the entire party persists of people who are also new, it can be difficult for my DM to remind people. I have thought of creating a manager system that would keep track of information. I'm planning on making so people can have multiple character sheets for different campaign. There will be a notes section that has a title, date, and session # properties so people can easily find them.\nI also want to add a dice roller section so people can do other things besides doing math the entire session. This includes a button for each type of saving throw, along with each skill check with the option of adding if it's with advantage/disadvantage. I also want to add attack rolls as well. Since the character (and their loot) is already loaded, the bonuses from the skills and modifies should already be in the application's memory. So the player just needs to press the button and get the results. This should significantly decrease the time of other people waiting for someone to adding up 7 numbers."
+        },
+        {
+            "Title": "KTANE Mod Setting Support",
+            "Description":"Mod settings support allows certain mods parameters to be easily modified outside of Unity. In most cases, it is used in order to make a mod easier for learning purposes or harder for more of a challenge. I would like to add this support to some of my mods to make them more accessible. I also want to understand it more so I can write documentation on how to implement it for my FAQ KTANE bot."
+        },
+        {
+            "Title": "KTANE Rule Seed Support",
+            "Description":"Similar to mod setting support, rule seed support is another set of modification to KTANE mods. These however, change the mod's rules based on a seed number. The seed number can be quite large, so the same mod keeps from becoming stale. This is another feature I wnt to add to my mods in order to properly write documentation for the FAQ Bot."
+        },
+        {
+            "Title": "KTANE Decompilation",
+            "Description":"While it's common practice to keep the source code of KTANE mods open-sourced on GitHub, some mods' code have become unavailable for various reasons. This lack of public source code can limit community engagement. If there is a bug and the author is not active, the mod is marked as incompatible since others are unable to fix the issue. Additionally, mods without accessible source code are less likely to gain new features like Twitch Plays, Rule Seed Support, and Mod Settings if they weren't there in the original build.\nDecompilation solves this problem with the use of tools that easily allows extraction of important files from the build in order to recreate the mod to almost a one to one replica. Currently, there are only a handful of people who know how to decompile a mod. I have reached out to one of these people to teach me. My plan is to document the process via the KTANE FAQ bot so others can learn as well. My hope that if enough people are aware how it's done, the more source code will be found."
         }
     ]
 }
