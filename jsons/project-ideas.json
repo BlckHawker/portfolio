@@ -79,6 +79,14 @@
         {
             "Title": "KTANE Decompilation",
             "Description":"While it's common practice to keep the source code of KTANE mods open-sourced on GitHub, some mods' code have become unavailable for various reasons. This lack of public source code can limit community engagement. If there is a bug and the author is not active, the mod is marked as incompatible since others are unable to fix the issue. Additionally, mods without accessible source code are less likely to gain new features like Twitch Plays, Rule Seed Support, and Mod Settings if they weren't there in the original build.\nDecompilation solves this problem with the use of tools that easily allows extraction of important files from the build in order to recreate the mod to almost a one to one replica. Currently, there are only a handful of people who know how to decompile a mod. I have reached out to one of these people to teach me. My plan is to document the process via the KTANE FAQ bot so others can learn as well. My hope that if enough people are aware how it's done, the more source code will be found."
+        },
+        {
+            "Title": "Minesweeper Predictor",
+            "Description": "I'm calling this a predictor rather than a solver because of how different minesweeper is compared to other puzzles. If you make a mistake in Towers or Sudoku, you are still able to recover as there is no real punishment besides reverting your changes. In minesweeper however, if you step on a bomb, the game is over. Most of the puzzle solvers have done (and/or currently doing) can rely on recursion as a last resort. I want to see how not having that option will make creating this \"solver\" different."
+        },
+        {
+            "Title": "Tax Calculator",
+            "Description": "I don't like doing taxes and the process is a lot more convoluted than it should be. Although I have an accountant that handles these calculations for me, it's not a bad idea to understand how to do them myself."
         }
     ]
 }
