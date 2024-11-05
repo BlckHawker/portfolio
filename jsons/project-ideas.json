@@ -87,10 +87,6 @@
         {
             "Title": "Tax Calculator",
             "Description": "I don't like doing taxes and the process is a lot more convoluted than it should be. Although I have an accountant that handles these calculations for me, it's not a bad idea to understand how to do them myself."
-        },
-        {
-            "Title": "Discord Link Parser Bot",
-            "Description": "I am in several discord servers where I chat with many people. Most servers have a memes channel, where (you guessed it) people send memes they want others to see. Most of those memes are links to different sites such as twitter, reddit, instagram, tiktok, etc. All of these links work differently where some will be viewable within discord while others will open your web browser, often time asking you to log in, which can be annoying at times. Especially when you're on a different device that is not logged in to all of your socials.\nThere have been some applications such as <a href=\"https://ddinstagram.com\" target=\"_blank\">InstaFix</a> and <a href=\"https://github.com/FixTweet/FxTwitter\" target=\"_blank\">FxTwitter</a> that allow the content to be seen within discord itself by editing the link. Though that can be annoying to remember what to edit each link to for different websites. I want to make a discord bot that would detect that a link from a certain site is sent, delete the original message, and then send the new link, basically cutting out the middle man of the user editing the link."
         }
     ]
 }
