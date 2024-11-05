@@ -8,7 +8,9 @@
                 "JavaScript"
             ],
             "Libraries": [
-                "Discord.js, Node.js"
+                "Discord.js",
+                "Node.js",
+                "Node Package Manager"
             ],
             "Tools": [
                 "Visual Studio Code",
@@ -42,7 +44,6 @@
                 "Adobe Premiere Pro"
             ],
             "Description": "I've often been asked how to get started with Unity, whether it’s for modding an existing game or creating a new one from scratch. Rather than overwhelming newcomers with the dense Unity documentation, I prefer to guide them through hands-on projects. I start with basic exercises and once they’re comfortable, encourage them to tackle more advanced ones until they’re ready to work on their own projects.\nAlthough I am happy to assist people individually, the teaching process takes a while and can be repetitive. To streamline this process and make it accessible to a wider audience, I’ve created a comprehensive video tutorial. It is designed for beginners with no prior experience in Unity and allows them to learn at their own pace, even when I’m not available. If someone doesn't understand something, they can refer to the completed code on GitHub or reach out with specific questions in the comments section. For those who prefer reading, I’ve also prepared slides that cover the same material as the video.",
-
             "Links": [
                 {
                     "Name": "Video Tutorial",
@@ -53,7 +54,6 @@
                     "Link": "https://github.com/BlckHawker/Unity-Tutorial"
                 }
             ],
-
             "Image": {
                 "src": "img/unity.gif",
                 "alt": "gif of one of finished projects"
@@ -99,6 +99,7 @@
             "Libraries": [
                 "Sequelize",
                 "Node Package Manager",
+                "Node.js",
                 "React"
             ],
             "Tools": [

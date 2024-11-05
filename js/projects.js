@@ -135,32 +135,48 @@ function createProjectLayout(project, flexClass) {
 function getFilters(filterType) {
   let localStorageFilters = JSON.parse(localStorage.getItem("filters") || "[]").filter((filter) => filter.type === filterType);
   let targetedFilters = [];
-  const filterNames = removeDuplicates(
-    projects.flatMap((project) => {
-      switch (filterType) {
-        case "tools":
-          return project.tools;
-        case "languages":
-          return project.languages;
-        case "libraries":
-          return project.libraries;
-      }
-    })
-  ).sort();
+  
+  //get all of the languages/tools/libraries use 
+  const filterNames = projects.flatMap((project) => {
+    switch (filterType) {
+      case "tools":
+        return project.tools;
+      case "languages":
+        return project.languages;
+      case "libraries":
+        return project.libraries;
+    }
+  })
 
+  const filterCount = [];
+
+  //count the amount of times a language/tool/library appears
+  for(const name of filterNames) {
+    const foundObj = filterCount.find(obj => obj.name == name);
+    if(foundObj === undefined) {
+      filterCount.push({name, count: 1});
+    }
+
+    else {
+      filterCount[filterCount.indexOf(foundObj)].count++;
+    }
+  }
+
+
+  //if there are no saved filters in local storage, enable all the filters
   if (localStorageFilters.length == 0) {
-    targetedFilters = filterNames.map((name) => {
-      return { name, checked: true, type: filterType };
+    targetedFilters = filterCount.map((obj) => {
+      return { name: obj.name, count: obj.count, checked: true, type: filterType };
     });
   } else {
-    //check if new filters have been added
-    targetedFilters = filterNames.map((name) => {
+    //check if new filters have been added, if they have, set them to true
+    targetedFilters = filterCount.map((obj) => {
       for (const tool of localStorageFilters) {
         if (tool.name == name) {
-          return { name, checked: tool.checked, type: filterType };
+          return { name: obj.name, count: obj.count, checked: tool.checked, type: filterType };
         }
       }
-      return { name, checked: true, type: filterType };
+      return { name: obj.name, count: obj.count, checked: true, type: filterType };
     });
   }
 
@@ -184,7 +200,7 @@ function getFilters(filterType) {
     checkbox.checked = filter.checked;
     const label = document.createElement("label");
     label.htmlFor = filter.name;
-    label.appendChild(document.createTextNode(filter.name));
+    label.appendChild(document.createTextNode(`${filter.name} (${filter.count})`));
     div.appendChild(checkbox);
     div.appendChild(label);
     element.appendChild(div);
