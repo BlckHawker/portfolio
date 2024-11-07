@@ -87,6 +87,14 @@
         {
             "Title": "Tax Calculator",
             "Description": "I don't like doing taxes and the process is a lot more convoluted than it should be. Although I have an accountant that handles these calculations for me, it's not a bad idea to understand how to do them myself."
+        },
+        {
+            "Title": "Job Application Analysis",
+            "Description": "When applying to jobs, it's a good idea to keep track of what jobs you have applied for including meta data. Information such as location, desired skills, and status of application to name a few. It can be difficult to get a general overview of the information just by looking at the sheet itself. I have tried using sheets functions in order to give various statistics. It's was doable, but not easy to maintain. It would be a lot easier if there was an application that took in some sort of file (csv for example), parse the information, ask the user what specific parameters they want to see, and display them via some sort of graphics like a pie chart."
+        },
+        {
+            "Title": "Basketball Schedule Maker",
+            "Description": "I am a big fan of basket and making the schedule schedule maker got me interested in generation. I am a fan of NBA basketball, and always wondered how difficult it is to make a season schedules.\nFor those who are unfamiliar with the sport, the NBA has 30 teams, with half being on the eastern conference, and the other half being on the western. Each team that are in the same conference face off 4 times while opposite conference teams face off only twice. Leading to a total of 82 games.\nThe prototype won’t be the most accurate as there are some factors as home vs away games, travel time, certain days being off limit, etc. Though I plan to add those the more I tweak the schedule"
         }
     ]
 }
