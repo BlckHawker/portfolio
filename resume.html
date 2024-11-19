@@ -20,9 +20,21 @@
       }
       function toggleDropDown() {
         const element = document.querySelector('.dropdown-content');
-        console.log(element.style.display);
         element.style.display = element.style.display == 'block' ? 'none' : 'block' 
       }
+
+      window.onclick = function (event) {
+        const targetElements = [
+          document.querySelector(".dropdown"),
+          document.querySelector(".dropdown-content"),
+        ];
+
+        if (targetElements.some((ele) => ele == event.target)) {
+          return;
+        }
+
+        targetElements[1].style.display = "none";
+      };
     </script>
     <title>Document</title>
   </head>

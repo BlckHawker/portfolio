@@ -1,54 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="js/projects.js"></script>
+    <script type="module" src="js/utils.js"></script>
+    <script>
+      function redirect(str) {
+        window.location.href = str;
+      }
+      function toggleDropDown() {
+        const element = document.querySelector(".dropdown-content");
+        element.style.display =
+          element.style.display == "block" ? "none" : "block";
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script type="module" src="js/projects.js"></script>
-  <script type="module" src="js/utils.js"></script>
-  <script>
-    function redirect(str) {
-      window.location.href = str;
-    }
-    function toggleDropDown() {
-      const element = document.querySelector('.dropdown-content');
-      element.style.display = element.style.display == 'block' ? 'none' : 'block'
-    }
-  </script>
-  <link rel="stylesheet" href="./css/projects.css" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>Document</title>
-</head>
+      window.onclick = function (event) {
+        const targetElements = [
+          document.querySelector(".dropdown"),
+          document.querySelector(".dropdown-content"),
+        ];
 
-<body>
-  <div id="banner"></div>
-  <button id="settings-button"> 
-    <img src="img/settings.png" alt="setting"/> 
-  </button>
-  <div id="myPopup" class="popup">
-    <div class="popup-content">
-      <button id="restore-filter-button">Restore Defaults</button>
-      <h2>Filters</h2>
-      <div id="filters">
-        <fieldset id="tools-filter"></fieldset>
-        <fieldset id="libraries-filter"></fieldset>
-        <fieldset id="languages-filter"></fieldset>
+        if (targetElements.some((ele) => ele == event.target)) {
+          return;
+        }
+
+        targetElements[1].style.display = "none";
+      };
+    </script>
+    <link rel="stylesheet" href="./css/projects.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="banner"></div>
+    <button id="settings-button">
+      <img src="img/settings.png" alt="setting" />
+    </button>
+    <div id="myPopup" class="popup">
+      <div class="popup-content">
+        <button id="restore-filter-button">Restore Defaults</button>
+        <h2>Filters</h2>
+        <div id="filters">
+          <fieldset id="tools-filter"></fieldset>
+          <fieldset id="libraries-filter"></fieldset>
+          <fieldset id="languages-filter"></fieldset>
+        </div>
+        <button id="close-button">Close</button>
       </div>
-      <button id="close-button">
-        Close
-      </button>
     </div>
-  </div>
-  <h1>Projects</h1>
-  <p id="results">Loading results</p>
-  <div id="projects"></div>
-</body>
-<footer>
-  <hr />
-  <div id="contactLinks"></div>
-</footer>
-
+    <h1>Projects</h1>
+    <p id="results">Loading results</p>
+    <div id="projects"></div>
+  </body>
+  <footer>
+    <hr />
+    <div id="contactLinks"></div>
+  </footer>
 </html>

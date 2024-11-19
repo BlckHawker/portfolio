@@ -21,10 +21,24 @@
         window.location.href = str;
       }
       function toggleDropDown() {
-        const element = document.querySelector('.dropdown-content');
+        const element = document.querySelector(".dropdown-content");
         console.log(element.style.display);
-        element.style.display = element.style.display == 'block' ? 'none' : 'block' 
+        element.style.display =
+          element.style.display == "block" ? "none" : "block";
       }
+
+      window.onclick = function (event) {
+        const targetElements = [
+          document.querySelector(".dropdown"),
+          document.querySelector(".dropdown-content"),
+        ];
+
+        if (targetElements.some((ele) => ele == event.target)) {
+          return;
+        }
+
+        targetElements[1].style.display = "none";
+      };
     </script>
   </head>
 
@@ -32,31 +46,50 @@
     <div id="banner"></div>
     <h1>KTANE Projects</h1>
     <p class="introduction">
-      Keep Talking and Nobody Explodes is a co-op game where all parties must work together in order to defuse a bomb. The bomb is made up of puzzles called “modules”. One person takes the role of the
-      defuser. They can interact with the bomb. Everyone else is an expert; they have access to the manuals that tell how to defuse the modules. Defusers are not allowed to look at the manuals while
-      the experts are not allowed to look at the bomb. Both parties must communicate with each other in order to defuse the bomb. Each page of the manual tells how to solve a specific module given
-      some information from the bomb. Solving all modules before time runs out will defuse the bomb. The modding community flourished in 2016 where players could create their own modules and other
-      tools to enhance the experience playing the game. Here are some of my contributions to the community.
+      Keep Talking and Nobody Explodes is a co-op game where all parties must
+      work together in order to defuse a bomb. The bomb is made up of puzzles
+      called “modules”. One person takes the role of the defuser. They can
+      interact with the bomb. Everyone else is an expert; they have access to
+      the manuals that tell how to defuse the modules. Defusers are not allowed
+      to look at the manuals while the experts are not allowed to look at the
+      bomb. Both parties must communicate with each other in order to defuse the
+      bomb. Each page of the manual tells how to solve a specific module given
+      some information from the bomb. Solving all modules before time runs out
+      will defuse the bomb. The modding community flourished in 2016 where
+      players could create their own modules and other tools to enhance the
+      experience playing the game. Here are some of my contributions to the
+      community.
     </p>
 
     <div id="projects"></div>
     <hr />
     <h2>Log File Analyzer (LFA)</h2>
     <h4 id="lfa-date">July 2023 - September 2024</h4>
-    <p class="languages"><b>Tools: </b>Regex, Javscript, Jquery, CSS, SVG, Visual Studio Code</p>
+    <p class="languages">
+      <b>Tools: </b>Regex, Javscript, Jquery, CSS, SVG, Visual Studio Code
+    </p>
     <p class="narrow-text">
-      The log file analyzer is a tool created by the community that parses logs printed from modules in a more digestible way. Most logs tell the user how to solve the module and the steps to get
-      there. Mods are limited in what they can log since they can only use text. LFA has the ability to add svg graphics, put messages into dropdowns and code blocks, reword logging to make it more
-      clear, and much more. Here are my contributions to LFA.
+      The log file analyzer is a tool created by the community that parses logs
+      printed from modules in a more digestible way. Most logs tell the user how
+      to solve the module and the steps to get there. Mods are limited in what
+      they can log since they can only use text. LFA has the ability to add svg
+      graphics, put messages into dropdowns and code blocks, reword logging to
+      make it more clear, and much more. Here are my contributions to LFA.
     </p>
     <h4></h4>
 
     <div class="carousel" data-carousel>
       <div class="carousel-buttons">
-        <button class="carousel-button carousel-button_previous" data-carousel-button-previous>
+        <button
+          class="carousel-button carousel-button_previous"
+          data-carousel-button-previous
+        >
           <span class="fas fa-chevron-circle-left"></span>
         </button>
-        <button class="carousel-button carousel-button_next" data-carousel-button-next>
+        <button
+          class="carousel-button carousel-button_next"
+          data-carousel-button-next
+        >
           <span class="fas fa-chevron-circle-right"></span>
         </button>
       </div>
