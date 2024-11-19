@@ -21,15 +21,14 @@ async function getBannerElement() {
         const banner = bannerData['Buttons'][i];
 
         const dropdown = banner['Dropdown'];
-
         if (dropdown.length == 0) {
-            html += `<button onclick="redirect('${banner['Link']}')">${banner['Name']}</button>`
+            html += `<button onclick="redirect('${banner['Link'].replaceAll("{root}", getProjectRoot())}')">${banner['Name']}</button>`
         }
         else {
             html += `<button class="dropdown" onclick="toggleDropDown()">${banner['Name']}<div class="dropdown-content">`;
             for (let i = 0; i < dropdown.length; i++) {
                 const link = dropdown[i];
-                html += `<a href="${link['Link']}">${link['Name']}</a>`;
+                html += `<a href="${link['Link'].replaceAll("{root}", getProjectRoot())}">${link['Name']}</a>`;
             }
             html += `</div></button>`;
         }

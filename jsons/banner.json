@@ -2,7 +2,7 @@
     "Buttons": [
         {
             "Name": "About Me",
-            "Link": "/index.html",
+            "Link": "{root}/index.html",
             "Dropdown": []
         },
         {
@@ -10,21 +10,21 @@
             "Dropdown": [
                 {
                     "Name": "General Projects",
-                    "Link": "/projects/"
+                    "Link": "{root}/projects/"
                 },
                 {
                     "Name": "KTANE Projects",
-                    "Link": "/projects/ktane.html"
+                    "Link": "{root}/projects/ktane.html"
                 },
                 {
                     "Name": "Ideas",
-                    "Link": "/projects/ideas.html"
+                    "Link": "{root}/projects/ideas.html"
                 }
             ]
         },
         {
             "Name": "Master Resume",
-            "Link": "/resume.html",
+            "Link": "{root}/resume.html",
             "Dropdown": []
         }
     ]
