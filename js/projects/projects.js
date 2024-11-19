@@ -66,8 +66,10 @@ class Project {
     const src = this.image["src"];
     const alt = this.image["alt"];
 
-    if (!src || !alt) return `<img src="/img/WIP.png" alt="This is a work in progress">`;
-    return `<img src="${src}" alt="${alt}">`;
+    const srcPrefix = '../../';
+
+    if (!src || !alt) return `<img src="${srcPrefix}img/WIP.png" alt="This is a work in progress">`;
+    return `<img src="${srcPrefix + src}" alt="${alt}">`;
   }
 }
 

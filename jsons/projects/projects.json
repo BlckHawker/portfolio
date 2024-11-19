@@ -26,7 +26,7 @@
                 }
             ],
             "Image": {
-                "src": "../img/link parser example.gif",
+                "src": "img/link parser example.gif",
                 "alt": "Link Parser bot parsing 3 twitter links. One with just text, one with an image, and another with a video that can be played within discord"
             }
         },
@@ -56,7 +56,7 @@
                 }
             ],
             "Image": {
-                "src": "../img/unity.gif",
+                "src": "img/unity.gif",
                 "alt": "gif of one of finished projects"
             }
         },
@@ -83,7 +83,7 @@
                 }
             ],
             "Image": {
-                "src": "../img/Pin State.gif",
+                "src": "img/Pin State.gif",
                 "alt": "gif of scrolling down through the results of a bowling game"
             }
         },
@@ -120,7 +120,7 @@
                 }
             ],
             "Image": {
-                "src": "../img/Crowd Comic.gif",
+                "src": "img/Crowd Comic.gif",
                 "alt": "gif of scrolling down the root's panel sets"
             }
         },
@@ -149,7 +149,7 @@
                 }
             ],
             "Image": {
-                "src": "../img/traumatic.gif",
+                "src": "img/traumatic.gif",
                 "alt": "gif of protagonist trying to run away from the enemies and failing"
             }
         },
@@ -175,7 +175,7 @@
                 }
             ],
             "Image": {
-                "src": "../img/IGME 540.gif",
+                "src": "img/IGME 540.gif",
                 "alt": "Post Processing Demonstration"
             }
         },
@@ -204,7 +204,7 @@
                 }
             ],
             "Image": {
-                "src": "../img/casper.gif",
+                "src": "img/casper.gif",
                 "alt": "Barista Game Demonstration"
             }
         },
@@ -229,7 +229,7 @@
                 }
             ],
             "Image": {
-                "src": "../img/ultimate-tic-tac-toe.gif",
+                "src": "img/ultimate-tic-tac-toe.gif",
                 "alt": "Ultimate Tic Tac Toe Gameplay"
             }
         },
@@ -256,7 +256,7 @@
                 }
             ],
             "Image": {
-                "src": "../img/pokemon.gif",
+                "src": "img/pokemon.gif",
                 "alt": "Pokemon Finder Demonstration"
             }
         },
@@ -285,7 +285,7 @@
                 }
             ],
             "Image": {
-                "src": "../img/conway.gif",
+                "src": "img/conway.gif",
                 "alt": "Conway’s Game of Life Demonstration"
             }
         },
@@ -311,7 +311,7 @@
                 }
             ],
             "Image": {
-                "src": "../img/vermin.png",
+                "src": "img/vermin.png",
                 "alt": "Volatile Vermin"
             }
         }
