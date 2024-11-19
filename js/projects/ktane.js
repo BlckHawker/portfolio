@@ -1,5 +1,4 @@
-import { getContactInfo, getBannerElement, changeTitle } from '../utils.js'
-
+import utils from '../utils.js'
 var carosolIndex;
 
 window.onload = () => {
@@ -7,11 +6,11 @@ window.onload = () => {
     loadProjects();
     loadContacts();
     loadBanner();
-    changeTitle();
+    utils.changeTitle();
 }
 
 async function loadProjects() {
-    await fetch('/jsons/projects/ktane.json')
+    await fetch(`${utils.getProjectRoot()}/jsons/projects/ktane.json`)
     .then((res) => {
         return res.json();
     })
@@ -145,11 +144,11 @@ async function loadProjects() {
 }
 
 async function loadContacts() {
-    getContactInfo().
+    utils.getContactInfo().
         then(data =>
             document.querySelector("#contactLinks").innerHTML = data);
 }
 
 async function loadBanner() {
-    await getBannerElement().then(html => { document.querySelector("#banner").innerHTML = html} );
+    await utils.getBannerElement().then(html => { document.querySelector("#banner").innerHTML = html} );
 }

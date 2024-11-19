@@ -1,4 +1,4 @@
-import { getContactInfo, getBannerElement } from './utils.js'
+import utils from './utils.js'
 
 window.onload = () => {
     loadContacts();
@@ -6,11 +6,11 @@ window.onload = () => {
 }
 
 async function loadContacts() {
-    getContactInfo().
+    utils.getContactInfo().
         then(data =>
             document.querySelector("#contactLinks").innerHTML = data);
 }
 
 async function loadBanner() {
-    await getBannerElement().then(html => { document.querySelector("#banner").innerHTML = html} );
+    await utils.getBannerElement().then(html => { document.querySelector("#banner").innerHTML = html} );
 }

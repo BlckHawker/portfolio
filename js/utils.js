@@ -48,33 +48,40 @@ async function changeTitle() {
 }
 
 async function loadContactInfo() {
-    await fetch("/jsons/contact-info.json")
-        .then((res) => {
-            return res.json();
-        })
-        .then((data) => {
-            contactData = { Name: data['Name'], Contacts: data['Contacts'] };
-        });
+    const link = `${getProjectRoot()}/jsons/contact-info.json`;
+    const data = await fetchJson(link);
+    contactData = { Name: data['Name'], Contacts: data['Contacts'] };
 }
 
 async function loadBannerInfo() {
-    await fetch("/jsons/banner.json")
-        .then((res) => {
-            return res.json();
-        })
-        .then((data) => {
-            bannerData = data;
-        });
+    const link = `${getProjectRoot()}/jsons/banner.json`;
+    const data = await fetchJson(link);
+    bannerData = data;
 }
 
 async function loadAboutMeInfo() {
-    await fetch("/jsons/about-me.json")
-        .then((res) => {
-            return res.json();
-        })
-        .then((data) => {
-            aboutMeData = data;
-        });
+    const link = `${getProjectRoot()}/jsons/about-me.json`;
+    const data = await fetchJson(link);
+    aboutMeData = data;
 }
 
-export { getContactInfo, getBannerElement, getAboutMeInfo, changeTitle };
+async function fetchJson(url) {
+    const res = await fetch(url);
+    return res.json();
+}
+
+function getProjectRoot()
+{
+    const differentHosts = [
+        {name: 'blckhawker.github.io', href: '/portfolio'}
+    ]
+    const host = differentHosts.find(h => h.name == window.location.hostname);
+    if(host) {
+        return host.href;
+    }
+    return '';
+}
+
+
+
+export default { getContactInfo, getBannerElement, getAboutMeInfo, changeTitle, getProjectRoot };

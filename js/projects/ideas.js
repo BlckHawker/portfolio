@@ -1,4 +1,4 @@
-import * as utils from '../utils.js'
+import utils from "../utils.js";
 
 window.onload = () => {
     loadContacts();
@@ -18,7 +18,8 @@ async function loadBanner() {
 }
 
 async function loadProjects() {
-    await fetch('/jsons/projects/ideas.json')
+    
+    await fetch(`${utils.getProjectRoot()}/jsons/projects/ideas.json`)
     .then((res) => {
         return res.json();
     })
@@ -33,7 +34,7 @@ async function loadProjects() {
         return `<div>
             <hr>
             <h3>${obj['Title']}</h3>
-            ${obj['Description'].split("\n").map(str => `<p>${str}</p>`)}
+            ${obj['Description'].replaceAll("{root}", utils.getProjectRoot()).split("\n").map(str => `<p>${str}</p>`)}
         </div>`
     }
 }

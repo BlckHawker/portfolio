@@ -1,4 +1,4 @@
-import { getContactInfo, getBannerElement, changeTitle } from "../utils.js";
+import utils from "../utils.js";
 let projects = []; //projects objects
 let validProjects = []; //projects that match the filter
 let filters = []; //filter objects
@@ -8,7 +8,7 @@ window.onload = () => {
   loadProjects();
   loadContacts();
   loadBanner();
-  changeTitle();
+  utils.changeTitle();
   const popUp = document.querySelector("#myPopup");
   document.querySelector("#settings-button").onclick = () => {
     popUp.classList.add("show");
@@ -50,7 +50,7 @@ class Project {
   }
 
   getDescription() {
-    return `${this.description
+    return `${this.description.replaceAll("{root}", utils.getProjectRoot())
       .split("\n")
       .map((d) => `<p>${d}</p>`)
       .join("")}`;
@@ -72,13 +72,13 @@ class Project {
 }
 
 async function loadBanner() {
-  await getBannerElement().then((html) => {
+  await utils.getBannerElement().then((html) => {
     document.querySelector("#banner").innerHTML = html;
   });
 }
 
 async function loadProjects() {
-  await fetch("/jsons/projects/projects.json")
+  await fetch(`${utils.getProjectRoot()}/jsons/projects/projects.json`)
     .then((res) => {
       return res.json();
     })
@@ -282,5 +282,5 @@ function removeDuplicates(arr) {
 }
 
 async function loadContacts() {
-  getContactInfo().then((data) => (document.querySelector("#contactLinks").innerHTML = data));
+  utils.getContactInfo().then((data) => (document.querySelector("#contactLinks").innerHTML = data));
 }

@@ -18,7 +18,7 @@
         },
         {
             "Title": "Dynamic Binary Puzzle Solver",
-            "Description": "I created a <a href=\"https://www.puzzle-binairo.com\" target=\"_blank\">Binary Puzzle (also known as Binario)</a> solver during my <a href=\"/portfolio/projects-ktane.html\" target=\"_blank\">KTANE solver saga</a>. The KTANE version always generated a 6x6 puzzle, but I have recently started solving some with a larger size. I want to challenge myself by making a solver where the dimensions are not constant. This will force me to think about what rules work for one size and not for others and apply them in the appropriate context."
+            "Description": "I created a <a href=\"https://www.puzzle-binairo.com\" target=\"_blank\">Binary Puzzle (also known as Binario)</a> solver during my <a href=\"{root}/projects/ktane.html\" target=\"_blank\">KTANE solver saga</a>. The KTANE version always generated a 6x6 puzzle, but I have recently started solving some with a larger size. I want to challenge myself by making a solver where the dimensions are not constant. This will force me to think about what rules work for one size and not for others and apply them in the appropriate context."
         },
         {
             "Title": "Budget Tracker",
@@ -95,6 +95,10 @@
         {
             "Title": "Basketball Schedule Maker",
             "Description": "I am a big fan of basket and making the schedule schedule maker got me interested in generation. I am a fan of NBA basketball, and always wondered how difficult it is to make a season schedules.\nFor those who are unfamiliar with the sport, the NBA has 30 teams, with half being on the eastern conference, and the other half being on the western. Each team that are in the same conference face off 4 times while opposite conference teams face off only twice. Leading to a total of 82 games.\nThe prototype won’t be the most accurate as there are some factors as home vs away games, travel time, certain days being off limit, etc. Though I plan to add those the more I tweak the schedule"
+        },
+        {
+            "Title": "Conway's Game of Life Revamped",
+            "Description": "Looking over my first <a href=\"{root}/projects/\" target=\"_blank\">Conway's Game of Life implementation</a>, it feels pretty bland. It make sense for it to be considering it was made during my second of college, and I was focusing more on how to use Javascript and animations. Though that doesn't mean I can't improve on the project. I have thought of having it more interactive with the user being able to pause/play the simulation, go back/forward to a specific state, change the size of the starting grid, and set which cells are dead or alive."
         }
     ]
 }
