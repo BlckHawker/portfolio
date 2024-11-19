@@ -1,4 +1,4 @@
-import * as utils from './utils.js'
+import * as utils from '../utils.js'
 
 window.onload = () => {
     loadContacts();
@@ -18,7 +18,7 @@ async function loadBanner() {
 }
 
 async function loadProjects() {
-    await fetch('./jsons/project-ideas.json')
+    await fetch('/jsons/projects/ideas.json')
     .then((res) => {
         return res.json();
     })

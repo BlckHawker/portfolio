@@ -48,7 +48,7 @@ async function changeTitle() {
 }
 
 async function loadContactInfo() {
-    await fetch("./jsons/contact-info.json")
+    await fetch("/jsons/contact-info.json")
         .then((res) => {
             return res.json();
         })
@@ -58,7 +58,7 @@ async function loadContactInfo() {
 }
 
 async function loadBannerInfo() {
-    await fetch("./jsons/banner.json")
+    await fetch("/jsons/banner.json")
         .then((res) => {
             return res.json();
         })
@@ -68,7 +68,7 @@ async function loadBannerInfo() {
 }
 
 async function loadAboutMeInfo() {
-    await fetch("./jsons/about-me.json")
+    await fetch("/jsons/about-me.json")
         .then((res) => {
             return res.json();
         })

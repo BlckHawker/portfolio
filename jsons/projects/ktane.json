@@ -22,7 +22,7 @@
                 }
             ],
             "Image": {
-                "src": "img/KTANE Solver.gif",
+                "src": "/img/KTANE Solver.gif",
                 "alt": "KTANE Solver Demonstration"
             }
         },
@@ -57,7 +57,7 @@
                 }
             ],
             "Image": {
-                "src": "img/Steam Workshop.png",
+                "src": "/img/Steam Workshop.png",
                 "alt": "Steam Workshop"
             }
         },
@@ -76,7 +76,7 @@
                 }
             ],
             "Image": {
-                "src": "img/Souvenir.png",
+                "src": "/img/Souvenir.png",
                 "alt": "Souvenir preview image"
             },
             "Description": "<a href=\"https://github.com/Timwi/KtaneSouvenir\" target=\"_blank\">Souvenir</a> is a module that asks various questions about other modules. Since there are always new modules being created, there's always a supply to update the module with new questions. I have added souvenir support to 31 modules with a demonstration video shown below. These integrations have significantly honed my ability to interpret and enhance code across different standards and practices."

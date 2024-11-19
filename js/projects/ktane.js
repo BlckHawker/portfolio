@@ -1,9 +1,8 @@
-import { getContactInfo, getBannerElement, changeTitle } from './utils.js'
+import { getContactInfo, getBannerElement, changeTitle } from '../utils.js'
 
 var carosolIndex;
 
 window.onload = () => {
-
     carosolIndex = document.querySelector("#carousel-page-num");
     loadProjects();
     loadContacts();
@@ -12,7 +11,7 @@ window.onload = () => {
 }
 
 async function loadProjects() {
-    await fetch('./jsons/ktane-projects.json')
+    await fetch('/jsons/projects/ktane.json')
     .then((res) => {
         return res.json();
     })
@@ -107,7 +106,7 @@ async function loadProjects() {
 
     function createLFASpan(name, start) {
         const text = start ? "Before" : "After";
-        return `<span class="center-image"><p class="center-text comparison-text">${text}</p><img src="img/LFA/${name}/${text}.png" alt=""></span>`
+        return `<span class="center-image"><p class="center-text comparison-text">${text}</p><img src="/img/LFA/${name}/${text}.png" alt=""></span>`
     }
 
     function createGeneralProjectLayout(projectData, flex) {
@@ -124,7 +123,7 @@ async function loadProjects() {
         const alt = image == undefined ? undefined : image['alt'];
 
         if (!src || !alt)
-            html += `<img src="img/WIP.png" alt="This is a work in progress">`;
+            html += `<img src="/img/WIP.png" alt="This is a work in progress">`;
         else
             html += `<img src="${src}" alt="${alt}">`;
 
