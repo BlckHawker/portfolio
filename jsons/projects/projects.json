@@ -226,6 +226,10 @@
                 {
                     "Name": "Play Here",
                     "Link": "https://blckhawker.github.io/Ultimate-Tic-Tac-Toe/"
+                },
+                {
+                    "Name": "Repository",
+                    "Link": "https://github.com/BlckHawker/Ultimate-Tic-Tac-Toe"
                 }
             ],
             "Image": {

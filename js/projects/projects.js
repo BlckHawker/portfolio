@@ -110,7 +110,6 @@ async function loadProjects() {
       localStorage.setItem("filters", JSON.stringify(filters));
       getFilteredProjects();
       document.querySelector("#restore-filter-button").onclick = () => {
-        console.log(filterCheckboxes);
         filters.forEach((filter) => {
           filter.checked = true;
         });
