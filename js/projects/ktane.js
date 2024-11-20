@@ -107,7 +107,8 @@ async function loadProjects() {
 
     function createLFASpan(name, start) {
         const text = start ? "Before" : "After";
-        return `<span class="center-image"><p class="center-text comparison-text">${text}</p><img src="${srcPrefix}img/LFA/${name}/${text}.png" alt=""></span>`
+        const alt = start ? `The original '${name}' logging` : `The new '${name}' logging with LFA`;
+        return `<span class="center-image"><p class="center-text comparison-text">${text}</p><img src="${srcPrefix}img/LFA/${name}/${text}.png" alt="${alt}"></span>`
     }
 
     function createGeneralProjectLayout(projectData, flex) {
