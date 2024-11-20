@@ -121,10 +121,12 @@ async function loadProjects() {
         const src = image == undefined ? undefined : image['src']
         const alt = image == undefined ? undefined : image['alt'];
 
+        const srcPrefix = '../';
+
         if (!src || !alt)
-            html += `<img src="/img/WIP.png" alt="This is a work in progress">`;
+            html += `<img src="${srcPrefix}img/WIP.png" alt="This is a work in progress">`;
         else
-            html += `<img src="${src}" alt="${alt}">`;
+            html += `<img src="${srcPrefix + src}" alt="${alt}">`;
 
         html += "</div>";
         return html;
