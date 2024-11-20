@@ -21,7 +21,7 @@ async function changeName() {
     await utils.getAboutMeInfo().then(data => {
         const firstName = data["FirstName"];
 
-        document.querySelector('h1').innerHTML = `${firstName} Bentley`;
+        document.querySelector('h1').innerHTML = `${firstName} Jackson-Bentley`;
         document.querySelector('p').innerHTML = `${data['Description']}`.replace("firstName", firstName);
     });
 }

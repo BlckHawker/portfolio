@@ -43,7 +43,7 @@ async function getAboutMeInfo() {
 
 async function changeTitle() {
     await loadAboutMeInfo();
-    document.querySelector('title').textContent = `${aboutMeData['FirstName']} Bentley`;
+    document.querySelector('title').textContent = `${aboutMeData['FirstName']} Jackson-Bentley`;
 }
 
 async function loadContactInfo() {
