@@ -1,5 +1,7 @@
 import utils from '../utils.js'
 var carosolIndex;
+const srcPrefix = '../';
+
 
 window.onload = () => {
     carosolIndex = document.querySelector("#carousel-page-num");
@@ -105,7 +107,7 @@ async function loadProjects() {
 
     function createLFASpan(name, start) {
         const text = start ? "Before" : "After";
-        return `<span class="center-image"><p class="center-text comparison-text">${text}</p><img src="/img/LFA/${name}/${text}.png" alt=""></span>`
+        return `<span class="center-image"><p class="center-text comparison-text">${text}</p><img src="${srcPrefix}img/LFA/${name}/${text}.png" alt=""></span>`
     }
 
     function createGeneralProjectLayout(projectData, flex) {
@@ -121,7 +123,6 @@ async function loadProjects() {
         const src = image == undefined ? undefined : image['src']
         const alt = image == undefined ? undefined : image['alt'];
 
-        const srcPrefix = '../';
 
         if (!src || !alt)
             html += `<img src="${srcPrefix}img/WIP.png" alt="This is a work in progress">`;
