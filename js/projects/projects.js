@@ -128,7 +128,7 @@ async function loadProjects() {
 function createProjectLayout(project, flexClass) {
   let html = "";
   if (project.hasHR) html += "<hr>";
-  const wordSpan = `<span><h2>${project.title}</h2><h4>${project.getProjectTimeFrame()}</h4>${project.getToolLibrariesLanguages()}${project.getDescription()}${project.getLinks()}</span>`;
+  const wordSpan = `<span><h2 id="${project.title.replaceAll(" ", "-")}">${project.title}</h2><h4>${project.getProjectTimeFrame()}</h4>${project.getToolLibrariesLanguages()}${project.getDescription()}${project.getLinks()}</span>`;
   html += `<div class="${flexClass}"> ${wordSpan}${project.getImage()}</div>`;
   return html;
 }
