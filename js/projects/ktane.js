@@ -117,7 +117,9 @@ async function loadProjects() {
         html += ``
         html += ``
 
-        const wordSpan = `<span>` + `<h2>${projectData['Title']}</h2>` + `<h4>${projectData['Date']}</h4>` + getTools(projectData) + getDescription(projectData) + getLinks(projectData) + `</span>`;
+        const projectTitle = projectData['Title'];
+
+        const wordSpan = `<span>` + `<h2 id=${projectTitle.replaceAll(' ', '-')}>${projectTitle}</h2>` + `<h4>${projectData['Date']}</h4>` + getTools(projectData) + getDescription(projectData) + getLinks(projectData) + `</span>`;
         html += `<div class="${flex}"> ${wordSpan}`;
 
         const image = projectData['Image'];
