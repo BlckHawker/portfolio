@@ -80,6 +80,28 @@
                 "alt": "Souvenir preview image"
             },
             "Description": "<a href=\"https://github.com/Timwi/KtaneSouvenir\" target=\"_blank\">Souvenir</a> is a module that asks various questions about other modules. Since there are always new modules being created, there's always a supply to update the module with new questions. I have added souvenir support to 31 modules with a demonstration video shown below. These integrations have significantly honed my ability to interpret and enhance code across different standards and practices."
+        },
+        {
+            "Title": "KTANE FAQ Discord Bot",
+            "Date": "October 2024 - November 2024",
+            "Tools": [
+                "Javascript",
+                "Node Package Manager",
+                "Node",
+                "Visual Studio Code"
+            ],
+            "Links": [
+                {
+                    "Name": "Repository",
+                    "Link": "https://github.com/Qkrisi/ktanecord"
+                }
+            ],
+            "Image": {
+                "src": "img/ktane faq bot.gif",
+                "alt": "Demonstration of using the 'faq' command, and selecting a question"
+            },
+            
+            "Description": "Similar to my <a href=\"/projects/index.html#Unity-Tutorial\"  target=\"_blank\">Unity video tutorial</a>, I spent a lot of time in the <a href=\"https://discord.gg/ktane-160061833166716928\"  target=\"_blank\">KTANE Discord sever</a> answering questions related to modding for new developers. While I enjoy teaching people, it can be tedious to type out the same detailed messages multiple times. Although the answers to these questions have been documented, they are scattered throughout the server with various levels of depth.\nI created a FAQ feature in the already existing KTANE bot created by Qksiri. The FAQ command works by giving the category the question falls under. A dropdown will then appear with each selection being questions that fall under the selected category. When a user selects the question, the bot will send the answer to the question. This way, developers can quickly find the answers they need without having to blindly search through the server."
         }
     ],
     "LFA": [
