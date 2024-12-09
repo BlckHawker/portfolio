@@ -71,6 +71,10 @@
             ],
             "Links": [
                 {
+                    "Name": "Repository",
+                    "Link": "https://github.com/Timwi/KtaneSouvenir"
+                },
+                {
                     "Name": "Demonstration",
                     "Link": "https://www.youtube.com/watch?v=g8pATKCpfsQ&ab_channel=Hawker"
                 }
@@ -91,6 +95,10 @@
                 "Visual Studio Code"
             ],
             "Links": [
+                {
+                    "Name": "Video Demonstration",
+                    "Link": "https://youtu.be/GmQVyxlycBU?t=372"
+                },
                 {
                     "Name": "Repository",
                     "Link": "https://github.com/Qkrisi/ktanecord"
