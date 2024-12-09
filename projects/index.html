@@ -47,12 +47,25 @@
     </button>
     <div id="myPopup" class="popup">
       <div class="popup-content">
-        <button id="restore-filter-button">Restore Defaults</button>
+        <button id="restore-setting-button">Restore Defaults</button>
         <h2>Filters</h2>
         <div id="filters">
           <fieldset id="tools-filter"></fieldset>
           <fieldset id="libraries-filter"></fieldset>
           <fieldset id="languages-filter"></fieldset>
+        </div>
+        <h2>Sort By</h2>
+        <div id="sort">
+          <fieldset id="sort-options">
+            <input id="title-radio-button" type="radio" name="sort-type" value="Title">
+            <label>Title</label><br>
+            <input id="start-date-radio-button" type="radio" name="sort-type" value="Start Date">
+            <label>Start Date</label><br>
+            <input id="end-date-radio-button" type="radio" name="sort-type" value="End Date">
+            <label>End Date</label><br>
+            <input id="reverse-checkbox" type="checkbox">
+            <label>Reverse Results</label>
+          </fieldset>
         </div>
         <button id="close-button">Close</button>
       </div>

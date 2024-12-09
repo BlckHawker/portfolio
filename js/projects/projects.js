@@ -3,8 +3,20 @@ let projects = []; //projects objects
 let validProjects = []; //projects that match the filter
 let filters = []; //filter objects
 let filterCheckboxes = []; //all filter checkbox element
-
+let sortTypeIds = []; //the ids of the sort type
+let selectedSortType; //how the projects are currently sorted
+let reverseSort; //if the projects should be sorted in the opposite direction
+let reverseSortId = "reverse-checkbox"; //the id of the checkbox that is responsible for if the project results should be reversed
 window.onload = () => {
+  //get all the ways the user can sort the projects
+  let sortOptions = document.querySelector("#sort-options");
+  let sortTypes = Array.from(sortOptions.children).filter(ele => ele.tagName == "INPUT");
+
+  //the last input is a checkbox, so we can ignore that
+  for(let i = 0; i < sortTypes.length - 1; i++) {
+    sortTypeIds.push(sortTypes[i].id);
+  }
+
   loadProjects();
   loadContacts();
   loadBanner();
@@ -100,16 +112,20 @@ async function loadProjects() {
             links: p["Links"],
           })
       );
+
       getFilters("tools");
       getFilters("libraries");
       getFilters("languages");
+
       updateToggleAllButton("tools");
       updateToggleAllButton("libraries");
       updateToggleAllButton("languages");
 
       localStorage.setItem("filters", JSON.stringify(filters));
       getFilteredProjects();
-      document.querySelector("#restore-filter-button").onclick = () => {
+      document.querySelector("#restore-setting-button").onclick = () => {
+
+        //make it so all to filter check boxes are checked
         filters.forEach((filter) => {
           filter.checked = true;
         });
@@ -121,8 +137,78 @@ async function loadProjects() {
         updateToggleAllButton("tools");
         updateToggleAllButton("libraries");
         updateToggleAllButton("languages");
+
+        //set the sorting algorithm to "end date"
+        selectedSortType = "End Date";
+        let targetRadioButtonId = sortTypeIds.find(id => id.replaceAll("-", "").toUpperCase().includes(selectedSortType.replaceAll(" ", "").toUpperCase()))
+        document.querySelector(`#${targetRadioButtonId}`).checked = true;
+        localStorage.setItem("selectedSortType", JSON.stringify(selectedSortType))
+
+
+        // set reversing the project to false
+        reverseSort = false;
+        document.querySelector(`#${reverseSortId}`).checked = reverseSort;
+        localStorage.setItem("reverseSort", JSON.stringify(reverseSort))
+
+
       };
+
+      //set the sort type
+      //if the the sort type can't be found in local storage, use default
+      selectedSortType = JSON.parse(localStorage.getItem("selectedSortType"));
+      console.log(selectedSortType)
+
+      if(selectedSortType === null)
+      {
+        let element = document.querySelector(`#${sortTypeIds[2]}`);
+        selectedSortType = element.value;
+        element.checked = true;
+        localStorage.setItem("selectedSortType", JSON.stringify(selectedSortType))
+      }
+
+      else
+      {
+        let id = sortTypeIds.find(id => document.querySelector(`#${id}`).value === selectedSortType);  
+        let element = document.querySelector(`#${id}`);
+        element.checked = true;
+      }
+
+      //when a radio button is pressed, change the order of projects
+      sortTypeIds.forEach(id => {
+        document.querySelector(`#${id}`).onclick = (e) => {
+          selectedSortType = e.target.value;
+          validProjects = validProjects.sort(sortProjects())
+          updateDisplayedProjects();
+
+          //update the local storage 
+          localStorage.setItem("selectedSortType", JSON.stringify(selectedSortType));
+        }});
+
+        //if the reverse check is in localstorage, 
+        // set the variable to the stored value, otherwise set it to false
+        if(!reverseSort)
+        {
+          reverseSort = false;
+          localStorage.setItem("reverseSort", JSON.stringify(reverseSort));
+        }
+
+        else
+        {
+          reverseSort = JSON.parse(localStorage.getItem("reverseSort"));
+        }
+        //when a reverse checkbox is clicked, reverse the results
+        document.querySelector(`#${reverseSortId}`).onclick = (e) => {
+          reverseSort = e.target.checked;
+          validProjects = validProjects.sort(sortProjects())
+          updateDisplayedProjects();
+
+          //update the local storage 
+          localStorage.setItem("reverseSort", JSON.stringify(reverseSort));
+        }
+
     });
+
+
 }
 
 function createProjectLayout(project, flexClass) {
@@ -173,7 +259,7 @@ function getFilters(filterType) {
     //check if new filters have been added, if they have, set them to true
     targetedFilters = filterCount.map((obj) => {
       for (const tool of localStorageFilters) {
-        if (tool.name == name) {
+        if (tool.name == obj.name) {
           return { name: obj.name, count: obj.count, checked: tool.checked, type: filterType };
         }
       }
@@ -192,7 +278,7 @@ function getFilters(filterType) {
   targetedFilters.forEach((filter) => {
     const div = document.createElement("div");
     const checkbox = document.createElement("input");
-    checkbox.onclick = checkboxClick;
+    checkbox.onclick = filterCheckboxClick;
     checkbox.type = "checkbox";
     checkbox.name = filter.name;
     checkbox.value = filter.name;
@@ -253,12 +339,35 @@ function getFilteredProjects() {
     }
   }
 
+  updateDisplayedProjects();
+}
+
+function updateDisplayedProjects()
+{
   document.querySelector("#results").innerHTML = `Showing ${validProjects.length} out of ${projects.length} projects`;
   const html = validProjects.map((p, ix) => createProjectLayout(p, ix % 2 == 0 ? "flex" : "flex-reverse"));
   document.querySelector("#projects").innerHTML = `<div class="project">${html.join("")}</div>`;
 }
 
-function checkboxClick(e) {
+function sortProjects() {
+  
+  switch(selectedSortType)
+  {
+    //sort projects by start date in descending order
+    case 'Start Date':
+      return (ProjectA, ProjectB) => reverseSort ? ProjectA.startDate - ProjectB.startDate : ProjectB.startDate - ProjectA.startDate;
+      
+    //sort projects by end date in descending order
+      case 'End Date':
+        return (ProjectA, ProjectB) => reverseSort ? ProjectA.endDate - ProjectB.endDate : ProjectB.endDate - ProjectA.endDate;
+
+      //sort projects by title in alphabetical order
+      case 'Title':
+        return (ProjectA, ProjectB) => reverseSort ? ProjectB.title.localeCompare(ProjectA.title) : ProjectA.title.localeCompare(ProjectB.title);
+  }
+}
+
+function filterCheckboxClick(e) {
   filters.find((filter) => filter.name === e.target.name).checked = e.target.checked;
   localStorage.setItem("filters", JSON.stringify(filters));
   getFilteredProjects();
@@ -276,10 +385,6 @@ function updateToggleAllButton(filterType) {
       toggleAllButton.innerHTML = "Enable All";
     }
   }
-}
-
-function removeDuplicates(arr) {
-  return arr.filter((value, ix) => arr.indexOf(value) === ix && value);
 }
 
 async function loadContacts() {
