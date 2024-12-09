@@ -3,8 +3,21 @@ let projects = []; //projects objects
 let validProjects = []; //projects that match the filter
 let filters = []; //filter objects
 let filterCheckboxes = []; //all filter checkbox element
+let selectedSortType; //the condition of how the projects are sorted
+let sortTypeIds; //the ids of the sort type
 
 window.onload = () => {
+  //get all the ways the user can sort the projects
+  let sortOptions = document.querySelector("#sort-options");
+  let sortTypes = Array.from(sortOptions.children).filter(ele => ele.tagName == "INPUT").map(ele => ele.id);
+
+  //the last input is a checkbox, so we can ignore that
+  for(let i = 0; i < sortTypes.length - 1; i++) {
+    selectedSortType.push(sortTypes[i]);
+  }
+
+  console.log(selectedSortType);
+
   loadProjects();
   loadContacts();
   loadBanner();
@@ -100,6 +113,8 @@ async function loadProjects() {
             links: p["Links"],
           })
       );
+
+
       getFilters("tools");
       getFilters("libraries");
       getFilters("languages");
@@ -107,15 +122,21 @@ async function loadProjects() {
       updateToggleAllButton("libraries");
       updateToggleAllButton("languages");
 
+      //set the sort type to end date for debugging purposes
+      document.querySelector('#title-radio-button').checked = true;
+
+
+
       localStorage.setItem("filters", JSON.stringify(filters));
       getFilteredProjects();
-      document.querySelector("#restore-filter-button").onclick = () => {
+      document.querySelector("#restore-setting-button").onclick = () => {
         filters.forEach((filter) => {
           filter.checked = true;
         });
         filterCheckboxes.forEach((checkbox) => {
           checkbox.checked = true;
         });
+        selectedSortTye = 
         getFilteredProjects();
         localStorage.setItem("filters", JSON.stringify(filters));
         updateToggleAllButton("tools");
@@ -253,9 +274,38 @@ function getFilteredProjects() {
     }
   }
 
+  const order = ['start date', 'end date', 'alphabetical']
+  const reverse = true;
+  const chosenOrder = order[0];
+
+  //sort projects
+  validProjects = validProjects.sort(sortProject(chosenOrder))
+
+  if(reverse) {
+    validProjects = validProjects.reverse()
+  }
+
   document.querySelector("#results").innerHTML = `Showing ${validProjects.length} out of ${projects.length} projects`;
   const html = validProjects.map((p, ix) => createProjectLayout(p, ix % 2 == 0 ? "flex" : "flex-reverse"));
   document.querySelector("#projects").innerHTML = `<div class="project">${html.join("")}</div>`;
+}
+
+function sortProject(sortType) {
+  
+  switch(sortType)
+  {
+    //sort projects by start date in descending order
+    case 'start date':
+      return (projectA, ProjectB) => ProjectB.startDate - projectA.startDate;
+      
+    //sort projects by end date in descending order
+      case 'end date':
+        return (projectA, ProjectB) => ProjectB.endDate - projectA.endDate;
+
+      //sort projects by title in alphabetical order
+      case 'alphabetical':
+        return (projectA, ProjectB) => projectA.title.localeCompare(ProjectB.title);
+  }
 }
 
 function checkboxClick(e) {
