@@ -111,6 +111,10 @@
         {
             "Title": "\"Is There Any Deal\" Bot",
             "Description": "<a href=\"https://isthereanydeal.com\" target=\"_blank\">Is There Any Deal</a> is a site that notifies people if a game is a sale for a certain price. Let's say I wanted to get the game \"Cyperpunk 2077\" when it's on sale for $15 or less. The site will send me an email when that condition is met on whitelisted game sites. I would prefer if I got another notification that isn't email. There is a bot called <a href=\"https://freestuffbot.xyz\"  target=\"_blank\">Free Stuff</a> that notifies when a game goes on sale or is free on Discord. But it doesn't have the customization of choosing which games and what price to alert for."
+        },
+        {
+            "Title": "KTANE LFA Request Organizer",
+            "Description": "Handling LFA (Log File Analyzer) requests is one of the many tasks I do for KTANE. In brief, it is converting strings from a log into various formats including but not limited to: svgs, dropdowns, and images. These requests are made by several people within the community Discord server {insert link}. They fall under a thread as they are considered a \"subtask\". Since it is a thread, it's difficult to search if a module has already been requested for LFA as Discord does not support searching through a thread. This means the search results will also pull information from the main channel and other threads, making it cumbersome to navigate.\nI would like to develop a Discord bot that would scan the entire thread and archive the modules that have been requested. It could also add to this list whenever a new module is requested. These archived results could be saved in an external file, such as a JSON, and sorted in various ways, such as by alphabetical or chronological order."
         }
     ]
 }
