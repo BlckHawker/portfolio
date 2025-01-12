@@ -35,7 +35,16 @@ class Project {
     this.hasHR = hasHR;
     this.title = title;
     this.startDate = new Date(`${startDate.split(" ")[0]} 1, ${startDate.split(" ")[1]} 00:00:00`);
-    this.endDate = new Date(`${endDate.split(" ")[0]} 1, ${endDate.split(" ")[1]} 00:00:00`);
+
+    //if the end date is "Present", set it as present. Otherwise, set it as a date
+    if(endDate == "Present")
+    {
+      this.endDate = "Present";
+    }
+    else
+    {
+      this.endDate = new Date(`${endDate.split(" ")[0]} 1, ${endDate.split(" ")[1]} 00:00:00`);
+    }
     this.tools = tools;
     this.libraries = libraries;
     this.languages = languages;
@@ -46,6 +55,7 @@ class Project {
 
   getProjectTimeFrame() {
     const startDate = this.getDate(this.startDate);
+
     const endDate = this.getDate(this.endDate);
 
     if (startDate === endDate) return startDate;
@@ -53,6 +63,10 @@ class Project {
   }
 
   getDate(date) {
+    if(date == "Present")
+    {
+      return date;
+    }
     const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     return `${monthNames[date.getMonth()]} ${date.getFullYear()}`;
   }
@@ -156,7 +170,6 @@ async function loadProjects() {
       //set the sort type
       //if the the sort type can't be found in local storage, use default
       selectedSortType = JSON.parse(localStorage.getItem("selectedSortType"));
-      console.log(selectedSortType)
 
       if(selectedSortType === null)
       {
@@ -177,9 +190,7 @@ async function loadProjects() {
       sortTypeIds.forEach(id => {
         document.querySelector(`#${id}`).onclick = (e) => {
           selectedSortType = e.target.value;
-          validProjects = validProjects.sort(sortProjects())
-          updateDisplayedProjects();
-
+          sortProjects()
           //update the local storage 
           localStorage.setItem("selectedSortType", JSON.stringify(selectedSortType));
         }});
@@ -199,7 +210,7 @@ async function loadProjects() {
         //when a reverse checkbox is clicked, reverse the results
         document.querySelector(`#${reverseSortId}`).onclick = (e) => {
           reverseSort = e.target.checked;
-          validProjects = validProjects.sort(sortProjects())
+          sortProjects();
           updateDisplayedProjects();
 
           //update the local storage 
@@ -349,21 +360,47 @@ function updateDisplayedProjects()
   document.querySelector("#projects").innerHTML = `<div class="project">${html.join("")}</div>`;
 }
 
-function sortProjects() {
+function sortProjects()
+{
+  //if the sort type is end date, make it so one's with the end date "Present are shown first"
+  if(selectedSortType == "End Date")
+    {
+      const endProjects =  validProjects.filter(p => p.endDate == "Present").sort(getSortProjectFunction());
+      const nonEndProjects = validProjects.filter(p => p.endDate != "Present").sort(getSortProjectFunction());
+      validProjects = [
+        ...endProjects,
+        ...nonEndProjects
+      ]
+    }
+    //otherwise sort it like norma;
+    else
+    {
+      validProjects.sort(getSortProjectFunction());
+    }
+    
+    if(reverseSort)
+    {
+      validProjects.reverse()
+    }
+    updateDisplayedProjects();
+}
+
+function getSortProjectFunction() {
   
   switch(selectedSortType)
   {
     //sort projects by start date in descending order
     case 'Start Date':
-      return (ProjectA, ProjectB) => reverseSort ? ProjectA.startDate - ProjectB.startDate : ProjectB.startDate - ProjectA.startDate;
+      
+      return (ProjectA, ProjectB) => ProjectB.startDate - ProjectA.startDate;
       
     //sort projects by end date in descending order
       case 'End Date':
-        return (ProjectA, ProjectB) => reverseSort ? ProjectA.endDate - ProjectB.endDate : ProjectB.endDate - ProjectA.endDate;
+        return (ProjectA, ProjectB) => ProjectB.endDate - ProjectA.endDate
 
       //sort projects by title in alphabetical order
       case 'Title':
-        return (ProjectA, ProjectB) => reverseSort ? ProjectB.title.localeCompare(ProjectA.title) : ProjectA.title.localeCompare(ProjectB.title);
+        return (ProjectA, ProjectB) => ProjectA.title.localeCompare(ProjectB.title);
   }
 }
 
@@ -377,7 +414,6 @@ function filterCheckboxClick(e) {
 function updateToggleAllButton(filterType) {
   const targetedCheckboxes = filterCheckboxes.filter((cb) => cb.dataset["type"] === filterType);
   const toggleAllButton = document.querySelector(`#${filterType}-toggle-all-button`);
-  console.log(toggleAllButton);
   if (targetedCheckboxes.every((cb) => cb.checked === targetedCheckboxes[0].checked)) {
     if (targetedCheckboxes[0].checked) {
       toggleAllButton.innerHTML = "Disable All";
