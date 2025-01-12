@@ -1,6 +1,29 @@
 {
     "Projects": [
         {
+            "Title": "Stardew Valley Perfectionist Interactive Guide",
+            "Start Date": "November 2024",
+            "End Date": "Present",
+            "Languages": ["C#"],
+            "Libraries": ["MonoGame"],
+            "Tools": ["Discord", "Visual Studio", "GitHub", "SMAPI"],
+            "Description": "<a href=\"https://www.stardewvalley.net\" target=\"_blank\">Stardew Valley</a> is farming game that surprisingly has a lot of content besides farming. This makes 100% the game a very long task to complete, especially since there are multiple ways to do some tasks. I have often thought \"I wish there was a mod that told me to hold onto these items so I don't have to grind to get them later.\" I decided to expand the scope of the project so it tells the player how to 100% the game based on their state of the game.",
+            "Links": [
+                {
+                    "Name": "Repository",
+                    "Link": "https://github.com/BlckHawker/Perfectionist-Interactive-Guide"
+                },
+                {
+                    "Name": "Video Demonstrations",
+                    "Link": ""
+                }
+            ],
+            "Image": {
+                "src": "img/stardew valley perfectionist demo.gif",
+                "alt": "Demonstration of the game telling the player to befriend an NPC by giving her gifts and talking to her when available"
+            }
+        },
+        {
             "Title": "Mentor Schedule Maker",
             "Start Date": "August 2024",
             "End Date": "Present",
