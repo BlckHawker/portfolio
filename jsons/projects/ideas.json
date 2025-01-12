@@ -10,7 +10,7 @@
         },
         {
             "Title": "Dynamic Binary Puzzle Solver",
-            "Description": "I created a <a href=\"https://www.puzzle-binairo.com\" target=\"_blank\">Binary Puzzle (also known as Binario)</a> solver during my <a href=\"{root}/projects/ktane.html#Solver\" target=\"_blank\">KTANE solver saga</a>. The KTANE version always generated a 6x6 puzzle, but I have recently started solving some with a larger size. I want to challenge myself by making a solver where the dimensions are not constant. This will force me to think about what rules work for one size and not for others and apply them in the appropriate context."
+            "Description": "I created a <a href=\"https://www.puzzle-binairo.com\" target=\"_blank\">Binary Puzzle (also known as Binario)</a> solver during my <a href=\"{root}/projects/ktane.html#Solver\" target=\"_blank\">KTANE solver saga</a>. The KTANE version always generated a 6x6 puzzle, but I have recently started solving some with a larger size. I want to challenge myself by making a solver where the dimensions are not constant. This will force me to think about what rules work for one size and not for others and apply them in the appropriate context.\nI have been made aware that there is a harder version of this puzzle called <a href=\" https://www.puzzle-binairo.com/binairo-plus-6x6-easy/\" target=\"_blank\">Binario+</a> that has more rules, but also offer more challenges. I would like the solver to solve this version of the puzzle as well."
         },
         {
             "Title": "Budget Tracker",
