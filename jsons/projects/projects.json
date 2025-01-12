@@ -1,6 +1,32 @@
 {
     "Projects": [
         {
+            "Title": "Timestamp Discord Bot",
+            "Start Date": "December 2024",
+            "End Date": "January 2025",
+            "Languages": ["JavaScript"],
+            "Libraries": ["Discord.js",
+                "Node.js",
+                "Node Package Manager",
+                "Regex"],
+            "Tools": [
+                "Visual Studio Code",
+                "GitHub",
+                "Trello"
+            ],
+            "Description": "I use Discord a lot for vairous purposes. This means I talk to a lot of people all around the globe who are in different time zones. I often had issues schedule events with people when converting times.  Discord does have a timestamp feature that automatically parses a unix timestamp to each local user's time zone, but it can be a bit cumbersome for users to manually convert the time into a timestamp and navigate through multiple timestamp formats that are not intuitive to the naked eye.\nThis bot simplifies the process. Users can simply input a date (MM/DD/YYYY), a time (12:00AM or 00:00) and their timezone, and the bot will automatically convert it into a timestamp. It will then provide all possible formats for the timestamp, making it easy for users to copy and paste the one they need.",
+            "Links": [
+                {
+                    "Name": "Repository",
+                    "Link": "https://github.com/BlckHawker/Timestamp-Discord-Bot"
+                }
+            ],
+            "Image": {
+                "src": "img/discord timestamp demo.gif",
+                "alt": "Demonstration of getting a discord timestamp of January 23, 2002 at 1:00PM"
+            }
+        },
+        {
             "Title": "Stardew Valley Perfectionist Interactive Guide",
             "Start Date": "November 2024",
             "End Date": "Present",
