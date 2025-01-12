@@ -1,10 +1,6 @@
 {
     "ProjectIdeas": [
         {
-            "Title": "Mentor Schedule Maker",
-            "Description": "At my time at RIT, I joined the <a href=\"https://sse.rit.edu\" target=\"_blank\">Society of Software Engineers</a>. It's an academic organization that mainly focused on mentoring (tutoring) students who are majoring in Software Engineering related field. The \"Mentor Head\" would be responsible for making the schedule of which mentor(s) would be assigned each shift based on their availability. Since the Mentor Head has many other responsibilities, I thought it would be a good idea to alleviate one of those problems with a schedule generator. Given the name and availability of each mentor, the software would generate all possible schedules, verifying that nobody is overworked."
-        },
-        {
             "Title": "Q Learning Rubik's Cube",
             "Description": "I was always mesmerized with Rubik's Cubes. When I finally learned an algorithm that guarantees the cube would be solved, I felt a great wave of pride. Although I never had the time to get into the hobby myself, I enjoy watching competitive cubing. I find the idea of memorizing patterns in order to optimize the solving process fascinating. A few years later, I took a class that focused on the use AI in games. We learned about neural networking and Q learning (a machine learning algorithm where the machine iteratively learns how to solve something and improves over time). I figured a rubik's cube would be a great puzzle to understand the algorithm more."
         },
