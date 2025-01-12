@@ -10,10 +10,12 @@ let reverseSortId = "reverse-checkbox"; //the id of the checkbox that is respons
 window.onload = () => {
   //get all the ways the user can sort the projects
   let sortOptions = document.querySelector("#sort-options");
-  let sortTypes = Array.from(sortOptions.children).filter(ele => ele.tagName == "INPUT");
+  let sortTypes = Array.from(sortOptions.children).filter(
+    (ele) => ele.tagName == "INPUT"
+  );
 
   //the last input is a checkbox, so we can ignore that
-  for(let i = 0; i < sortTypes.length - 1; i++) {
+  for (let i = 0; i < sortTypes.length - 1; i++) {
     sortTypeIds.push(sortTypes[i].id);
   }
 
@@ -31,19 +33,31 @@ window.onload = () => {
 };
 
 class Project {
-  constructor({ hasHR, title, startDate, endDate, tools, libraries, languages, links, image, description }) {
+  constructor({
+    hasHR,
+    title,
+    startDate,
+    endDate,
+    tools,
+    libraries,
+    languages,
+    links,
+    image,
+    description,
+  }) {
     this.hasHR = hasHR;
     this.title = title;
-    this.startDate = new Date(`${startDate.split(" ")[0]} 1, ${startDate.split(" ")[1]} 00:00:00`);
+    this.startDate = new Date(
+      `${startDate.split(" ")[0]} 1, ${startDate.split(" ")[1]} 00:00:00`
+    );
 
     //if the end date is "Present", set it as present. Otherwise, set it as a date
-    if(endDate == "Present")
-    {
+    if (endDate == "Present") {
       this.endDate = "Present";
-    }
-    else
-    {
-      this.endDate = new Date(`${endDate.split(" ")[0]} 1, ${endDate.split(" ")[1]} 00:00:00`);
+    } else {
+      this.endDate = new Date(
+        `${endDate.split(" ")[0]} 1, ${endDate.split(" ")[1]} 00:00:00`
+      );
     }
     this.tools = tools;
     this.libraries = libraries;
@@ -63,20 +77,36 @@ class Project {
   }
 
   getDate(date) {
-    if(date == "Present")
-    {
+    if (date == "Present") {
       return date;
     }
-    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const monthNames = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
     return `${monthNames[date.getMonth()]} ${date.getFullYear()}`;
   }
 
   getToolLibrariesLanguages() {
-    return `<p class="tools"><b>Languages/Libraries/Tools:</b> ${this.languages.concat(this.libraries).concat(this.tools).join(", ")}</p>`;
+    return `<p class="tools"><b>Languages/Libraries/Tools:</b> ${this.languages
+      .concat(this.libraries)
+      .concat(this.tools)
+      .join(", ")}</p>`;
   }
 
   getDescription() {
-    return `${this.description.replaceAll("{root}", utils.getProjectRoot())
+    return `${this.description
+      .replaceAll("{root}", utils.getProjectRoot())
       .split("\n")
       .map((d) => `<p>${d}</p>`)
       .join("")}`;
@@ -92,9 +122,10 @@ class Project {
     const src = this.image["src"];
     const alt = this.image["alt"];
 
-    const srcPrefix = '../';
+    const srcPrefix = "../";
 
-    if (!src || !alt) return `<img src="${srcPrefix}img/WIP.png" alt="This is a work in progress">`;
+    if (!src || !alt)
+      return `<img src="${srcPrefix}img/WIP.png" alt="This is a work in progress">`;
     return `<img src="${srcPrefix + src}" alt="${alt}">`;
   }
 }
@@ -138,7 +169,6 @@ async function loadProjects() {
       localStorage.setItem("filters", JSON.stringify(filters));
       getFilteredProjects();
       document.querySelector("#restore-setting-button").onclick = () => {
-
         //make it so all to filter check boxes are checked
         filters.forEach((filter) => {
           filter.checked = true;
@@ -154,87 +184,100 @@ async function loadProjects() {
 
         //set the sorting algorithm to "end date"
         selectedSortType = "End Date";
-        let targetRadioButtonId = sortTypeIds.find(id => id.replaceAll("-", "").toUpperCase().includes(selectedSortType.replaceAll(" ", "").toUpperCase()))
+        let targetRadioButtonId = sortTypeIds.find((id) =>
+          id
+            .replaceAll("-", "")
+            .toUpperCase()
+            .includes(selectedSortType.replaceAll(" ", "").toUpperCase())
+        );
         document.querySelector(`#${targetRadioButtonId}`).checked = true;
-        localStorage.setItem("selectedSortType", JSON.stringify(selectedSortType))
-
+        localStorage.setItem(
+          "selectedSortType",
+          JSON.stringify(selectedSortType)
+        );
 
         // set reversing the project to false
         reverseSort = false;
         document.querySelector(`#${reverseSortId}`).checked = reverseSort;
-        localStorage.setItem("reverseSort", JSON.stringify(reverseSort))
-
-
+        localStorage.setItem("reverseSort", JSON.stringify(reverseSort));
       };
 
       //set the sort type
       //if the the sort type can't be found in local storage, use default
       selectedSortType = JSON.parse(localStorage.getItem("selectedSortType"));
 
-      if(selectedSortType === null)
-      {
+      if (selectedSortType === null) {
         let element = document.querySelector(`#${sortTypeIds[2]}`);
         selectedSortType = element.value;
         element.checked = true;
-        localStorage.setItem("selectedSortType", JSON.stringify(selectedSortType))
-      }
-
-      else
-      {
-        let id = sortTypeIds.find(id => document.querySelector(`#${id}`).value === selectedSortType);  
+        localStorage.setItem(
+          "selectedSortType",
+          JSON.stringify(selectedSortType)
+        );
+      } else {
+        let id = sortTypeIds.find(
+          (id) => document.querySelector(`#${id}`).value === selectedSortType
+        );
         let element = document.querySelector(`#${id}`);
         element.checked = true;
       }
 
       //when a radio button is pressed, change the order of projects
-      sortTypeIds.forEach(id => {
+      sortTypeIds.forEach((id) => {
         document.querySelector(`#${id}`).onclick = (e) => {
           selectedSortType = e.target.value;
-          sortProjects()
-          //update the local storage 
-          localStorage.setItem("selectedSortType", JSON.stringify(selectedSortType));
-        }});
-
-        //if the reverse check is in localstorage, 
-        // set the variable to the stored value, otherwise set it to false
-        if(!reverseSort)
-        {
-          reverseSort = false;
-          localStorage.setItem("reverseSort", JSON.stringify(reverseSort));
-        }
-
-        else
-        {
-          reverseSort = JSON.parse(localStorage.getItem("reverseSort"));
-        }
-        //when a reverse checkbox is clicked, reverse the results
-        document.querySelector(`#${reverseSortId}`).onclick = (e) => {
-          reverseSort = e.target.checked;
           sortProjects();
-          updateDisplayedProjects();
+          //update the local storage
+          localStorage.setItem(
+            "selectedSortType",
+            JSON.stringify(selectedSortType)
+          );
+        };
+      });
 
-          //update the local storage 
-          localStorage.setItem("reverseSort", JSON.stringify(reverseSort));
-        }
+      //if the reverse check is in localstorage,
+      // set the variable to the stored value, otherwise set it to false
+      reverseSort = JSON.parse(localStorage.getItem("reverseSort"));
 
+      if (reverseSort !== true) {
+        reverseSort = false;
+        localStorage.setItem("reverseSort", JSON.stringify(reverseSort));
+      } 
+      else {
+        document.querySelector(`#${reverseSortId}`).checked = true;
+      }
+      //when a reverse checkbox is clicked, reverse the results
+      document.querySelector(`#${reverseSortId}`).onclick = (e) => {
+        reverseSort = e.target.checked;
+        sortProjects();
+        updateDisplayedProjects();
+
+        //update the local storage
+        localStorage.setItem("reverseSort", JSON.stringify(reverseSort));
+      };
+
+      //sort the projects based on local storage
+      sortProjects();
     });
-
-
 }
 
 function createProjectLayout(project, flexClass) {
   let html = "";
   if (project.hasHR) html += "<hr>";
-  const wordSpan = `<span><h2 id="${project.title.replaceAll(" ", "-")}">${project.title}</h2><h4>${project.getProjectTimeFrame()}</h4>${project.getToolLibrariesLanguages()}${project.getDescription()}${project.getLinks()}</span>`;
+  const wordSpan = `<span><h2 id="${project.title.replaceAll(" ", "-")}">${
+    project.title
+  }</h2><h4>${project.getProjectTimeFrame()}</h4>${project.getToolLibrariesLanguages()}${project.getDescription()}${project.getLinks()}</span>`;
   html += `<div class="${flexClass}"> ${wordSpan}${project.getImage()}</div>`;
   return html;
 }
 
 function getFilters(filterType) {
-  let localStorageFilters = JSON.parse(localStorage.getItem("filters") || "[]").filter((filter) => filter.type === filterType);
+  let localStorageFilters = JSON.parse(
+    localStorage.getItem("filters") || "[]"
+  ).filter((filter) => filter.type === filterType);
   let targetedFilters = [];
-  
-  //get all of the languages/tools/libraries use 
+
+  //get all of the languages/tools/libraries use
   const filterNames = projects.flatMap((project) => {
     switch (filterType) {
       case "tools":
@@ -244,37 +287,49 @@ function getFilters(filterType) {
       case "libraries":
         return project.libraries;
     }
-  })
+  });
 
   const filterCount = [];
 
   //count the amount of times a language/tool/library appears
-  for(const name of filterNames) {
-    const foundObj = filterCount.find(obj => obj.name == name);
-    if(foundObj === undefined) {
-      filterCount.push({name, count: 1});
-    }
-
-    else {
+  for (const name of filterNames) {
+    const foundObj = filterCount.find((obj) => obj.name == name);
+    if (foundObj === undefined) {
+      filterCount.push({ name, count: 1 });
+    } else {
       filterCount[filterCount.indexOf(foundObj)].count++;
     }
   }
 
-
   //if there are no saved filters in local storage, enable all the filters
   if (localStorageFilters.length == 0) {
     targetedFilters = filterCount.map((obj) => {
-      return { name: obj.name, count: obj.count, checked: true, type: filterType };
+      return {
+        name: obj.name,
+        count: obj.count,
+        checked: true,
+        type: filterType,
+      };
     });
   } else {
     //check if new filters have been added, if they have, set them to true
     targetedFilters = filterCount.map((obj) => {
       for (const tool of localStorageFilters) {
         if (tool.name == obj.name) {
-          return { name: obj.name, count: obj.count, checked: tool.checked, type: filterType };
+          return {
+            name: obj.name,
+            count: obj.count,
+            checked: tool.checked,
+            type: filterType,
+          };
         }
       }
-      return { name: obj.name, count: obj.count, checked: true, type: filterType };
+      return {
+        name: obj.name,
+        count: obj.count,
+        checked: true,
+        type: filterType,
+      };
     });
   }
 
@@ -298,7 +353,9 @@ function getFilters(filterType) {
     checkbox.checked = filter.checked;
     const label = document.createElement("label");
     label.htmlFor = filter.name;
-    label.appendChild(document.createTextNode(`${filter.name} (${filter.count})`));
+    label.appendChild(
+      document.createTextNode(`${filter.name} (${filter.count})`)
+    );
     div.appendChild(checkbox);
     div.appendChild(label);
     element.appendChild(div);
@@ -306,7 +363,9 @@ function getFilters(filterType) {
   });
 
   toggleAllButton.onclick = () => {
-    const targetedCheckboxes = filterCheckboxes.filter((cb) => filterNames.includes(cb.name));
+    const targetedCheckboxes = filterCheckboxes.filter((cb) =>
+      filterNames.includes(cb.name)
+    );
     if (toggleAllButton.innerHTML == "Enable All") {
       toggleAllButton.innerHTML = "Disable All";
       targetedCheckboxes.forEach((cb) => (cb.checked = true));
@@ -353,68 +412,77 @@ function getFilteredProjects() {
   updateDisplayedProjects();
 }
 
-function updateDisplayedProjects()
-{
-  document.querySelector("#results").innerHTML = `Showing ${validProjects.length} out of ${projects.length} projects`;
-  const html = validProjects.map((p, ix) => createProjectLayout(p, ix % 2 == 0 ? "flex" : "flex-reverse"));
-  document.querySelector("#projects").innerHTML = `<div class="project">${html.join("")}</div>`;
+function updateDisplayedProjects() {
+  document.querySelector(
+    "#results"
+  ).innerHTML = `Showing ${validProjects.length} out of ${projects.length} projects`;
+  const html = validProjects.map((p, ix) =>
+    createProjectLayout(p, ix % 2 == 0 ? "flex" : "flex-reverse")
+  );
+  document.querySelector(
+    "#projects"
+  ).innerHTML = `<div class="project">${html.join("")}</div>`;
 }
 
-function sortProjects()
-{
+function sortProjects() {
   //if the sort type is end date, make it so one's with the end date "Present are shown first"
-  if(selectedSortType == "End Date")
-    {
-      const endProjects =  validProjects.filter(p => p.endDate == "Present").sort(getSortProjectFunction());
-      const nonEndProjects = validProjects.filter(p => p.endDate != "Present").sort(getSortProjectFunction());
-      validProjects = [
-        ...endProjects,
-        ...nonEndProjects
-      ]
-    }
-    //otherwise sort it like norma;
-    else
-    {
-      validProjects.sort(getSortProjectFunction());
-    }
-    
-    if(reverseSort)
-    {
-      validProjects.reverse()
-    }
-    updateDisplayedProjects();
+  if (selectedSortType == "End Date") {
+    const endProjects = validProjects
+      .filter((p) => p.endDate == "Present")
+      .sort(getSortProjectFunction());
+    const nonEndProjects = validProjects
+      .filter((p) => p.endDate != "Present")
+      .sort(getSortProjectFunction());
+    validProjects = [...endProjects, ...nonEndProjects];
+  }
+  //otherwise sort it like norma;
+  else {
+    validProjects.sort(getSortProjectFunction());
+  }
+
+  if (reverseSort) {
+    validProjects.reverse();
+  }
+  updateDisplayedProjects();
 }
 
 function getSortProjectFunction() {
-  
-  switch(selectedSortType)
-  {
+  switch (selectedSortType) {
     //sort projects by start date in descending order
-    case 'Start Date':
-      
+    case "Start Date":
       return (ProjectA, ProjectB) => ProjectB.startDate - ProjectA.startDate;
-      
-    //sort projects by end date in descending order
-      case 'End Date':
-        return (ProjectA, ProjectB) => ProjectB.endDate - ProjectA.endDate
 
-      //sort projects by title in alphabetical order
-      case 'Title':
-        return (ProjectA, ProjectB) => ProjectA.title.localeCompare(ProjectB.title);
+    //sort projects by end date in descending order
+    case "End Date":
+      return (ProjectA, ProjectB) => ProjectB.endDate - ProjectA.endDate;
+
+    //sort projects by title in alphabetical order
+    case "Title":
+      return (ProjectA, ProjectB) =>
+        ProjectA.title.localeCompare(ProjectB.title);
   }
 }
 
 function filterCheckboxClick(e) {
-  filters.find((filter) => filter.name === e.target.name).checked = e.target.checked;
+  filters.find((filter) => filter.name === e.target.name).checked =
+    e.target.checked;
   localStorage.setItem("filters", JSON.stringify(filters));
   getFilteredProjects();
   updateToggleAllButton(e.target.dataset["type"]);
 }
 
 function updateToggleAllButton(filterType) {
-  const targetedCheckboxes = filterCheckboxes.filter((cb) => cb.dataset["type"] === filterType);
-  const toggleAllButton = document.querySelector(`#${filterType}-toggle-all-button`);
-  if (targetedCheckboxes.every((cb) => cb.checked === targetedCheckboxes[0].checked)) {
+  const targetedCheckboxes = filterCheckboxes.filter(
+    (cb) => cb.dataset["type"] === filterType
+  );
+  const toggleAllButton = document.querySelector(
+    `#${filterType}-toggle-all-button`
+  );
+  if (
+    targetedCheckboxes.every(
+      (cb) => cb.checked === targetedCheckboxes[0].checked
+    )
+  ) {
     if (targetedCheckboxes[0].checked) {
       toggleAllButton.innerHTML = "Disable All";
     } else {
@@ -424,5 +492,7 @@ function updateToggleAllButton(filterType) {
 }
 
 async function loadContacts() {
-  utils.getContactInfo().then((data) => (document.querySelector("#contactLinks").innerHTML = data));
+  utils
+    .getContactInfo()
+    .then((data) => (document.querySelector("#contactLinks").innerHTML = data));
 }
