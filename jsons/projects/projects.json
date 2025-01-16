@@ -1,6 +1,25 @@
 {
     "Projects": [
         {
+            "Title": "Todo Tracker + Randomizer",
+            "Start Date": "January 2025",
+            "End Date": "January 2025",
+            "Languages": ["Python"],
+            "Libraries": ["Tkinter"],
+            "Tools": ["Visual Studio Code", "GitHub"],
+            "Description": "There is a lot of things I want with my life. I have a lot of media I want to consume, songs I want to learn on my bass, and create many software applications. It can be overwhelming at times to think about it all. So much so that I sometimes can't even choose one of the things I want to do to start. I decided to make an application that would not only keep track of all of the \"tasks\" I want to do, but also allow the software randomly choose which task I should do. I added the ability to override this choice if desired. Since I don't plan to have this application to use networking, I implemented a safe file that users can import/export between devices.",
+            "Links": [
+                {
+                    "Name": "Repository",
+                    "Link": "https://github.com/BlckHawker/Todo-Randomizer"
+                }
+            ],
+            "Image": {
+                "src": "img/to do tracker + randomizer demo.gif",
+                "alt": "demonstration of adding, exporting, deleting, and importing categories and tasks with the application"
+            }
+        },
+        {
             "Title": "Timestamp Discord Bot",
             "Start Date": "December 2024",
             "End Date": "January 2025",
@@ -14,7 +33,7 @@
                 "GitHub",
                 "Trello"
             ],
-            "Description": "I use Discord a lot for vairous purposes. This means I talk to a lot of people all around the globe who are in different time zones. I often had issues schedule events with people when converting times.  Discord does have a timestamp feature that automatically parses a unix timestamp to each local user's time zone, but it can be a bit cumbersome for users to manually convert the time into a timestamp and navigate through multiple timestamp formats that are not intuitive to the naked eye.\nThis bot simplifies the process. Users can simply input a date (MM/DD/YYYY), a time (12:00AM or 00:00) and their timezone, and the bot will automatically convert it into a timestamp. It will then provide all possible formats for the timestamp, making it easy for users to copy and paste the one they need.",
+            "Description": "I use Discord a lot for various purposes. This means I talk to a lot of people all around the globe who are in different time zones. I often had issues schedule events with people when converting times.  Discord does have a timestamp feature that automatically parses a unix timestamp to each local user's time zone, but it can be a bit cumbersome for users to manually convert the time into a timestamp and navigate through multiple timestamp formats that are not intuitive to the naked eye.\nThis bot simplifies the process. Users can simply input a date (MM/DD/YYYY), a time (12:00AM or 00:00) and their timezone, and the bot will automatically convert it into a timestamp. It will then provide all possible formats for the timestamp, making it easy for users to copy and paste the one they need.",
             "Links": [
                 {
                     "Name": "Repository",
