@@ -1,9 +1,9 @@
 {
-    "Projects": [
+	"Projects": [
 		{
 			"Title": "Project Generator",
 			"Start Date": "February 2025",
-			"End Date": "Present",
+			"End Date": "February 2025",
 			"Languages": [
 				"JavaScript",
 				"TypeScript"
@@ -19,6 +19,10 @@
 				{
 					"Name": "Repository",
 					"Link": "https://github.com/BlckHawker/Project-Generator"
+				},
+				{
+					"Name": "Website",
+					"Link": "https://hawker-project-generator.netlify.app"
 				}
 			],
 			"Image": {
@@ -26,436 +30,456 @@
 				"alt": "demonstration of adding a new project using the project generator application"
 			}
 		},
-        {
-            "Title": "Todo Tracker + Randomizer",
-            "Start Date": "January 2025",
-            "End Date": "January 2025",
-            "Languages": ["Python"],
-            "Libraries": ["Tkinter"],
-            "Tools": ["Visual Studio Code", "GitHub"],
-            "Description": "There is a lot of things I want with my life. I have a lot of media I want to consume, songs I want to learn on my bass, and create many software applications. It can be overwhelming at times to think about it all. So much so that I sometimes can't even choose one of the things I want to do to start. I decided to make an application that would not only keep track of all of the \"tasks\" I want to do, but also allow the software randomly choose which task I should do. I added the ability to override this choice if desired. Since I don't plan to have this application to use networking, I implemented a safe file that users can import/export between devices.",
-            "Links": [
-                {
-                    "Name": "Repository",
-                    "Link": "https://github.com/BlckHawker/Todo-Randomizer"
-                }
-            ],
-            "Image": {
-                "src": "img/to do tracker + randomizer demo.gif",
-                "alt": "demonstration of adding, exporting, deleting, and importing categories and tasks with the application"
-            }
-        },
-        {
-            "Title": "Timestamp Discord Bot",
-            "Start Date": "December 2024",
-            "End Date": "January 2025",
-            "Languages": ["JavaScript"],
-            "Libraries": ["Discord.js",
-                "Node.js",
-                "Node Package Manager",
-                "Regex"],
-            "Tools": [
-                "Visual Studio Code",
-                "GitHub",
-                "Trello"
-            ],
-            "Description": "I use Discord a lot for various purposes. This means I talk to a lot of people all around the globe who are in different time zones. I often had issues schedule events with people when converting times.  Discord does have a timestamp feature that automatically parses a unix timestamp to each local user's time zone, but it can be a bit cumbersome for users to manually convert the time into a timestamp and navigate through multiple timestamp formats that are not intuitive to the naked eye.\nThis bot simplifies the process. Users can simply input a date (MM/DD/YYYY), a time (12:00AM or 00:00) and their timezone, and the bot will automatically convert it into a timestamp. It will then provide all possible formats for the timestamp, making it easy for users to copy and paste the one they need.",
-            "Links": [
-                {
-                    "Name": "Repository",
-                    "Link": "https://github.com/BlckHawker/Timestamp-Discord-Bot"
-                }
-            ],
-            "Image": {
-                "src": "img/discord timestamp demo.gif",
-                "alt": "Demonstration of getting a discord timestamp of January 23, 2002 at 1:00PM"
-            }
-        },
-        {
-            "Title": "Stardew Valley Perfectionist Interactive Guide",
-            "Start Date": "November 2024",
-            "End Date": "Present",
-            "Languages": ["C#"],
-            "Libraries": ["MonoGame"],
-            "Tools": ["Discord", "Visual Studio", "GitHub", "SMAPI"],
-            "Description": "<a href=\"https://www.stardewvalley.net\" target=\"_blank\">Stardew Valley</a> is farming game that surprisingly has a lot of content besides farming. This makes 100% the game a very long task to complete, especially since there are multiple ways to do some tasks. I have often thought \"I wish there was a mod that told me to hold onto these items so I don't have to grind to get them later.\" I decided to expand the scope of the project so it tells the player how to 100% the game based on their state of the game.",
-            "Links": [
-                {
-                    "Name": "Repository",
-                    "Link": "https://github.com/BlckHawker/Perfectionist-Interactive-Guide"
-                },
-                {
-                    "Name": "Video Demonstrations",
-                    "Link": "https://www.youtube.com/playlist?list=PLR_AbBaKlWBikt92CGPEX560tV9rxY4TA"
-                }
-            ],
-            "Image": {
-                "src": "img/stardew valley perfectionist demo.gif",
-                "alt": "Demonstration of the game telling the player to befriend an NPC by giving her gifts and talking to her when available"
-            }
-        },
-        {
-            "Title": "Mentor Schedule Maker",
-            "Start Date": "August 2024",
-            "End Date": "Present",
-            "Languages": [
-                "TypeScript"
-            ],
-            "Libraries": [
-                "React"
-            ],
-            "Tools": [
-                "Visual Studio Code",
-                "GitHub",
-                "Trello",
-                "Discord"
-            ],
-            "Description": "At my time at RIT, I joined the <a href=\"https://sse.rit.edu\" target=\"_blank\">Society of Software Engineers (SSE)</a>. It's an academic organization that mainly focused on mentoring (tutoring) students who are majoring in Software Engineering related field. The \"Mentor Head\" is responsible for making the schedule of which mentor(s) would be assigned each shift based on their availability. Since the Mentor Head has many other responsibilities, I decided to alleviate one of those duties by creating a schedule generator. Given the name and availability of each mentor, and many other parameters, the software generates many schedule possibilities, verifying that nobody is overworked.\nI independently built a prototype within the span of 3 months. It's in a functional state, but there is room for improvement, including a optimizing the schedule generation algorithm, a homepage that better explains the purpose of the website, the ability to import/export generated schedules and mentors, better generated schedule visuals, etc.\nI invited three students who are currently part of the SSE to do some user testing. They agreed that the website needed some work, but it was a good product. They offered to assist me in developing the project into a more usable state. Now I am taking more of a project manager role, prioritizing tasks and assigning them to the rest of the team. I plan to monitor progress and adjust the project timeline based on team morale contributions.",
-            "Links": [
-                {
-                    "Name": "Repository",
-                    "Link": "https://github.com/BlckHawker/Mentor-Schedule-Maker"
-                },
-                {
-                    "Name": "Prototype",
-                    "Link": "https://mellow-haupia-4eb202.netlify.app"
-                },
-                {
-                    "Name": "Video Demonstrations",
-                    "Link": "https://www.youtube.com/playlist?list=PLR_AbBaKlWBhpLq4AFxAZ1w57kCJVk7mn"
-                }
-            ],
-            "Image": {
-                "src": "img/mentor schedule maker demonstration.gif",
-                "alt": "demonstration of generating schedules then showing the results"
-            }
-        },
-        {
-            "Title": "Discord Link Parser",
-            "Start Date": "November 2024",
-            "End Date": "November 2024",
-            "Languages": [
-                "JavaScript"
-            ],
-            "Libraries": [
-                "Discord.js",
-                "Node.js",
-                "Node Package Manager",
-                "Regex"
-            ],
-            "Tools": [
-                "Visual Studio Code",
-                "GitHub",
-                "Trello"
-            ],
-            "Description": "I am in several discord servers where I chat with many people. Most servers have a memes channel, where (you guessed it) people send memes they want others to see. Most of those memes are links to different sites such as twitter, reddit, instagram, tiktok, etc. All of these links work differently where some will be viewable within discord while others will open your web browser, often time asking you to log in, which can be annoying. Especially when you're on a different device that is not logged in to all of your socials.\nThere have been some \"link fixers\" such as <a href=\"https://ddinstagram.com\" target=\"_blank\">InstaFix</a> and <a href=\"https://github.com/FixTweet/FxTwitter\" target=\"_blank\">FxTwitter</a> that allow the content to be seen within discord itself by editing the link. Though that can be annoying to remember what to edit each link to for different websites. I made a discord bot that cuts out the process of the user editing the message. Whenever a tiktok, twitter, or instagram link is sent, the bot will delete the message the user sent, send a new message with the fixed link and who originally sent the request.",
-            "Links": [
-                {
-                    "Name": "Video Demonstration",
-                    "Link": "https://youtu.be/GmQVyxlycBU?t=453"
-                },
-                {
-                    "Name": "Repository",
-                    "Link": "https://github.com/BlckHawker/Link-Parser"
-                }
-            ],
-            "Image": {
-                "src": "img/link parser example.gif",
-                "alt": "Link Parser bot parsing 3 twitter links. One with just text, one with an image, and another with a video that can be played within discord"
-            }
-        },
-        {
-            "Title": "Unity Tutorial",
-            "Start Date": "September 2024",
-            "End Date": "September 2024",
-            "Languages": [
-                "C#"
-            ],
-            "Libraries": [],
-            "Tools": [
-                "Unity",
-                "Visual Studio",
-                "GitHub",
-                "Adobe Premiere Pro"
-            ],
-            "Description": "I've often been asked how to get started with Unity, whether it’s for modding an existing game or creating a new one from scratch. Rather than overwhelming newcomers with the dense Unity documentation, I prefer to guide them through hands-on projects. I start with basic exercises and once they’re comfortable, encourage them to tackle more advanced ones until they’re ready to work on their own projects.\nAlthough I am happy to assist people individually, the teaching process takes a while and can be repetitive. To streamline this process and make it accessible to a wider audience, I’ve created a comprehensive video tutorial. It is designed for beginners with no prior experience in Unity and allows them to learn at their own pace, even when I’m not available. If someone doesn't understand something, they can refer to the completed code on GitHub or reach out with specific questions in the comments section. For those who prefer reading, I’ve also prepared slides that cover the same material as the video.",
-            "Links": [
-                {
-                    "Name": "Video Tutorial",
-                    "Link": "https://youtu.be/XcK0Y_PVyu8"
-                },
-                {
-                    "Name": "Repository",
-                    "Link": "https://github.com/BlckHawker/Unity-Tutorial"
-                }
-            ],
-            "Image": {
-                "src": "img/unity.gif",
-                "alt": "gif of one of finished projects"
-            }
-        },
-        {
-            "Title": "Pin State",
-            "Start Date": "August 2024",
-            "End Date": "August 2024",
-            "Tools": [
-                "Visual Studio"
-            ],
-            "Languages": [
-                "C#"
-            ],
-            "Libraries": [],
-            "Description": "This a prototype that handles the scoreboard of a game of bowling. It was made to understand the State design pattern for a class. The assignment was to refactor an old project that simulated a bowling center with multiple lanes. The original project handled the scoring in one method with multiple checks for bonuses (strikes and spares). It was clear the developers were struggling as the code is inefficient and difficult to read, which is most likely due to a time constraint. Although the state pattern increases coupling (increases the amount of files), it decreases the amount of work one file needs to do. This means each pin state can handle their own scoring, and a method can be called to get it. When the total score is needed, a loop can be ran where said method is called.\nUnfortunately, this project alone does not fully show how powerful design patterns can be. They can streamline the process of developing, and has the potential benefit of making maintainability easier. If a design pattern should be used (and which one) depends on what the project entails; it's important to not shoehorn a design pattern just for the sakes of having one as some deviations of the pattern can lead to the pattern not working as intended.",
-            "Links": [
-                {
-                    "Name": "Repository",
-                    "Link": "https://github.com/BlckHawker/PinState"
-                },
-                {
-                    "Name": "Design Pattern Catalog",
-                    "Link": "https://refactoring.guru/design-patterns/catalog"
-                }
-            ],
-            "Image": {
-                "src": "img/Pin State.gif",
-                "alt": "gif of scrolling down through the results of a bowling game"
-            }
-        },
-        {
-            "Title": "Crowd Comic",
-            "Start Date": "May 2024",
-            "End Date": "August 2024",
-            "Languages": [
-                "C#",
-                "SQL",
-                "TypeScript",
-                "JavaScript"
-            ],
-            "Libraries": [
-                "Sequelize",
-                "Node Package Manager",
-                "Node.js",
-                "React"
-            ],
-            "Tools": [
-                "GitHub",
-                "Visual Studio Code",
-                "Swagger API documentation"
-            ],
-            "Description": "Crowd Comic is a project that encourages users to collaborate with each other to create their own story. The project starts off with one panel set (root) with three hooks. A user can choose one of those hooks and create a new panel set, continuing the story.\nI had numerous responsibilities while working on this project; the main one was developing the backend with the use of Sequelize and SQL. Since I was working with team members with different levels of database knowledge, I would guide them through the process of creating a database including the creation of schemas and controllers.\nI also created API handlers and endpoints that would be used for the front end to make requests to the backend. Since, there was an abundance of endpoints that did various things; we knew that it was impractical to have people memorize them. We used Swagger.io which would auto generate documentation for each request. We would then tweak said documentation in order for it to be understandable for all developers. This saved us time from tediously writing documentation by hand.\nIt was crucial for the backend to be running in order to develop the front end. With some team members having more of a designer role, it was my responsibility to guide them through the set up. Rather than verbally instructing them how to do so, we wrote thorough documentation explaining not only the set up, but other topics related to the backend. This includes: the schema, project structure, regulations of unit tests, how to migrate data, scripts that quickly configures the database's content, etc.\nWhen the backend was finished, my team was moved to help with the functionality of the front end. Since I had previous experience with React, I helped other team members with the learning curve along with refactoring some boilerplate code into components. My main responsibility was to help with functionality of the read page. I added the logic that would either send the user to the next set of panels, or the page where they can create the next set; this all depended on if that hook lead to anywhere yet. Since this projects focusses on collaboration, I made is so the author of a panel set could not branch off of their own set of panels.\nOverall, this project allowed me to gain experience of working with a large group that has different levels of skills is a variety of topics. It would have been easy to tell my teammates to \"learn as you go\" and leave them, but I wanted to be a good leader and show by example. Instead, I took the time to answer any questions they had, and gave constructive feedback in the hopes they would improve.",
-            "Links": [
-                {
-                    "Name": "Prototype",
-                    "Link": "https://crowd-comic-site-07c5469f2ff1.herokuapp.com"
-                },
-                {
-                    "Name": "Github Organization",
-                    "Link": "https://github.com/RIT-Crowd-Comic"
-                }
-            ],
-            "Image": {
-                "src": "img/Crowd Comic.gif",
-                "alt": "gif of scrolling down the root's panel sets"
-            }
-        },
-        {
-            "Title": "Traumatic Toybox",
-            "Start Date": "January 2024",
-            "End Date": "May 2024",
-            "Languages": [
-                "C#"
-            ],
-            "Libraries": [],
-            "Tools": [
-                "GitHub",
-                "Unity",
-                "Visual Studio"
-            ],
-            "Description": "Traumatic Toybox started initially as a project for class that focused on the production of game development. It is a first person stealth game where the protagonist is a toy that must escape a toybox full of murderous teddy bears who are out for blood (stuffing). I took the role of the Lead Programmer in which I was in charge of developing the basic movement including sprinting, crouching, and the stamina meter. I was also responsible for the enemy detection icons that appear differently if the enemy is on or off the screen.",
-            "Links": [
-                {
-                    "Name": "itch.io Page",
-                    "Link": "https://avb999.itch.io/traumatic-toybox"
-                },
-                {
-                    "Name": "Demo",
-                    "Link": "https://www.youtube.com/watch?v=yw9JfkdARDk"
-                }
-            ],
-            "Image": {
-                "src": "img/traumatic.gif",
-                "alt": "gif of protagonist trying to run away from the enemies and failing"
-            }
-        },
-        {
-            "Title": "Foundation of Game Graphics Programming",
-            "Start Date": "August 2023",
-            "End Date": "December 2023",
-            "Languages": [
-                "C++",
-                "HLSL"
-            ],
-            "Libraries": [
-                "Direct X 11"
-            ],
-            "Tools": [
-                "Visual Studio"
-            ],
-            "Description": "During my time at RIT, I enrolled in a class that delved deep into the world of game graphics programming. The class first focused on what meshes are as they are fundamental building blocks for 3D object rendering. The course then progressed to the development of camera systems, translating world space events into the player's perspective. The focal point was the utilization of shaders and HLSL code to govern on-screen processing, enabling the rendering of shadows, giving the illusion of depth and shine to objects, adding post-processing effects such as blurring, and much more. This class not only served as a robust introduction to game graphics but also refined crucial software engineering skills, emphasizing importance of code optimization in terms of size and speed along with the importance of communicating with various team members to build good foundation for the project.",
-            "Links": [
-                {
-                    "Name": "Repository",
-                    "Link": "https://github.com/BlckHawker/IGME-540"
-                }
-            ],
-            "Image": {
-                "src": "img/IGME 540.gif",
-                "alt": "Post Processing Demonstration"
-            }
-        },
-        {
-            "Title": "Casper's Cat Cafe",
-            "Start Date": "January 2023",
-            "End Date": "April 2023",
-            "Languages": [
-                "C#"
-            ],
-            "Libraries": [],
-            "Tools": [
-                "GitHub",
-                "Visual Studio",
-                "Unity"
-            ],
-            "Description": "This is an academic group project where we were tasked to make a casual game. My group decided to make an app that could be played on desktop or a mobile device where the player was in charge of a cat cafe. They would play mini games in order to earn a currency called treats. When they have enough treats, they can spend them at the adoption center that will give them a random cat to roam around the floor. One of my contributions was to create a saving system that would save the players' amount of treats and track which cats have been collected. My other main task was the creation of two of our mini games.\nThe first mini game that I created has the player working as a barista. They will be bombarded with coffee orders that they need to prepare in a short amount of time. The game rewards players with fast reflexes by giving more points the faster they complete the order. I also implemented a tutorial system that uses pictures from the minigame in order to familiarize the user with the layout. In addition, I developed a high score system that has increased the amount of competitiveness and replayability in our playtests.\nThe other minigame I created was a fishing simulator. The player would have to wait until a fish bites on their line, and reel the fish in by spamming the “pull” button. The amount of clicks it took for a fish to get caught would depend on their size: small, medium, or large. The larger the fish, the bigger the reward would be. If the player did not spam enough, the fish would break free and the player would have to wait for another fish. Due to time constraints, the minigame was not finalized and did not make it into our final build of the game.\nI also helped with the adoption system. When you adopt a cat that is a duplicate of one you have already obtained, the game will give the user a 50% refund.",
-            "Links": [
-                {
-                    "Name": "Latest Build",
-                    "Link": "https://github.com/andrewrama/IGME450/releases/tag/2-10-23"
-                },
-                {
-                    "Name": "Demo",
-                    "Link": "https://youtu.be/Vu_ZcVhQJqA"
-                }
-            ],
-            "Image": {
-                "src": "img/casper.gif",
-                "alt": "Barista Game Demonstration"
-            }
-        },
-        {
-            "Title": "Ultimate Tic Tac Toe",
-            "Start Date": "December 2022",
-            "End Date": "December 2022",
-            "Languages": [
-                "JavaScript"
-            ],
-            "Libraries": [
-                "PixiJS"
-            ],
-            "Tools": [
-                "Visual Studio Code"
-            ],
-            "Description": "This project is a twist of the game Tic Tac Toe where the entire game is made up of 9 smaller tic tac toe boards. When someone wins a smaller board, the player’s symbol gets displayed over the small board. When a player wins enough boards to make a tic tac toe, they win the game.",
-            "Links": [
-                {
-                    "Name": "Play Here",
-                    "Link": "https://blckhawker.github.io/Ultimate-Tic-Tac-Toe/"
-                },
-                {
-                    "Name": "Repository",
-                    "Link": "https://github.com/BlckHawker/Ultimate-Tic-Tac-Toe"
-                }
-            ],
-            "Image": {
-                "src": "img/ultimate-tic-tac-toe.gif",
-                "alt": "Ultimate Tic Tac Toe Gameplay"
-            }
-        },
-        {
-            "Title": "Pokemon Finder",
-            "Start Date": "November 2022",
-            "End Date": "November 2022",
-            "Languages": [
-                "JavaScript",
-                "HTML",
-                "CSS"
-            ],
-            "Libraries": [
-                "PixiJS"
-            ],
-            "Tools": [
-                "Visual Studio Code"
-            ],
-            "Description": "This website allows users to look up Pokemon based on type, either the exact type or types that are weak or strong against a specific type. This site was made to learn how to use APIs along with extracting information from a JSON file. I also learned a little about dynamic displays since I was unaware about how much data would be extracted every time.",
-            "Links": [
-                {
-                    "Name": "Website",
-                    "Link": "https://people.rit.edu/nab6476/235/project2/"
-                },
-                {
-                    "Name": "Repository",
-                    "Link": "https://github.com/BlckHawker/Pokemon-Finder"
-                }
-            ],
-            "Image": {
-                "src": "img/pokemon.gif",
-                "alt": "Pokemon Finder Demonstration"
-            }
-        },
-        {
-            "Title": "Conway’s Game of Life",
-            "Start Date": "October 2022",
-            "End Date": "October 2022",
-            "Languages": [
-                "JavaScript",
-                "HTML",
-                "CSS"
-            ],
-            "Libraries": [],
-            "Tools": [
-                "Visual Studio Code"
-            ],
-            "Description": "Conway’s Game of Life is a zero player \"game\" that simulates how population grows/shrinks depending on adjacent neighbors. This was one of my first projects using loops in JavaScript to create a game-like function.",
-            "Links": [
-                {
-                    "Name": "Website",
-                    "Link": "https://blckhawker.github.io/Conways-Game-of-Life/"
-                },
-                {
-                    "Name": "Repository",
-                    "Link": "https://github.com/BlckHawker/Conways-Game-of-Life"
-                }
-            ],
-            "Image": {
-                "src": "img/conway.gif",
-                "alt": "Conway’s Game of Life Demonstration"
-            }
-        },
-        {
-            "Title": "Volatile Vermin",
-            "Start Date": "January 2021",
-            "End Date": "May 2021",
-            "Languages": [
-                "C#"
-            ],
-            "Libraries": [
-                "MonoGame"
-            ],
-            "Tools": [
-                "GitHub",
-                "Visual Studio"
-            ],
-            "Description": "This was a group project for one of my classes; it's also the first game I created. The game is a top down shooter where the player has to kill all enemies in the level in order to progress to the next one. The game is won when the player passes all the levels. My task was to create a level editor in order to have other members of my group easily create levels. I also implemented a high score system where players who get a top 5 score can put their initials in and is displayed on other playthroughs.",
-            "Links": [
-                {
-                    "Name": "Demo",
-                    "Link": "https://youtu.be/v1BvdzU7wZQ"
-                }
-            ],
-            "Image": {
-                "src": "img/vermin.png",
-                "alt": "Volatile Vermin"
-            }
-        }
-    ]
+		{
+			"Title": "Todo Tracker + Randomizer",
+			"Start Date": "January 2025",
+			"End Date": "January 2025",
+			"Languages": [
+				"Python"
+			],
+			"Libraries": [
+				"Tkinter"
+			],
+			"Tools": [
+				"Visual Studio Code",
+				"GitHub"
+			],
+			"Description": "There is a lot of things I want with my life. I have a lot of media I want to consume, songs I want to learn on my bass, and create many software applications. It can be overwhelming at times to think about it all. So much so that I sometimes can't even choose one of the things I want to do to start. I decided to make an application that would not only keep track of all of the \"tasks\" I want to do, but also allow the software randomly choose which task I should do. I added the ability to override this choice if desired. Since I don't plan to have this application to use networking, I implemented a safe file that users can import/export between devices.",
+			"Links": [
+				{
+					"Name": "Repository",
+					"Link": "https://github.com/BlckHawker/Todo-Randomizer"
+				}
+			],
+			"Image": {
+				"src": "img/to do tracker + randomizer demo.gif",
+				"alt": "demonstration of adding, exporting, deleting, and importing categories and tasks with the application"
+			}
+		},
+		{
+			"Title": "Timestamp Discord Bot",
+			"Start Date": "December 2024",
+			"End Date": "January 2025",
+			"Languages": [
+				"JavaScript"
+			],
+			"Libraries": [
+				"Discord.js",
+				"Node.js",
+				"Node Package Manager",
+				"Regex"
+			],
+			"Tools": [
+				"Visual Studio Code",
+				"GitHub",
+				"Trello"
+			],
+			"Description": "I use Discord a lot for various purposes. This means I talk to a lot of people all around the globe who are in different time zones. I often had issues schedule events with people when converting times.  Discord does have a timestamp feature that automatically parses a unix timestamp to each local user's time zone, but it can be a bit cumbersome for users to manually convert the time into a timestamp and navigate through multiple timestamp formats that are not intuitive to the naked eye.\nThis bot simplifies the process. Users can simply input a date (MM/DD/YYYY), a time (12:00AM or 00:00) and their timezone, and the bot will automatically convert it into a timestamp. It will then provide all possible formats for the timestamp, making it easy for users to copy and paste the one they need.",
+			"Links": [
+				{
+					"Name": "Repository",
+					"Link": "https://github.com/BlckHawker/Timestamp-Discord-Bot"
+				}
+			],
+			"Image": {
+				"src": "img/discord timestamp demo.gif",
+				"alt": "Demonstration of getting a discord timestamp of January 23, 2002 at 1:00PM"
+			}
+		},
+		{
+			"Title": "Stardew Valley Perfectionist Interactive Guide",
+			"Start Date": "November 2024",
+			"End Date": "Present",
+			"Languages": [
+				"C#"
+			],
+			"Libraries": [
+				"MonoGame"
+			],
+			"Tools": [
+				"Discord",
+				"Visual Studio",
+				"GitHub",
+				"SMAPI"
+			],
+			"Description": "<a href=\"https://www.stardewvalley.net\" target=\"_blank\">Stardew Valley</a> is farming game that surprisingly has a lot of content besides farming. This makes 100% the game a very long task to complete, especially since there are multiple ways to do some tasks. I have often thought \"I wish there was a mod that told me to hold onto these items so I don't have to grind to get them later.\" I decided to expand the scope of the project so it tells the player how to 100% the game based on their state of the game.",
+			"Links": [
+				{
+					"Name": "Repository",
+					"Link": "https://github.com/BlckHawker/Perfectionist-Interactive-Guide"
+				},
+				{
+					"Name": "Video Demonstrations",
+					"Link": "https://www.youtube.com/playlist?list=PLR_AbBaKlWBikt92CGPEX560tV9rxY4TA"
+				}
+			],
+			"Image": {
+				"src": "img/stardew valley perfectionist demo.gif",
+				"alt": "Demonstration of the game telling the player to befriend an NPC by giving her gifts and talking to her when available"
+			}
+		},
+		{
+			"Title": "Mentor Schedule Maker",
+			"Start Date": "August 2024",
+			"End Date": "Present",
+			"Languages": [
+				"TypeScript"
+			],
+			"Libraries": [
+				"React"
+			],
+			"Tools": [
+				"Visual Studio Code",
+				"GitHub",
+				"Trello",
+				"Discord"
+			],
+			"Description": "At my time at RIT, I joined the <a href=\"https://sse.rit.edu\" target=\"_blank\">Society of Software Engineers (SSE)</a>. It's an academic organization that mainly focused on mentoring (tutoring) students who are majoring in Software Engineering related field. The \"Mentor Head\" is responsible for making the schedule of which mentor(s) would be assigned each shift based on their availability. Since the Mentor Head has many other responsibilities, I decided to alleviate one of those duties by creating a schedule generator. Given the name and availability of each mentor, and many other parameters, the software generates many schedule possibilities, verifying that nobody is overworked.\nI independently built a prototype within the span of 3 months. It's in a functional state, but there is room for improvement, including a optimizing the schedule generation algorithm, a homepage that better explains the purpose of the website, the ability to import/export generated schedules and mentors, better generated schedule visuals, etc.\nI invited three students who are currently part of the SSE to do some user testing. They agreed that the website needed some work, but it was a good product. They offered to assist me in developing the project into a more usable state. Now I am taking more of a project manager role, prioritizing tasks and assigning them to the rest of the team. I plan to monitor progress and adjust the project timeline based on team morale contributions.",
+			"Links": [
+				{
+					"Name": "Repository",
+					"Link": "https://github.com/BlckHawker/Mentor-Schedule-Maker"
+				},
+				{
+					"Name": "Prototype",
+					"Link": "https://mellow-haupia-4eb202.netlify.app"
+				},
+				{
+					"Name": "Video Demonstrations",
+					"Link": "https://www.youtube.com/playlist?list=PLR_AbBaKlWBhpLq4AFxAZ1w57kCJVk7mn"
+				}
+			],
+			"Image": {
+				"src": "img/mentor schedule maker demonstration.gif",
+				"alt": "demonstration of generating schedules then showing the results"
+			}
+		},
+		{
+			"Title": "Discord Link Parser",
+			"Start Date": "November 2024",
+			"End Date": "November 2024",
+			"Languages": [
+				"JavaScript"
+			],
+			"Libraries": [
+				"Discord.js",
+				"Node.js",
+				"Node Package Manager",
+				"Regex"
+			],
+			"Tools": [
+				"Visual Studio Code",
+				"GitHub",
+				"Trello"
+			],
+			"Description": "I am in several discord servers where I chat with many people. Most servers have a memes channel, where (you guessed it) people send memes they want others to see. Most of those memes are links to different sites such as twitter, reddit, instagram, tiktok, etc. All of these links work differently where some will be viewable within discord while others will open your web browser, often time asking you to log in, which can be annoying. Especially when you're on a different device that is not logged in to all of your socials.\nThere have been some \"link fixers\" such as <a href=\"https://ddinstagram.com\" target=\"_blank\">InstaFix</a> and <a href=\"https://github.com/FixTweet/FxTwitter\" target=\"_blank\">FxTwitter</a> that allow the content to be seen within discord itself by editing the link. Though that can be annoying to remember what to edit each link to for different websites. I made a discord bot that cuts out the process of the user editing the message. Whenever a tiktok, twitter, or instagram link is sent, the bot will delete the message the user sent, send a new message with the fixed link and who originally sent the request.",
+			"Links": [
+				{
+					"Name": "Video Demonstration",
+					"Link": "https://youtu.be/GmQVyxlycBU?t=453"
+				},
+				{
+					"Name": "Repository",
+					"Link": "https://github.com/BlckHawker/Link-Parser"
+				}
+			],
+			"Image": {
+				"src": "img/link parser example.gif",
+				"alt": "Link Parser bot parsing 3 twitter links. One with just text, one with an image, and another with a video that can be played within discord"
+			}
+		},
+		{
+			"Title": "Unity Tutorial",
+			"Start Date": "September 2024",
+			"End Date": "September 2024",
+			"Languages": [
+				"C#"
+			],
+			"Libraries": [],
+			"Tools": [
+				"Unity",
+				"Visual Studio",
+				"GitHub",
+				"Adobe Premiere Pro"
+			],
+			"Description": "I've often been asked how to get started with Unity, whether it’s for modding an existing game or creating a new one from scratch. Rather than overwhelming newcomers with the dense Unity documentation, I prefer to guide them through hands-on projects. I start with basic exercises and once they’re comfortable, encourage them to tackle more advanced ones until they’re ready to work on their own projects.\nAlthough I am happy to assist people individually, the teaching process takes a while and can be repetitive. To streamline this process and make it accessible to a wider audience, I’ve created a comprehensive video tutorial. It is designed for beginners with no prior experience in Unity and allows them to learn at their own pace, even when I’m not available. If someone doesn't understand something, they can refer to the completed code on GitHub or reach out with specific questions in the comments section. For those who prefer reading, I’ve also prepared slides that cover the same material as the video.",
+			"Links": [
+				{
+					"Name": "Video Tutorial",
+					"Link": "https://youtu.be/XcK0Y_PVyu8"
+				},
+				{
+					"Name": "Repository",
+					"Link": "https://github.com/BlckHawker/Unity-Tutorial"
+				}
+			],
+			"Image": {
+				"src": "img/unity.gif",
+				"alt": "gif of one of finished projects"
+			}
+		},
+		{
+			"Title": "Pin State",
+			"Start Date": "August 2024",
+			"End Date": "August 2024",
+			"Languages": [
+				"C#"
+			],
+			"Libraries": [],
+			"Tools": [
+				"Visual Studio"
+			],
+			"Description": "This a prototype that handles the scoreboard of a game of bowling. It was made to understand the State design pattern for a class. The assignment was to refactor an old project that simulated a bowling center with multiple lanes. The original project handled the scoring in one method with multiple checks for bonuses (strikes and spares). It was clear the developers were struggling as the code is inefficient and difficult to read, which is most likely due to a time constraint. Although the state pattern increases coupling (increases the amount of files), it decreases the amount of work one file needs to do. This means each pin state can handle their own scoring, and a method can be called to get it. When the total score is needed, a loop can be ran where said method is called.\nUnfortunately, this project alone does not fully show how powerful design patterns can be. They can streamline the process of developing, and has the potential benefit of making maintainability easier. If a design pattern should be used (and which one) depends on what the project entails; it's important to not shoehorn a design pattern just for the sakes of having one as some deviations of the pattern can lead to the pattern not working as intended.",
+			"Links": [
+				{
+					"Name": "Repository",
+					"Link": "https://github.com/BlckHawker/PinState"
+				},
+				{
+					"Name": "Design Pattern Catalog",
+					"Link": "https://refactoring.guru/design-patterns/catalog"
+				}
+			],
+			"Image": {
+				"src": "img/Pin State.gif",
+				"alt": "gif of scrolling down through the results of a bowling game"
+			}
+		},
+		{
+			"Title": "Crowd Comic",
+			"Start Date": "May 2024",
+			"End Date": "August 2024",
+			"Languages": [
+				"C#",
+				"SQL",
+				"TypeScript",
+				"JavaScript"
+			],
+			"Libraries": [
+				"Sequelize",
+				"Node Package Manager",
+				"Node.js",
+				"React"
+			],
+			"Tools": [
+				"GitHub",
+				"Visual Studio Code",
+				"Swagger API documentation"
+			],
+			"Description": "Crowd Comic is a project that encourages users to collaborate with each other to create their own story. The project starts off with one panel set (root) with three hooks. A user can choose one of those hooks and create a new panel set, continuing the story.\nI had numerous responsibilities while working on this project; the main one was developing the backend with the use of Sequelize and SQL. Since I was working with team members with different levels of database knowledge, I would guide them through the process of creating a database including the creation of schemas and controllers.\nI also created API handlers and endpoints that would be used for the front end to make requests to the backend. Since, there was an abundance of endpoints that did various things; we knew that it was impractical to have people memorize them. We used Swagger.io which would auto generate documentation for each request. We would then tweak said documentation in order for it to be understandable for all developers. This saved us time from tediously writing documentation by hand.\nIt was crucial for the backend to be running in order to develop the front end. With some team members having more of a designer role, it was my responsibility to guide them through the set up. Rather than verbally instructing them how to do so, we wrote thorough documentation explaining not only the set up, but other topics related to the backend. This includes: the schema, project structure, regulations of unit tests, how to migrate data, scripts that quickly configures the database's content, etc.\nWhen the backend was finished, my team was moved to help with the functionality of the front end. Since I had previous experience with React, I helped other team members with the learning curve along with refactoring some boilerplate code into components. My main responsibility was to help with functionality of the read page. I added the logic that would either send the user to the next set of panels, or the page where they can create the next set; this all depended on if that hook lead to anywhere yet. Since this projects focusses on collaboration, I made is so the author of a panel set could not branch off of their own set of panels.\nOverall, this project allowed me to gain experience of working with a large group that has different levels of skills is a variety of topics. It would have been easy to tell my teammates to \"learn as you go\" and leave them, but I wanted to be a good leader and show by example. Instead, I took the time to answer any questions they had, and gave constructive feedback in the hopes they would improve.",
+			"Links": [
+				{
+					"Name": "Prototype",
+					"Link": "https://crowd-comic-site-07c5469f2ff1.herokuapp.com"
+				},
+				{
+					"Name": "Github Organization",
+					"Link": "https://github.com/RIT-Crowd-Comic"
+				}
+			],
+			"Image": {
+				"src": "img/Crowd Comic.gif",
+				"alt": "gif of scrolling down the root's panel sets"
+			}
+		},
+		{
+			"Title": "Traumatic Toybox",
+			"Start Date": "January 2024",
+			"End Date": "May 2024",
+			"Languages": [
+				"C#"
+			],
+			"Libraries": [],
+			"Tools": [
+				"GitHub",
+				"Unity",
+				"Visual Studio"
+			],
+			"Description": "Traumatic Toybox started initially as a project for class that focused on the production of game development. It is a first person stealth game where the protagonist is a toy that must escape a toybox full of murderous teddy bears who are out for blood (stuffing). I took the role of the Lead Programmer in which I was in charge of developing the basic movement including sprinting, crouching, and the stamina meter. I was also responsible for the enemy detection icons that appear differently if the enemy is on or off the screen.",
+			"Links": [
+				{
+					"Name": "itch.io Page",
+					"Link": "https://avb999.itch.io/traumatic-toybox"
+				},
+				{
+					"Name": "Demo",
+					"Link": "https://www.youtube.com/watch?v=yw9JfkdARDk"
+				}
+			],
+			"Image": {
+				"src": "img/traumatic.gif",
+				"alt": "gif of protagonist trying to run away from the enemies and failing"
+			}
+		},
+		{
+			"Title": "Foundation of Game Graphics Programming",
+			"Start Date": "August 2023",
+			"End Date": "December 2023",
+			"Languages": [
+				"C++",
+				"HLSL"
+			],
+			"Libraries": [
+				"Direct X 11"
+			],
+			"Tools": [
+				"Visual Studio"
+			],
+			"Description": "During my time at RIT, I enrolled in a class that delved deep into the world of game graphics programming. The class first focused on what meshes are as they are fundamental building blocks for 3D object rendering. The course then progressed to the development of camera systems, translating world space events into the player's perspective. The focal point was the utilization of shaders and HLSL code to govern on-screen processing, enabling the rendering of shadows, giving the illusion of depth and shine to objects, adding post-processing effects such as blurring, and much more. This class not only served as a robust introduction to game graphics but also refined crucial software engineering skills, emphasizing importance of code optimization in terms of size and speed along with the importance of communicating with various team members to build good foundation for the project.",
+			"Links": [
+				{
+					"Name": "Repository",
+					"Link": "https://github.com/BlckHawker/IGME-540"
+				}
+			],
+			"Image": {
+				"src": "img/IGME 540.gif",
+				"alt": "Post Processing Demonstration"
+			}
+		},
+		{
+			"Title": "Casper's Cat Cafe",
+			"Start Date": "January 2023",
+			"End Date": "April 2023",
+			"Languages": [
+				"C#"
+			],
+			"Libraries": [],
+			"Tools": [
+				"GitHub",
+				"Visual Studio",
+				"Unity"
+			],
+			"Description": "This is an academic group project where we were tasked to make a casual game. My group decided to make an app that could be played on desktop or a mobile device where the player was in charge of a cat cafe. They would play mini games in order to earn a currency called treats. When they have enough treats, they can spend them at the adoption center that will give them a random cat to roam around the floor. One of my contributions was to create a saving system that would save the players' amount of treats and track which cats have been collected. My other main task was the creation of two of our mini games.\nThe first mini game that I created has the player working as a barista. They will be bombarded with coffee orders that they need to prepare in a short amount of time. The game rewards players with fast reflexes by giving more points the faster they complete the order. I also implemented a tutorial system that uses pictures from the minigame in order to familiarize the user with the layout. In addition, I developed a high score system that has increased the amount of competitiveness and replayability in our playtests.\nThe other minigame I created was a fishing simulator. The player would have to wait until a fish bites on their line, and reel the fish in by spamming the “pull” button. The amount of clicks it took for a fish to get caught would depend on their size: small, medium, or large. The larger the fish, the bigger the reward would be. If the player did not spam enough, the fish would break free and the player would have to wait for another fish. Due to time constraints, the minigame was not finalized and did not make it into our final build of the game.\nI also helped with the adoption system. When you adopt a cat that is a duplicate of one you have already obtained, the game will give the user a 50% refund.",
+			"Links": [
+				{
+					"Name": "Latest Build",
+					"Link": "https://github.com/andrewrama/IGME450/releases/tag/2-10-23"
+				},
+				{
+					"Name": "Demo",
+					"Link": "https://youtu.be/Vu_ZcVhQJqA"
+				}
+			],
+			"Image": {
+				"src": "img/casper.gif",
+				"alt": "Barista Game Demonstration"
+			}
+		},
+		{
+			"Title": "Ultimate Tic Tac Toe",
+			"Start Date": "December 2022",
+			"End Date": "December 2022",
+			"Languages": [
+				"JavaScript"
+			],
+			"Libraries": [
+				"PixiJS"
+			],
+			"Tools": [
+				"Visual Studio Code"
+			],
+			"Description": "This project is a twist of the game Tic Tac Toe where the entire game is made up of 9 smaller tic tac toe boards. When someone wins a smaller board, the player’s symbol gets displayed over the small board. When a player wins enough boards to make a tic tac toe, they win the game.",
+			"Links": [
+				{
+					"Name": "Play Here",
+					"Link": "https://blckhawker.github.io/Ultimate-Tic-Tac-Toe/"
+				},
+				{
+					"Name": "Repository",
+					"Link": "https://github.com/BlckHawker/Ultimate-Tic-Tac-Toe"
+				}
+			],
+			"Image": {
+				"src": "img/ultimate-tic-tac-toe.gif",
+				"alt": "Ultimate Tic Tac Toe Gameplay"
+			}
+		},
+		{
+			"Title": "Pokemon Finder",
+			"Start Date": "November 2022",
+			"End Date": "November 2022",
+			"Languages": [
+				"JavaScript",
+				"HTML",
+				"CSS"
+			],
+			"Libraries": [
+				"PixiJS"
+			],
+			"Tools": [
+				"Visual Studio Code"
+			],
+			"Description": "This website allows users to look up Pokemon based on type, either the exact type or types that are weak or strong against a specific type. This site was made to learn how to use APIs along with extracting information from a JSON file. I also learned a little about dynamic displays since I was unaware about how much data would be extracted every time.",
+			"Links": [
+				{
+					"Name": "Website",
+					"Link": "https://people.rit.edu/nab6476/235/project2/"
+				},
+				{
+					"Name": "Repository",
+					"Link": "https://github.com/BlckHawker/Pokemon-Finder"
+				}
+			],
+			"Image": {
+				"src": "img/pokemon.gif",
+				"alt": "Pokemon Finder Demonstration"
+			}
+		},
+		{
+			"Title": "Conway’s Game of Life",
+			"Start Date": "October 2022",
+			"End Date": "October 2022",
+			"Languages": [
+				"JavaScript",
+				"HTML",
+				"CSS"
+			],
+			"Libraries": [],
+			"Tools": [
+				"Visual Studio Code"
+			],
+			"Description": "Conway’s Game of Life is a zero player \"game\" that simulates how population grows/shrinks depending on adjacent neighbors. This was one of my first projects using loops in JavaScript to create a game-like function.",
+			"Links": [
+				{
+					"Name": "Website",
+					"Link": "https://blckhawker.github.io/Conways-Game-of-Life/"
+				},
+				{
+					"Name": "Repository",
+					"Link": "https://github.com/BlckHawker/Conways-Game-of-Life"
+				}
+			],
+			"Image": {
+				"src": "img/conway.gif",
+				"alt": "Conway’s Game of Life Demonstration"
+			}
+		},
+		{
+			"Title": "Volatile Vermin",
+			"Start Date": "January 2021",
+			"End Date": "May 2021",
+			"Languages": [
+				"C#"
+			],
+			"Libraries": [
+				"MonoGame"
+			],
+			"Tools": [
+				"GitHub",
+				"Visual Studio"
+			],
+			"Description": "This was a group project for one of my classes; it's also the first game I created. The game is a top down shooter where the player has to kill all enemies in the level in order to progress to the next one. The game is won when the player passes all the levels. My task was to create a level editor in order to have other members of my group easily create levels. I also implemented a high score system where players who get a top 5 score can put their initials in and is displayed on other playthroughs.",
+			"Links": [
+				{
+					"Name": "Demo",
+					"Link": "https://youtu.be/v1BvdzU7wZQ"
+				}
+			],
+			"Image": {
+				"src": "img/vermin.png",
+				"alt": "Volatile Vermin"
+			}
+		}
+	]
 }
