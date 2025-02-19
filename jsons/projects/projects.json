@@ -1,5 +1,31 @@
 {
     "Projects": [
+		{
+			"Title": "Project Generator",
+			"Start Date": "February 2025",
+			"End Date": "Present",
+			"Languages": [
+				"JavaScript",
+				"TypeScript"
+			],
+			"Libraries": [
+				"React"
+			],
+			"Tools": [
+				"Visual Studio Code"
+			],
+			"Description": "All of my project displayed on my portfolio are generated from a JSON file. I created this file to easily have a place to hold the meta data of each project. By parsing this data, I can easily adjust the layout without needing to modify the content. To maintain my portfolio, I frequently update this file, either to make changes to existing projects or add new ones. However, this process can be tedious as several conditions need to be met for the JSON to be read correctly and for the projects to display properly. This GUI was created to streamline the process which includes built-in checks to ensure that each project's content is valid, minimizing the risk of syntax errors and making management smoother.",
+			"Links": [
+				{
+					"Name": "Repository",
+					"Link": "https://github.com/BlckHawker/Project-Generator"
+				}
+			],
+			"Image": {
+				"src": "img/project generator demonstration.gif",
+				"alt": "demonstration of adding a new project using the project generator application"
+			}
+		},
         {
             "Title": "Todo Tracker + Randomizer",
             "Start Date": "January 2025",
@@ -60,7 +86,7 @@
                 },
                 {
                     "Name": "Video Demonstrations",
-                    "Link": ""
+                    "Link": "https://www.youtube.com/playlist?list=PLR_AbBaKlWBikt92CGPEX560tV9rxY4TA"
                 }
             ],
             "Image": {

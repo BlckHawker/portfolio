@@ -105,8 +105,8 @@
             "Description": "<a href=\"https://isthereanydeal.com\" target=\"_blank\">Is There Any Deal</a> is a site that notifies people if a game is a sale for a certain price. Let's say I wanted to get the game \"Cyperpunk 2077\" when it's on sale for $15 or less. The site will send me an email when that condition is met on whitelisted game sites. I would prefer if I got another notification that isn't email. There is a bot called <a href=\"https://freestuffbot.xyz\"  target=\"_blank\">Free Stuff</a> that notifies when a game goes on sale or is free on Discord. But it doesn't have the customization of choosing which games and what price to alert for."
         },
         {
-            "Title": "Project (Idea) Generator",
-            "Description": "All of my projects (and idea) meta data, such as descriptions, are stored in a json file. Any time I want to add a project, I need to manually edit the file in order to do. This can be tedious as there are several variables within a project that take a while to input. Not to mention that it's very easy to break the json in a way that the website fails to load. I would like to create an application that given the meta data for a project, I can add said project to the json. I would also like it so I can easily edit the data of an existing project."
+            "Title": "Project Idea Generator",
+            "Description": "Similar to my project page, this idea page's content is all stored in a json file. I have created a <a href=\"{root}/projects/index.html#Project-Generator\" target=\"_blank\">project generator</a> page in order to make the process of adding or editing a project easier. It would be nice to add a second page in which I can do the same for the ideas."
         }
     ]
 }
