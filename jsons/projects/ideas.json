@@ -107,6 +107,10 @@
         {
             "Title": "Project Idea Generator",
             "Description": "Similar to my project page, this idea page's content is all stored in a json file. I have created a <a href=\"{root}/projects/index.html#Project-Generator\" target=\"_blank\">project generator</a> page in order to make the process of adding or editing a project easier. It would be nice to add a second page in which I can do the same for the ideas."
+        },
+        {
+            "Title": "Stardew Valley Chest Organizer Mod",
+            "Description": "Stardew Valley is a game that has a lot of items which requires a lot of inventory management. The game has chests for the player to put items that they can't carry in their inventory. However, with the amount of items in the game, it can be difficult to stay organized and find certain items when you need it. I would like to make a mod that allows the player to sort their chests with a click of a button based on the item's categories, and allow them to extract a certain item from a chest."
         }
     ]
 }
