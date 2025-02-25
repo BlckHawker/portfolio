@@ -111,6 +111,14 @@
         {
             "Title": "Stardew Valley Chest Organizer Mod",
             "Description": "Stardew Valley is a game that has a lot of items which requires a lot of inventory management. The game has chests for the player to put items that they can't carry in their inventory. However, with the amount of items in the game, it can be difficult to stay organized and find certain items when you need it. I would like to make a mod that allows the player to sort their chests with a click of a button based on the item's categories, and allow them to extract a certain item from a chest."
+        },
+        {
+            "Title": "Stardew Valley Gift Loving Mod",
+            "Description": "Stardew mod that gives the player a better understanding of which gift to give to someone. When the player is holding an item and an NPC loves that item, a faint heart will appear above their head in order to tell the player that the NPC would love that gift. There will be other emojis for the other levels of how much the NPC likes that gift. If you can't gift that NPC a gift that day, the reaction will not appear."
+        },
+        {
+            "Title": "Stardew Valley Idle Keg Mod",
+            "Description": "Kegs are an item that turn fruit into wine. They are very profitable, so many users have a whole building full of them to have multiple wine makers. However, all of these kegs need to be manually handled. Meaning if the user misses putting fruit inside of a keg (which is very easy since they all look the same), they will lose out on some profit. To avoid this, I want to make a mod that will change the tint of an idle keg to be red so it stands out more compared to others."
         }
     ]
 }
