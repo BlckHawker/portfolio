@@ -119,6 +119,10 @@
         {
             "Title": "Stardew Valley Idle Keg Mod",
             "Description": "Kegs are an item that turn fruit into wine. They are very profitable, so many users have a whole building full of them to have multiple wine makers. However, all of these kegs need to be manually handled. Meaning if the user misses putting fruit inside of a keg (which is very easy since they all look the same), they will lose out on some profit. To avoid this, I want to make a mod that will change the tint of an idle keg to be red so it stands out more compared to others."
+        },
+        {
+            "Title": "Stardew Valley Instant Community Center Cheat",
+            "Description": "For debugging purposes for some of my Stardew mods, I need to finish the Community Center many times. It's not a difficult task given that there is a mod that allows to you spawn any item in the game. Though it is a bit tedious as you need to look up the name of the item you need, and choose the exact amount of that specific item. This is more annoying if the player decides to do remixed bundles, where the desired items to complete the Community Center is randomized. This means players can't memorize the items needed and need to spend time looking at each bundle to make sure they don't spawn the wrong items. I would like to make a mod where the game checks which item the player needs and adds them to their inventory (assume they have space) with a press of a button. Then the player will just need to put the desired items in the right bundle."
         }
     ]
 }
