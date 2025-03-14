@@ -1,6 +1,36 @@
 {
 	"Projects": [
 		{
+			"Title": "Grade Predictor",
+			"Start Date": "March 2025",
+			"End Date": "March 2025",
+			"Languages": [
+				"JavaScript",
+				"TypeScript"
+			],
+			"Libraries": [
+				"React"
+			],
+			"Tools": [
+				"Visual Studio Code"
+			],
+			"Description": "Early in my teaching career, I noticed students frequently asking how much their late assignments would affect their grades, depending on when they submitted them. While manageable at first, this became time-consuming as the year went on, requiring me to look up due dates and calculate grade impacts for each student individually.\n\nTo streamline this, I created a simple website that answers these common grade-related questions. The homepage includes my grading policy, a brief overview of the other pages, and contact info. One page displays all assignments for a given period, along with due dates and potential grade impacts for late submissions. The final page is a grade calculator with pre-configured weightings, allowing students to input their grades and easily estimate their final score.",
+			"Links": [
+				{
+					"Name": "Repository",
+					"Link": "https://github.com/BlckHawker/Grade-Predictor"
+				},
+				{
+					"Name": "Website",
+					"Link": "https://grade-predictor.netlify.app"
+				}
+			],
+			"Image": {
+				"src": "img/grade predictor demonstration.gif",
+				"alt": "demonstration of grade predictor website"
+			}
+		},
+		{
 			"Title": "Stardew Valley Instant Community Center Cheat",
 			"Start Date": "March 2025",
 			"End Date": "Present",
