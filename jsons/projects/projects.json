@@ -1,6 +1,24 @@
 {
 	"Projects": [
 		{
+			"Title": "Google Apps Highschool Anti Cheat Script",
+			"Start Date": "March 2025",
+			"End Date": "March 2025",
+			"Languages": [
+				"Javascript"
+			],
+			"Libraries": [],
+			"Tools": [
+				"Google Apps Script"
+			],
+			"Description": "Since I started teaching and giving out homework assignments, I've noticed that many students are using language models like ChatGPT to complete them. It was very obvious by their editing history and the wording in their submissions. When I asked students to replicate their work with me observing them, many failed produce a similar result within the time limit I set.\nWhile it's impossible to completely eliminate cheating with these tools, I’ve found a way to slow it down. Using Google App Scripts, I’ve developed a method to modify assignment prompts by inserting scrambled characters within the text. The prompt remains understandable to a human reader but becomes difficult for an LLM to interpret. This is not fool proof as students can either delete the unwanted text, or type out the prompt manually. However, both will be very tedious to do, and it would possibly take less time and effort to do the assignment themselves. Unfortunately, I cannot show the script as I do not want students to reverse engineer it.",
+			"Links": [],
+			"Image": {
+				"src": "img/anti cheat demonstration.gif",
+				"alt": "Demonstration of the assignment being generated with random text with the text then being pasted into ChatGPT with the LMM unable to decipher the prompt"
+			}
+		},
+		{
 			"Title": "Grade Predictor",
 			"Start Date": "March 2025",
 			"End Date": "March 2025",
