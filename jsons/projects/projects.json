@@ -51,7 +51,7 @@
 		{
 			"Title": "Stardew Valley Instant Community Center Cheat",
 			"Start Date": "March 2025",
-			"End Date": "Present",
+			"End Date": "March 2025",
 			"Languages": [
 				"C#"
 			],
@@ -69,11 +69,15 @@
 				{
 					"Name": "Repository",
 					"Link": "https://github.com/BlckHawker/Instant-Community-Center-Cheat"
+				},
+				{
+					"Name": "Nexus Download",
+					"Link": "https://www.nexusmods.com/stardewvalley/mods/32839"
 				}
 			],
 			"Image": {
-				"src": "",
-				"alt": ""
+				"src": "img/Instant CC cheat.png",
+				"alt": "Player getting items from cheat"
 			}
 		},
 		{
