@@ -119,6 +119,10 @@
         {
             "Title": "Stardew Valley Idle Keg Mod",
             "Description": "Kegs are an item that turn fruit into wine. They are very profitable, so many users have a whole building full of them to have multiple wine makers. However, all of these kegs need to be manually handled. Meaning if the user misses putting fruit inside of a keg (which is very easy since they all look the same), they will lose out on some profit. To avoid this, I want to make a mod that will change the tint of an idle keg to be red so it stands out more compared to others."
+        },
+        {
+            "Title": "Stardew Valley QLearning AI Perfectionist",
+            "Description": "I am interested in speedrunning games. I like to see people try and \"break\" games in order to complete them as fast as possible. Sometimes there are exploits that cannot be done by humans that require multiple frame perfect inputs. This can be demonstrated by Tool Assisted Speedruns (TASs for short). I would like to create a TAS for Stardew Valley's Perfectionist run, but I don't plan to make the TAS by hand. I want to use machine learning AI (most likely QLearning) in order to create a TAS. This would be very difficult to do in the game's real time as machine learning requires a lot of trial and errors, and many simulations in order to get decent data. I would need to find a way to simulate years in the within seconds in order to make this somewhat achievable."
         }
     ]
 }
