@@ -143,6 +143,12 @@
         {
             "Title": "Markdown to BBCODE Converter",
             "Description": "I am familiar with markdown because I frequently use Discord and Github. However, some websites I use, such as Nexus, use the format \"BBCODE\" which I'm not familiar with. While it would be beneficial to learn the syntax of it, it seems like a niche format that doesn't get used enough for it to be worthwhile to learn at the moment. However, I do use Nexus to host some of my mods for download, which requires a lot of documentation. I have tried using already established Markdown to BBCODE converters, but they don't seem to be working correctly with Nexus.  They may work for other sites, but I haven't tested them yet. I would like to make a converter for myself since I know what the expected outcome would be."
+        },
+        {
+            "Title": "Steam Daily Hours Log",
+            "Description": "I played my 3DS a lot when I was a child. One of my favorite things to do was to look through my activities log. It would have an assortment of statistics such as how many times I launched an applications, how many hours total I played the game, and when were my active hours playing a certain game. It saddens me that other game applications, such as Steam, doesn't have these detailed statistics. While the total hours statistic is something that Steam provides, it's not as insightful as what the 3DS offers. I assume that Steam does keep track of this data in some way since it's possible to see a graph of the amount of players playing a certain game within a span of time through the <a href=\"https://steamcharts.com\" target=\"_blank\">Steam charts</a>. I would like to make an application that extracts that data from someone's profile (consensually of course) and displays it to the user similar to the <a href=\"https://steamdb.info/calculator/76561198218564439/?cc=us\" target=\"_blank\">Steam calculator</a>."
+
+            
         }
     ]
 }
