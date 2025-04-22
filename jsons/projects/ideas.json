@@ -131,6 +131,14 @@
         {
             "Title": "Papa's Pizzeria: Hot Shot solver",
             "Description": "Papa's Pizzeria has a mini game called \"Hot Shot\" where the player needs to shoot a threshold of enemies that will wander around the stage for a while in order to complete the level It's not the most difficult thing to do as the game allows some enemies to be missed for the stage to still be considered complete. Even still I would like to create a program that will automate the shooting so that enemies are hit within an instant of them spawning."
+        },
+        {
+            "Title": "Google Forms Quiz Maker",
+            "Description": "As a teacher, I tend to give out quizzes. Personally I prefer electronic quizzes using Google Form. However, not every student has reliable access to a computer requiring me to create a physical version of the quiz. While it's not difficult as I can copy and paste the words, it can be annoying to format the quiz for each individual question. I would like to make a tool that would convert a Google Form quiz into a Google Doc, decreasing the amount of manual formatting needed to be done."
+        },
+        {
+            "Title": "Stardew NPC Name Change",
+            "Description": "I have wanted to change the name of some of the NPCs of Stardew Valley to random names. It's mostly for fun and to better understand how the game works internally along with the tool to mod the game."
         }
     ]
 }
