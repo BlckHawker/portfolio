@@ -147,8 +147,14 @@
         {
             "Title": "Steam Daily Hours Log",
             "Description": "I played my 3DS a lot when I was a child. One of my favorite things to do was to look through my activities log. It would have an assortment of statistics such as how many times I launched an applications, how many hours total I played the game, and when were my active hours playing a certain game. It saddens me that other game applications, such as Steam, doesn't have these detailed statistics. While the total hours statistic is something that Steam provides, it's not as insightful as what the 3DS offers. I assume that Steam does keep track of this data in some way since it's possible to see a graph of the amount of players playing a certain game within a span of time through the <a href=\"https://steamcharts.com\" target=\"_blank\">Steam charts</a>. I would like to make an application that extracts that data from someone's profile (consensually of course) and displays it to the user similar to the <a href=\"https://steamdb.info/calculator/76561198218564439/?cc=us\" target=\"_blank\">Steam calculator</a>."
-
-            
+        },
+        {
+            "Title": "Discord Manager Bot",
+            "Description": "I have frequently been added as a moderator to some Discord servers. While enjoy being an admin, it can be a little hectic and tedious to manage. Especially when setting up servers as the same repetitive steps need to be taken. I personally like servers to be broken up into groups based on people's interest. This is easily manageable by roles, and allowing certain people to access"
+        },
+        {
+            "Title": "Hades Boon Guide",
+            "Description": "<a href=\"https://en.wikipedia.org/wiki/Hades_(video_game)\"  target=\"_blank\">Hades</a> is a <a href=\"https://en.wikipedia.org/wiki/Roguelike\"  target=\"_blank\">rogue-like</a> game where you get these special abilities called boons that give you special powers. There are over 100 of these items and they are given to you at random. Some of these boons requires the player to get other boons in order to be available to grab. There is an achievement to get every legendary (very rare) boon in the game, which can be difficult to get if you don't know the prerequisites. While the <a href=\"https://hades.fandom.com/wiki/Boons\"  target=\"_blank\">wiki</a> page does list all of them, it can be annoying to navigate as the page lists all the boons vertically which can cause a lot of moving up and down and losing your place. I would like to create a tool in which you tell which boon(s) you would like, and it will tell you the necessary boons you need in order to get that build."
         }
     ]
 }
