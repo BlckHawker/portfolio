@@ -209,7 +209,7 @@
 		{
 			"Title": "Mentor Schedule Maker",
 			"Start Date": "August 2024",
-			"End Date": "Present",
+			"End Date": "November 2024",
 			"Languages": [
 				"TypeScript"
 			],
@@ -222,7 +222,7 @@
 				"Trello",
 				"Discord"
 			],
-			"Description": "At my time at RIT, I joined the <a href=\"https://sse.rit.edu\" target=\"_blank\">Society of Software Engineers (SSE)</a>. It's an academic organization that mainly focused on mentoring (tutoring) students who are majoring in Software Engineering related field. The \"Mentor Head\" is responsible for making the schedule of which mentor(s) would be assigned each shift based on their availability. Since the Mentor Head has many other responsibilities, I decided to alleviate one of those duties by creating a schedule generator. Given the name and availability of each mentor, and many other parameters, the software generates many schedule possibilities, verifying that nobody is overworked.\nI independently built a prototype within the span of 3 months. It's in a functional state, but there is room for improvement, including a optimizing the schedule generation algorithm, a homepage that better explains the purpose of the website, the ability to import/export generated schedules and mentors, better generated schedule visuals, etc.\nI invited three students who are currently part of the SSE to do some user testing. They agreed that the website needed some work, but it was a good product. They offered to assist me in developing the project into a more usable state. Now I am taking more of a project manager role, prioritizing tasks and assigning them to the rest of the team. I plan to monitor progress and adjust the project timeline based on team morale contributions.",
+			"Description": "At my time at RIT, I joined the <a href=\"https://sse.rit.edu\" target=\"_blank\">Society of Software Engineers (SSE)</a>. It's an academic organization that mainly focused on mentoring (tutoring) students who are majoring in Software Engineering related field. The \"Mentor Head\" is responsible for making the schedule of which mentor(s) would be assigned each shift based on their availability. Since the Mentor Head has many other responsibilities, I decided to alleviate one of those duties by creating a schedule generator. Given the name and availability of each mentor, and many other parameters, the software generates many schedule possibilities, verifying that nobody is overworked.\nI independently built a prototype within the span of 3 months. It's in a functional state, but there is room for improvement, including a optimizing the schedule generation algorithm, a homepage that better explains the purpose of the website, the ability to import/export generated schedules and mentors, better generated schedule visuals, etc.\nWhile I’m proud of this project and would like to continue improving it, my graduation and departure from SSE have shifted my focus to other projects. However, I hope to revisit and expand this application in the future.",
 			"Links": [
 				{
 					"Name": "Repository",
