@@ -13,8 +13,8 @@
             "Description": "I created a <a href=\"https://www.puzzle-binairo.com\" target=\"_blank\">Binary Puzzle (also known as Binario)</a> solver during my <a href=\"{root}/projects/ktane.html#Solver\" target=\"_blank\">KTANE solver saga</a>. The KTANE version always generated a 6x6 puzzle, but I have recently started solving some with a larger size. I want to challenge myself by making a solver where the dimensions are not constant. This will force me to think about what rules work for one size and not for others and apply them in the appropriate context.\nI have been made aware that there is a harder version of this puzzle called <a href=\" https://www.puzzle-binairo.com/binairo-plus-6x6-easy/\" target=\"_blank\">Binario+</a> that has more rules, but also offer more challenges. I would like the solver to solve this version of the puzzle as well."
         },
         {
-            "Title": "Budget Tracker",
-            "Description": "I like my life to be organized, and technology has made that job easier. This applies to budgeting apps including a wishlist function. However, a big task like this can be done in several ways, and I never found an app that exactly fits my preferences; not to mention one that is free without some form of restriction.\nI want to be able to have items sectioned into categories (Needs, Wants, Savings, etc). These categories can then either have items or more subcategories, making a tree structure with a limited depth. The user will have the option of depositing or withdrawing money to/from a certain item/category along with notes. I'm planning on having depositing be customizable where the user has the option of automatically giving a certain category a percentage of the deposit. Or have a priority system where all the money goes into a certain category until the \"goal amount\" is reached. Then all deposited money will go into the next category. I also want each category to have its own stats section where users can see what they're spending most of their money on."
+            "Title": "Budget / Wishlist / Bill Tracker",
+            "Description": "I like my life to be organized, and technology has made that job easier. This applies to budgeting apps including a wishlist function. However, a big task like this can be done in several ways, and I never found an app that exactly fits my preferences; not to mention one that is free without some form of restriction.\nI want to be able to have items sectioned into categories (Needs, Wants, Savings, etc). These categories can then either have items or more subcategories, making a tree structure with a limited depth. The user will have the option of depositing or withdrawing money to/from a certain item/category along with notes. I'm planning on having depositing be customizable where the user has the option of automatically giving a certain category a percentage of the deposit. Or have a priority system where all the money goes into a certain category until the \"goal amount\" is reached. Then all deposited money will go into the next category. I also want each category to have its own stats section where users can see what they're spending most of their money on.\nI believe a bill tracker will also be good in this case. For example, if you need $1000 for all your bills in a month, you can easily making it so you get that amount of money in your needs category in your budget."
         },
         {
             "Title": "Sudoku Solver",
@@ -155,6 +155,102 @@
         {
             "Title": "Hades Boon Guide",
             "Description": "<a href=\"https://en.wikipedia.org/wiki/Hades_(video_game)\"  target=\"_blank\">Hades</a> is a <a href=\"https://en.wikipedia.org/wiki/Roguelike\"  target=\"_blank\">rogue-like</a> game where you get these special abilities called boons that give you special powers. There are over 100 of these items and they are given to you at random. Some of these boons requires the player to get other boons in order to be available to grab. There is an achievement to get every legendary (very rare) boon in the game, which can be difficult to get if you don't know the prerequisites. While the <a href=\"https://hades.fandom.com/wiki/Boons\"  target=\"_blank\">wiki</a> page does list all of them, it can be annoying to navigate as the page lists all the boons vertically which can cause a lot of moving up and down and losing your place. I would like to create a tool in which you tell which boon(s) you would like, and it will tell you the necessary boons you need in order to get that build."
+        },
+        {
+            "Title": "Student out time tracker",
+            "Description": "As a substitute teacher, it is my responsibility to keep track of when students leave my class. Whether it's to use the bathroom, get a drink of water, or quickly talk to another teacher. I often have students who are out longer than needed, possibly skipping, and need to report them to the main office. Though it's rather difficult to keep track of all students whereabouts while also teaching and grading. Currently, I have students write their name down on a piece of paper, along with where they're going and the time when they leave and come back. While it's better than keeping it all in my head, loose leaf paper with students' various styles of writing can make it difficult to keep track. My ideal method would be to have student \"clock out\" when they are leaving my class room with a brief not of where they're going. When they come back, they can \"clock in\". These breaks can be recorded in a database for me to manually review later. At the end of the day, if I notice someone out for longer than needed, I can report it."
+        },
+        {
+            "Title": "Mood Tracker",
+            "Description": "As someone who has been doing a lot of self reflection recently, I tend to write down my thoughts and moods in a journal. I have noticed apps for mood calendars, so you can generally see how you feel throughout a duration of time. I like the idea of being able generalize my moods, but I sometimes want to be detailed with them. The emotion wheel is a great guide for this, and something I want to incorporate into an app. Where the user says a general emotion they feel, and then an optional detailed one that fits under that general emotion. The user can leave an optional note about why the feel the way they did today. I like the visual mood calendar idea as it reminds me of the github contribution activity board."
+        },
+        {
+            "Title": "Sorter visualizer",
+            "Description": "A lot of people are familiar with those videos where sorting algorithms are visualized through animations and sound to show how they work differently. I would like to make one of my own, both as a way to deepen my understanding of sorting algorithms and to explore functional programming (i.e see how values can be transformed into corresponding visual and auditory outputs)."
+        },
+        {
+            "Title": "Task Tracker",
+            "Description": "I am very forgetful, so much so to the point where it can be difficult to get tasks done. I use Todoist as my current task tracker, but I have used dozens more in the past. While I liked most of them, there was always at least one thing that bothered me about them that made me want to switch to something else. Whether it be it wasn't cross platform, the free version didn't support what I wanted, or it was just too broad or too specific for my needs. I have decided to create one myself. Since I would be the only stake holder, I can adapt it to my needs, and if people similar to me are interested in the software, I can add features to support multiple users."
+        },
+        {
+            "Title": "Stardew Randomizer",
+            "Description": "Randomizers are mods that alter the outcomes of in game actions to create fresh and unpredictable experiences. For example, in The Legend of Zelda: Majora's Mask randomizer, picking up a stick might instead give you a boss key. This adds significant replayability to a game. I would like to create a randomizer for Stardew Valley. This is a very large task as there are some logic modes the user can toggle in order to change how difficult the game is. Such as \"Glitchless\",  where the game is beatable without using any glitches; \"Glitches\" where completing the game may rely on glitches, and \"No logic\", where item placements are completely randomized, potentially resulting in unbeatable seeds. All of these modes (and more) would need to have a lot of failsafe and logic checks in order to me enjoyable and accessible  for all."
+        },
+        {
+            "Title": "Job Web Scraper",
+            "Description": "With the job market being filled with fake listings and oversaturation for certain fields, I’ve been thinking about building a bot to help with my job searching. It would scrap various job listing websites and collecting potential opportunities in one place. I would not use this to apply to jobs for me as that feels disingenuous. Rather the idea is for it to generate a document that includes useful metadata like the job title, company, location, salary, and a direct link to the original posting. I can then filter out some of the listings and apply to the ones I think are worth my time."
+        },
+        {
+            "Title": "Grocery Store Coupon Loader",
+            "Description": "My local grocery store's app allows users to load digital coupons with a single click, but there are so many available that it can take me up to 30 minutes to add them all. Since I usually end up buying more than I originally planned, I prefer to load every coupon just in case. I’d like to create an application that automates this process so I can save time and get to the store faster."
+        },
+        {
+            "Title": "Magic: the Gathering Database",
+            "Description": "I recently got into Magic the Gathering, though I consider myself more more of collection rather than a player.  I’m not aiming to collect every card ever printed because I would probably be in more debt than the government. Instead I am interested in completing specific sets (e.g Assassin's Creed or Spiderman). There's a site called Moxfield that helps users track their collections, and I'd like to build a tool using their API to enhance that experience. The idea would be to make it easier to add multiple cards at once, possibly with visual previews, to streamline the process of managing and tracking my collection. My application can tell me what cards I'm missing along with an estimate of how much they would cost, and which cards I can sell as duplicates."
+        },
+        {
+            "Title": "Verbal Todoist Shortcut",
+            "Description": "I currently use Todoist to manage my tasks, and one of the features I rely on heavily is the \"Inbox\" section designed for users to quickly jotting down ideas to revisit later. However, there are times when I can’t use it easily, like when I’m driving. I’d like to create a voice activated phone shortcut that lets me capture ideas hands free and automatically adds them to my Todoist Inbox. It would help me stay organized without risking distractions during moments when typing isn’t practical."
+        },
+        {
+            "Title": "API Key Manager / Refresher",
+            "Description": "I’d like to build a secure application that acts as a central place to store and manage all of my API keys. This will make it easy to access them when needed, while keeping them protected. It would also include quick links to each service’s website so I can easily refresh or regenerate keys when they expire. This would help streamline development and reduce the time spent digging through old emails or dashboards just to find or update credentials."
+        },
+        {
+            "Title": "Risk of Rain 2 mods",
+            "Description": "I’ve recently picked up Risk of Rain 2, a roguelike game built in Unity. While I’m still getting familiar with the game itself, I’m interested in creating mods for it as a way to deepen my understanding of game development. Since the game was made in Unity, a game engine I’m already very comfortable with, it feels like a great opportunity to learn more about how real-world games are structured and extended through modding. It would also be a nice change of pace to mod something other than Keep Talking and Nobody Explodes, which has been my main modding experience so far."
+        },
+        {
+            "Title": "Binding of Isaac: Mom Laughing visualizer mod",
+            "Description": "The Binding of Isaac is a roguelike where a child battles grotesque enemies while exploring a series of procedurally generated rooms. One of the enemies is the child's mother's hand, which drops from the ceiling to grab the player. If it does, the player takes damage, and are kicked out of the room. The only warning is an audio cue of the mother laughing indicating the enemy's presence. I often play the game muted while listening to something else, which has caused me to miss that cue multiple times. It also feels unfair to players with hearing impairments, who have no way of detecting the enemy. I’d like to create a mod that adds a visual indicator alongside the audio cue, giving a more accessible experience."
+        },
+        {
+            "Title": "Project Plan Parser",
+            "Description": "WWhen I create project plans, I have a particular way of writing epics, user stories, and acceptance criteria that include markdown tables in a certain format. Editing these tables by hand can be tedious and error prone, especially as things change over time.  I would like to create a parser that automatically generates the markdown in the style I want given a json (or some other file format). This will save time on formatting, and make it easier to update plans as they evolve."
+        },
+        {
+            "Title": "Is Discord Bots down?",
+            "Description": "I have several discord bots that serve various purposes. These bots are hosted on a local laptop to avoid paying for a server. However, this laptop tends to shut down randomly, whether because it's old or because of automatic updates. I would like to have a script that runs on a separate device and monitors whether my bots are online. If any of them go down, I’d get a notification so I can address the issue right away. This would be a big improvement over relying on myself or someone else to notice the problem manually."
+        },
+        {
+            "Title": "Discord Quotes Voter bot",
+            "Description": "I want to make a \"Quote of the Year\" bot for Discord where the bot will scrape all the messages from a designated quotes channel, then compile them into a list for users to vote on. This would make it easy and fun for the community to look back on the year and choose their favorite quote."
+        },
+        {
+            "Title": "Spotify Playlist Tools",
+            "Description": "I use Spotify as my music app. It's great, but I often notice features missing that I would like added. Here is a list of a few. Unsure if this would be one project, or multiple.\nUse Spotify’s API to find new songs related to a specific track, helping with music discovery based on a song’s style or mood.\nAutomatically organize all of your liked songs into categorized playlists based on their similarities. Songs can appear in multiple playlists if they match different groups.\nGiven a playlist, ask Spotify for songs that would fit well within it, making it easier to expand existing playlists with relevant tracks.\nClean up duplicate tracks in playlists by identifying songs that are musically identical but appear under different albums or versions, and give the user the option to remove duplicates."
+        },
+        {
+            "Title": "Persona 5 X: Revelation Card auto-assigner",
+            "Description": "Persona 5 X is a gacha mobile game where players collect characters to battle. They have these equipment called \"Revelation Cards\" that boost the character's stats immensely. However, the stats each card provides are randomized, so players often need to collect many cards to find the ideal stat combinations for their characters. This can be a overwhelming for a new player to take in. I’d like to build an application that scans a user’s collection of Revelation Cards and provides tailored suggestions for optimal builds on different characters."
+        },
+        {
+            "Title": "Epic to Steam Library Importer",
+            "Description": "I like Epic Games as it gives me free games weekly. However, I often times forget what games are in my Epic Library as I often don't open the application. I would like to create an an application that automates adding multiple Epic Games Store titles to my Steam library, helping me keep better track of and access my games across platforms."
+        },
+        {
+            "Title": "Steam to HowLongToBeat Importer",
+            "Description": "I like using the website HowLongToBeat in order to keep track of the status of the games I own, including what games I have yet to play. I want to create an application that automatically adds all games to my Steam library into the backlog of HowLongToBeat account."
+        },
+        {
+            "Title": "Pokemon Go Discord Friend Code Scraper",
+            "Description": "I’m part of a large Pokémon Go Discord server that has a channel where users share their friend codes for others to add. Switching between the Discord app and the game to add friends is tedious, and I often lose my place in the server while doing it. I’d like to create an application that scrapes the friend code channel, identifies which codes aren’t already on my friend list (excluding my own), and automates adding those codes in the game to streamline the process."
+        },
+        {
+            "Title": "Pokemon Go Calcy IV fight chooser",
+            "Description": "Calcy IV is an app that scans the user’s screen to provide metadata on their Pokémon in Pokémon Go. There are also external websites that help users build optimal teams for specific battles. I’d like to create an app that combines both features: scanning the player’s available Pokémon and suggesting the best team to use based on the opponent’s lineup. If the opponent’s Pokémon are unknown, the app would instead suggest a strong general-purpose team"
+        },
+        {
+            "Title": "Persona 5 X Rhythm Game",
+            "Description": "Persona 5 X is a mobile game that has a rhythm mini-game that is notorious for having frustrating controls. I would like to make an application that automatically plays the game for the user, getting perfect ratings for all songs."
+        },
+        {
+            "Title": "Persona 5 X Soccer Game",
+            "Description": "Persona 5 X is a mobile game that has a soccer mini-game where the player must score a goal. It test precious and reflexes. Players can get better in the game with practice, but that requires a time investment. I would like to make an application that perfectly finishes all the levels in the game."
+        },
+        {
+            "Title": "Resume Formatter Tool",
+            "Description": "My resume follows a specific format, which makes writing out each new experience a bit tedious. I would like to create an application that takes in the meta data for said role (e.g. name, start/end date of a experience, bullet points, tools) and outputs properly formatted text that I can easily paste into a Google Doc. This would save time and ensure consistency across entries."
         }
     ]
 }
