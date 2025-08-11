@@ -251,6 +251,18 @@
         {
             "Title": "Resume Formatter Tool",
             "Description": "My resume follows a specific format, which makes writing out each new experience a bit tedious. I would like to create an application that takes in the meta data for said role (e.g. name, start/end date of a experience, bullet points, tools) and outputs properly formatted text that I can easily paste into a Google Doc. This would save time and ensure consistency across entries."
+        },
+        {
+            "Title": "Discord Mention Search",
+            "Description": "Discord allows users to search for messages with various filters such as the author of the message, if the message was sent before, on, or after a certain date, any specific words in the message, and so much more. However,  feature it is missing is the ability to search for messages that mention a specific user. It is surprising to see it missing as Discord can already filter by author and it seems like filtering by mentions would work in a similar way. I want to create an application that lets users easily find messages that ping a chosen user with a clear interface so that anyone can use it without needing to work with JSON files or know how to code."
+        },
+        {
+            "Title": "Tab Songsterr Converter",
+            "Description": "As a bass player, I use Songsterr to find tabs, but many useful features like synced video playback, looping, and slow-down are locked behind paywalls. I want to create an application that automatically converts Songsterr tabs into formats compatible with free programs like MuseScore, which offer those features for free. This tool would save me time by removing the need for manual conversion and make it easier to practice and learn songs with the playback tools I need."
+        },
+        {
+            "Title": "Med tracker",
+            "Description": "I take multiple medications and sometimes forget whether I’ve taken a dose or miss one altogether. I also need to track how many doses I have left because I like to request refills a week early to avoid running out. I want to create an app that reminds me to take each medication on schedule and lets me mark doses as taken, which will automatically update my remaining supply. When my supply gets low, the app will notify me to request a refill, helping me stay on top of my meds and avoid gaps."
         }
     ]
 }
