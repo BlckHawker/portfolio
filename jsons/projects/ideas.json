@@ -279,6 +279,10 @@
         {
             "Title": "Vscode blur .env on OBS",
             "Description": "I occasionally stream me developing on project on my Twitch. I tend to get nervous doing so because I don't want to leak sensitive information such as content from a .env file. While existing extensions can prevent editing or opening those files, that still lets me edit them normally on my screen, but automatically applies a blur in OBS so the contents are hidden from viewers."
+        },
+        {
+            "Title": "Balatro Score Calculator",
+            "Description": "Balatro is a game that requires a lot of math in order to optimize your score. While the math isn't difficult to do, I don't want to spend time figuring out what that optimization would be manually when a calculator can do it much faster. This idea has been done before, but I could only find mods that have some flaws. <a href=\"https://github.com/DivvyCr/Balatro-Preview\" target=\"_blank\">This mod</a> doesn't seem to work on the most recent version of the game and appears to be deprecated. <a href=\"https://github.com/Fantom-Balatro/Fantoms-Preview\" target=\"_blank\">This mod</a> has a calculate button that takes approximately 3-5 seconds to give an answer, which is considerably a lot of time since I personally usually use this button at least 3 times a round to verify I am scoring the most I can. This shouldn't be the most difficult mod as most of the math is already done, but my inexperience with lua and modding this game can slow it down a bit."
         }
     ]
 }
