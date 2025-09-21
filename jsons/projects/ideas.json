@@ -267,6 +267,10 @@
         {
             "Title": "Discord Notification Manager",
             "Description": "I am in multiple Discord servers for various reasons. I am in more active in some than others, so I tend to change the notification for either the entire server or for certain channels. Managing notification settings can become tedious, especially in large servers, since adjusting them requires right clicking on individual channels one by one. Although channels can default to the server wide notification setting, it's still inconvenient to manually check or update each channel's preferences. To resolve this, I want to build a frontend application that streamlines this process, allowing users to quickly view and update multiple notification settings at once without excessive clicking."
+        },
+        {
+            "Title": "Multiplayer Tic Tac Toe",
+            "Description": "I want to strengthen my understanding of networking, since it's a valuable skill for building applications that rely on real time communication. Rather than jumping into a complex project like an MMO, I want to start with something smaller, a networked version of Tic Tac Toe. One user can host a game and generate a join code, while another user connects using that code. After the game ends, both players must confirm a \"reset\" before starting a new match. This project will help me practice the fundamentals of networking in a manageable scope."
         }
     ]
 }
