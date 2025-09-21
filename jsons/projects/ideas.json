@@ -283,6 +283,10 @@
         {
             "Title": "Balatro Score Calculator",
             "Description": "Balatro is a game that requires a lot of math in order to optimize your score. While the math isn't difficult to do, I don't want to spend time figuring out what that optimization would be manually when a calculator can do it much faster. This idea has been done before, but I could only find mods that have some flaws. <a href=\"https://github.com/DivvyCr/Balatro-Preview\" target=\"_blank\">This mod</a> doesn't seem to work on the most recent version of the game and appears to be deprecated. <a href=\"https://github.com/Fantom-Balatro/Fantoms-Preview\" target=\"_blank\">This mod</a> has a calculate button that takes approximately 3-5 seconds to give an answer, which is considerably a lot of time since I personally usually use this button at least 3 times a round to verify I am scoring the most I can. This shouldn't be the most difficult mod as most of the math is already done, but my inexperience with lua and modding this game can slow it down a bit."
+        },
+        {
+            "Title": "Balatro Playing Card Predictor",
+            "Description": "Sometimes while playing this game, I want to know what my chances are getting a certain card with my deck. Whether that be a certain rank, suit, or a combination of both. While this information can be found by hovering over the deck, the process would be slow and tedious, especially if I’m also looking for cards with additional properties like seals. To improve this, I plan to create a mod with an in-game menu that displays these probabilities in real time, allowing users to quickly filter and view the exact odds they’re interested in."
         }
     ]
 }
