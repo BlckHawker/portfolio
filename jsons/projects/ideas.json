@@ -287,6 +287,10 @@
         {
             "Title": "Balatro Playing Card Predictor",
             "Description": "Sometimes while playing this game, I want to know what my chances are getting a certain card with my deck. Whether that be a certain rank, suit, or a combination of both. While this information can be found by hovering over the deck, the process would be slow and tedious, especially if I’m also looking for cards with additional properties like seals. To improve this, I plan to create a mod with an in-game menu that displays these probabilities in real time, allowing users to quickly filter and view the exact odds they’re interested in."
+        },
+        {
+            "Title": "Balatro Calculator Connector",
+            "Description": "There is a website called <a href=\"https://efhiii.github.io/balatro-calculator\" target=\"_blank\">Balatro Calculator</a> that lets users input their hand and jokers to see how much they will score. It also provides optimization features, suggesting the best joker order and card plays to maximize points for a given hand. While this tool is extremely useful, manually selecting and removing cards on the website can be tedious, espeically since how rapid the player's hand can change within a few seconds. Rather than rebuilding this functionality from scratch as a mod, I’d like to create a mod that automatically gathers the user’s current jokers and hand, opens the website in their browser, and populates the information directly. The information would update whenever the player’s jokers or hand change, leaving the player with playing the cards recommended by the calculator."
         }
     ]
 }
