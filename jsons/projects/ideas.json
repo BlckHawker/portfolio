@@ -206,7 +206,7 @@
         },
         {
             "Title": "Project Plan Parser",
-            "Description": "WWhen I create project plans, I have a particular way of writing epics, user stories, and acceptance criteria that include markdown tables in a certain format. Editing these tables by hand can be tedious and error prone, especially as things change over time.  I would like to create a parser that automatically generates the markdown in the style I want given a json (or some other file format). This will save time on formatting, and make it easier to update plans as they evolve."
+            "Description": "When I create project plans, I have a particular way of writing epics, user stories, and acceptance criteria that include markdown tables in a certain format. Editing these tables by hand can be tedious and error prone, especially as things change over time.  I would like to create a parser that automatically generates the markdown in the style I want given a json (or some other file format). This will save time on formatting, and make it easier to update plans as they evolve."
         },
         {
             "Title": "Is Discord Bots down?",
@@ -270,7 +270,15 @@
         },
         {
             "Title": "Multiplayer Tic Tac Toe",
-            "Description": "I want to strengthen my understanding of networking, since it's a valuable skill for building applications that rely on real time communication. Rather than jumping into a complex project like an MMO, I want to start with something smaller, a networked version of Tic Tac Toe. One user can host a game and generate a join code, while another user connects using that code. After the game ends, both players must confirm a \"reset\" before starting a new match. This project will help me practice the fundamentals of networking in a manageable scope."
+            "Description": "I want to strengthen my understanding of networking, since it's a valuable skill for building applications that rely on real time communication. Rather than jumping into a complex project like an MMO, I want to start with something smaller, a networked version of Tic Tac Toe. One user can host a game and generate a join code, while another user connects using that code. After the game ends, both players must confirm a \"reset\" before starting a new match."
+        },
+        {
+            "Title": "Multiplayer Tic Tac Toe",
+            "Description": "I want to strengthen my understanding of networking, since it's a valuable skill for building applications that rely on real time communication. Rather than jumping into a complex project like an MMO, I want to start with something smaller, a networked version of Tic Tac Toe. One user can host a game and generate a join code, while another user connects using that code. After the game ends, both players must confirm a \"reset\" before starting a new match."
+        },
+        {
+            "Title": "Vscode blur .env on OBS",
+            "Description": "I occasionally stream me developing on project on my Twitch. I tend to get nervous doing so because I don't want to leak sensitive information such as content from a .env file. While existing extensions can prevent editing or opening those files, that still lets me edit them normally on my screen, but automatically applies a blur in OBS so the contents are hidden from viewers."
         }
     ]
 }
