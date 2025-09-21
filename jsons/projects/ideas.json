@@ -263,6 +263,10 @@
         {
             "Title": "Med tracker",
             "Description": "I take multiple medications and sometimes forget whether I’ve taken a dose or miss one altogether. I also need to track how many doses I have left because I like to request refills a week early to avoid running out. I want to create an app that reminds me to take each medication on schedule and lets me mark doses as taken, which will automatically update my remaining supply. When my supply gets low, the app will notify me to request a refill, helping me stay on top of my meds and avoid gaps."
+        },
+        {
+            "Title": "Discord Notification Manager",
+            "Description": "I am in multiple Discord servers for various reasons. I am in more active in some than others, so I tend to change the notification for either the entire server or for certain channels. Managing notification settings can become tedious, especially in large servers, since adjusting them requires right clicking on individual channels one by one. Although channels can default to the server wide notification setting, it's still inconvenient to manually check or update each channel's preferences. To resolve this, I want to build a frontend application that streamlines this process, allowing users to quickly view and update multiple notification settings at once without excessive clicking."
         }
     ]
 }
